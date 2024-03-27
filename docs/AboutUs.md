@@ -9,13 +9,15 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 ## Project team
 
-### Joseph Chan 
+### Joseph Chan
 
 <img src="images/cyqjoseph.png" width="200px">
 
 [[github](https://github.com/cyqjoseph)]
 
-* Role: Developer 
+* Role: DevOps
+* Responsibilities: Test implementation and Management,
+  Feature Development and Enhancement.
 
 ### Wang Minhong
 

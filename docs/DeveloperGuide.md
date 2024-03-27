@@ -2,16 +2,10 @@
 layout: page
 title: Developer Guide
 ---
+Welcome to our Developer Guide! This resource is designed to provide developers with a overview of Dook's architecture. Whether you're new to the project or looking to extend its functionality, this guide is the best place to start learning how to contribute to Dook.
+
 * Table of Contents
 {:toc}
-
---------------------------------------------------------------------------------------------------------------------
-
-## **Acknowledgements**
-
-* {list here sources of all reused/adapted ideas, code, documentation, and third-party libraries -- include links to the original source as well}
-
---------------------------------------------------------------------------------------------------------------------
 
 ## **Setting up, getting started**
 
@@ -278,25 +272,25 @@ _{Explain here how the data archiving feature will be implemented}_
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
-| Priority | As a …​                          | I want to …​                      | So that I can…​                                                        |
-| -------- |----------------------------------|-----------------------------------| ---------------------------------------------------------------------- |
-| `* * *`  | new user                         | see usage instructions            | refer to instructions when I forget how to use the App                 |
-| `* * *`  | user                             | add a contact                     |                                                                        |
-| `* * *`  | user                             | delete a contact                  | remove entries that I no longer need                                   |
-| `* * *`  | user                             | update a contact                  |                                                                        |
-| `* * *`  | user                             | view professors calendar          | see the available timings                                              |
-| `* * *`  | user                             | view professors's office hours    | know when to contact them                                              |
-| `* * *`  | user                             | view professors's office location | know where to find them                                                | 
-| `* * *`  | user                             | find a prof by name               | locate details of persons without having to go through the entire list |
-| `* *`    | user                             | hide private contact details      | minimize chance of someone else seeing them by accident                |
-| `*`      | user                             | update my calendar                | change my schedule                                                     |
-| `*`      | user                             | create event/consultations        | it can be recorded                                                     |
-| `*`      | user                             | delete event                      |                                                                        |
-| `*`      | user                             | update event                      |                                                                        |
-| `*`      | user                             | view the current week's consults  | change my schedule                                                     |
-| `*`      | user                             | view a TA's calendar              | book a consult                                                         |
-| `*`      | user                             | generate email to contact         | easily send out communications                                         |
-| `*`      | user                             | delete all contacts               |                                                                        | 
+| Priority | As a …​  | I want to …​                      | So that I can…​                                                        |
+|----------|----------|-----------------------------------|------------------------------------------------------------------------|
+| `* * *`  | new user | see usage instructions            | refer to instructions when I forget how to use the App                 |
+| `* * *`  | user     | add a contact                     |                                                                        |
+| `* * *`  | user     | delete a contact                  | remove entries that I no longer need                                   |
+| `* * *`  | user     | update a contact                  |                                                                        |
+| `* * *`  | user     | view professors calendar          | see the available timings                                              |
+| `* * *`  | user     | view professors's office hours    | know when to contact them                                              |
+| `* * *`  | user     | view professors's office location | know where to find them                                                | 
+| `* * *`  | user     | find a prof by name               | locate details of persons without having to go through the entire list |
+| `* *`    | user     | hide private contact details      | minimize chance of someone else seeing them by accident                |
+| `*`      | user     | update my calendar                | change my schedule                                                     |
+| `*`      | user     | create event/consultations        | it can be recorded                                                     |
+| `*`      | user     | delete event                      |                                                                        |
+| `*`      | user     | update event                      |                                                                        |
+| `*`      | user     | view the current week's consults  | change my schedule                                                     |
+| `*`      | user     | view a TA's calendar              | book a consult                                                         |
+| `*`      | user     | generate email to contact         | easily send out communications                                         |
+| `*`      | user     | delete all contacts               |                                                                        | 
 *{More to be added}*
 
 ### Use cases
@@ -394,7 +388,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1. User inputs `/book` command with necessary details.
+1. User inputs `book` command with necessary details.
 2. Dook schedules the booking.
 3. Dook confirms the booking details to the user.
 
@@ -546,3 +540,11 @@ testers are expected to do more *exploratory* testing.
    1. _{explain how to simulate a missing/corrupted file, and the expected behavior}_
 
 1. _{ more test cases …​ }_
+
+--------------------------------------------------------------------------------------------------------------------
+
+## **Acknowledgements**
+
+* {list here sources of all reused/adapted ideas, code, documentation, and third-party libraries}
+* Include links to the original source as well
+

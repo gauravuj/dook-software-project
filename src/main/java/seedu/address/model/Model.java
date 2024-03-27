@@ -5,6 +5,7 @@ import java.util.function.Predicate;
 
 import javafx.collections.ObservableList;
 import seedu.address.commons.core.GuiSettings;
+import seedu.address.commons.core.Theme;
 import seedu.address.model.booking.Booking;
 import seedu.address.model.person.Person;
 
@@ -104,4 +105,12 @@ public interface Model {
     boolean hasBooking(Booking booking);
 
     ObservableList<Booking> getFilteredBookingList();
+
+    void setTheme(Theme theme);
+
+    /**
+     * Updates the filter of the filtered booking list to filter by the given {@code predicate}.
+     * @throws NullPointerException if {@code predicate} is null.
+     */
+    void updateFilteredBookingList(Predicate<Booking> predicate);
 }
