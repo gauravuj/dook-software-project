@@ -2,26 +2,25 @@
 layout: page
 title: User Guide
 ---
+This guide provides and overview and explains the essential features of Dook.
 
-Welcome to Dook: a **cutting-edge desktop application** for **computing students** engineered for the seamless management of consultations and 
-contacts, blending the power of a [**Command Line Interface (CLI)**](#glossary) with the intuitive accessibility of a 
+## What is Dook?
+An **elegant desktop application** for **NUS computing students** to easily manage consultations. This lightweight platform was enables users to quickly view and manage consultations and
+people. Dook blends the power of a nimble [**Command Line Interface (CLI)**](#glossary) together with the intuitive accessibility of a 
 [**Graphical User Interface (GUI)**](#glossary). 
 
-Designed specifically for the dynamic needs of the NUS 
-School of Computing community, Dook centralizes faculty information
-in an innovative manner, standing on the shoulders of AddressBook Level 3
-(AB3) as an advanced brownfield project. 
+Designed for the dynamic needs of the NUS 
+School of Computing (SoC) community, Dook centralizes faculty information
+in an innovative manner, allowing one to easily find their professors by taking advantage of the basic CLI familiarity of SoC students.
 
 For the quick typist, Dook elevates your ability to swiftly organize your academic consultations with professors
-and teaching assistants, outpacing conventional GUI-based applications.
+and teaching assistants, outpacing conventional GUI-based applications, making management of consultations a breeze.
 
-We hope that you will find this guide helpful in maximising you Dook experience! :)
+We hope that you will find this guide helpful in maximising your Dook experience! :)
 
 --------------------------------------------------------------------------------------------------------------------
 
 ## Using the Guide
-This user guide walks you through the essential features of *Dook*.
-
 We hope that this guide will familiarise you with the [CLI](#glossary) commands and [GUI](#glossary) and interface. If you
 are unfamiliar with some jargon here, do have a quick look at our [glossary](#glossary) below! :)
 
@@ -48,8 +47,6 @@ Content in green boxes provides tips and good practices to help you use the appl
 Content in red boxes draws your attention to potential pitfalls to avoid and alert you to possible errors.
 </div>
 
-Do look out for them!
-
 --------------------------------------------------------------------------------------------------------------------
 
 ## Table of Contents
@@ -58,17 +55,18 @@ Do look out for them!
 
 --------------------------------------------------------------------------------------------------------------------
 
-## Quick start
+## Installation and Quick start
 
-1. Ensure you have Java `11` or above installed in your Computer.
+1. Ensure you have [Java](#faq) `11` or above installed in your Computer.
 
-1. Download the latest `addressbook.jar` from [here](https://github.com/se-edu/addressbook-level3/releases).
+1. Download the latest `dook.jar` from [here](https://github.com/AY2324S2-CS2103T-W11-3/tp/releases).
 
 1. Copy the file to the folder you want to use as the _home folder_ for your AddressBook.
 
-1. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar addressbook.jar` command to run the application.<br>
+1. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar dook.jar` command to run the application.<br>
+   If you are unfamiliar with the command terminal, follow [this](https://tutorials.codebar.io/command-line/introduction/tutorial.html)
    A GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
-   ![Ui](images/NewUI.png)
+   ![Ui](docs/images/NewUi.png)
 
 1. Type a command in the command box and press Enter to execute it. <br>
    Some example commands you can try:
@@ -80,6 +78,10 @@ Do look out for them!
    * `delete 3` : Deletes the 3rd contact shown in the current list.
 
    * `clear` : Deletes all contacts.
+
+   * `book -n John's Birthday Party -s 2023-12-31 19:00 -e 2023-12-31 23:00` : Adds a new booking for `John's Birthday Party` from `2023-12-31 19:00` to `2023-12-31 23:00`.
+
+   * `cancel 3` : Deletes the 3rd booking shown in the current list.
 
    * `exit` : Exits the app.
 
@@ -122,9 +124,18 @@ Format: `help`
 
 ### Adding a person: `add`
 
-Adds a person to the address book.
+```
+add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS [t/TAG]…​
+```
+Adds a new person to the address book.
 
-Format: `add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS [t/TAG]…​`
+| Param            | Remarks                                                                                                        |
+|------------------|----------------------------------------------------------------------------------------------------------------|
+| **NAME**         | Must be non-null and unique                                                                                    |
+| **PHONE_NUMBER** | Optional, only numbers and minimum 3 digits                                                                    |
+| **EMAIL**        | Optional, follow standard email formats (i.e xxx@xxx)                                                          |
+| **ADDRESS**      | Optional                                                                                                       |
+| **TAG**          | Optional, each tag should start with -t (i.e. for two tags `friend`, `groupmate` use `-t friend -t groupmate`) |
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 A person can have any number of tags (including 0)
@@ -173,6 +184,7 @@ Format: `find KEYWORD [MORE_KEYWORDS]`
 Examples:
 * `find John` returns `john` and `John Doe`
 * `find alex david` returns `Alex Yeoh`, `David Li`<br>
+
   ![result for 'find alex david'](images/findAlexDavidResult.png)
 
 ### Deleting a person : `delete`
@@ -193,10 +205,10 @@ Examples:
 
 Adds the specified booking to the address book.
 
-Format: `-n [description] -s [start_time] -e [end_time]`
+Format: `-n DESCRIPTION -s START_TIME -e END_TIME`
 
 * Creates a booking with the specified parameters.
-* Start and end time formats are in yyyy-mm-d.
+* Start and end time formats are in yyyy-mm-d hh:mm.
 
 Examples:
 * `book -n John's Birthday Party -s 2023-12-31 19:00 -e 2023-12-31 23:00`
@@ -207,9 +219,12 @@ Cancels the specified booking from the address book.
 
 Format: `cancel INDEX`
 
-* Deletes the person at the specified `INDEX`.
+* Deletes the booking at the specified `INDEX`.
 * The index refers to the index number shown in the displayed booking list.
 * The index **must be a positive integer** 1, 2, 3, …​
+
+Examples:
+* `cancel 2` cancels the 2nd booking in the booking list.
 
 ### Searching for a booking : `search`
 
