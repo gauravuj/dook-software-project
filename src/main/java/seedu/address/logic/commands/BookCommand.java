@@ -3,6 +3,7 @@ package seedu.address.logic.commands;
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_END_TIME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_NOTES;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_START_TIME;
 
 import seedu.address.logic.Messages;
@@ -24,11 +25,13 @@ public class BookCommand extends Command {
             + "Parameters: "
             + PREFIX_NAME + "{description} "
             + PREFIX_START_TIME + "{start_time} "
-            + PREFIX_END_TIME + "{end_time}\n"
+            + PREFIX_END_TIME + "{end_time} "
+            + PREFIX_NOTES + "{notes}\n"
             + "Example usage: " + COMMAND_WORD + " "
             + PREFIX_NAME + "John's Birthday Party "
             + PREFIX_START_TIME + "2023-12-31 19:00 "
-            + PREFIX_END_TIME + "2023-12-31 23:00";
+            + PREFIX_END_TIME + "2023-12-31 23:00 "
+            + PREFIX_NOTES + "Bring cake";
     private final Booking toAdd;
 
     /**

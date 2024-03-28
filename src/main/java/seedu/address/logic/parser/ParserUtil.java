@@ -11,6 +11,7 @@ import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.booking.Description;
 import seedu.address.model.booking.EndTime;
+import seedu.address.model.booking.Notes;
 import seedu.address.model.booking.StartTime;
 import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
@@ -167,5 +168,20 @@ public class ParserUtil {
             throw new ParseException(EndTime.MESSAGE_CONSTRAINTS);
         }
         return new EndTime(trimmedEnd);
+    }
+
+    /**
+     * Parses a {@code String note} into a {@code Notes}.
+     * Leading and trailing whitespaces will be trimmed.
+     *
+     * @throws ParseException if the given {@code end} is invalid.
+     */
+    public static Notes parseBookingNote(String note) throws ParseException {
+        requireNonNull(note);
+        String trimmedNote = note.trim();
+        if (!Notes.isValidNote(trimmedNote)) {
+            throw new ParseException(Notes.MESSAGE_CONSTRAINTS);
+        }
+        return new Notes(trimmedNote);
     }
 }
