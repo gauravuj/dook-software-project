@@ -14,6 +14,8 @@ public interface ReadOnlyUserPrefs {
 
     Path getAddressBookFilePath();
 
+    Path getProfFilePath();
+
     Alias getAliases();
 
 }

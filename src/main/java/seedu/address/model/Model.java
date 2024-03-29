@@ -119,4 +119,6 @@ public interface Model {
 
     void addAlias(String alias, String toReplace);
     Theme getTheme();
+
+    public ReadOnlyAddressBook getProfData();
 }

@@ -57,7 +57,8 @@ public class MainApp extends Application {
         UserPrefsStorage userPrefsStorage = new JsonUserPrefsStorage(config.getUserPrefsFilePath());
         UserPrefs userPrefs = initPrefs(userPrefsStorage);
         AddressBookStorage addressBookStorage = new JsonAddressBookStorage(userPrefs.getAddressBookFilePath());
-        storage = new StorageManager(addressBookStorage, userPrefsStorage);
+        AddressBookStorage profStorage = new JsonAddressBookStorage(userPrefs.getProfFilePath());
+        storage = new StorageManager(addressBookStorage, profStorage, userPrefsStorage);
 
         model = initModelManager(storage, userPrefs);
 
@@ -75,20 +76,25 @@ public class MainApp extends Application {
         logger.info("Using data file : " + storage.getAddressBookFilePath());
 
         Optional<ReadOnlyAddressBook> addressBookOptional;
+        Optional<ReadOnlyAddressBook> profDataOptional;
         ReadOnlyAddressBook initialData;
+        ReadOnlyAddressBook profData;
         try {
             addressBookOptional = storage.readAddressBook();
+            profDataOptional = storage.readProfData();
             if (!addressBookOptional.isPresent()) {
                 logger.info("Creating a new data file " + storage.getAddressBookFilePath());
             }
             initialData = addressBookOptional.orElseGet(() -> new AddressBook());
+            profData = profDataOptional.orElseGet(() -> new AddressBook());
         } catch (DataLoadingException e) {
             logger.warning("Data file at " + storage.getAddressBookFilePath() + " could not be loaded."
                     + " Will be starting with an empty AddressBook.");
             initialData = new AddressBook();
+            profData = new AddressBook();
         }
 
-        return new ModelManager(initialData, userPrefs);
+        return new ModelManager(initialData, profData, userPrefs);
     }
 
     private void initLogging(Config config) {

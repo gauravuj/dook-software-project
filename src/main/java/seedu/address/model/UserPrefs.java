@@ -18,6 +18,8 @@ public class UserPrefs implements ReadOnlyUserPrefs {
     private GuiSettings guiSettings = new GuiSettings();
     private Path addressBookFilePath = Paths.get("data" , "addressbook.json");
 
+    private Path profFilePath = Paths.get("src/main/resources", "professorData.json");
+
     private Alias aliases = new Alias();
 
 
@@ -66,7 +68,16 @@ public class UserPrefs implements ReadOnlyUserPrefs {
         return addressBookFilePath;
     }
 
+    public Path getProfFilePath() {
+        return profFilePath;
+    }
+
     public void setAddressBookFilePath(Path addressBookFilePath) {
+        requireNonNull(addressBookFilePath);
+        this.addressBookFilePath = addressBookFilePath;
+    }
+
+    public void setProfFilePath(Path profFilePath) {
         requireNonNull(addressBookFilePath);
         this.addressBookFilePath = addressBookFilePath;
     }
