@@ -1,6 +1,5 @@
 package seedu.address.testutil;
 
-import seedu.address.logic.commands.BookCommand;
 import seedu.address.logic.parser.CliSyntax;
 import seedu.address.model.booking.Booking;
 import seedu.address.model.booking.Description;

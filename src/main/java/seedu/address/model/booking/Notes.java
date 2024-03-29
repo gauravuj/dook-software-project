@@ -25,7 +25,7 @@ public class Notes {
      * Must not be empty or made of spaces.
      */
     public static boolean isValidNote(String test) {
-        return !test.isEmpty();
+        return test != null && !test.trim().isEmpty();
     }
 
     @Override

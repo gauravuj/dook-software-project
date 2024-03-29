@@ -3,7 +3,6 @@ package seedu.address.logic.parser;
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static seedu.address.logic.commands.CommandTestUtil.BOOKING_DESC_TEST;
 import static seedu.address.logic.commands.CommandTestUtil.END_TIME_DESC_TEST;
-import static seedu.address.logic.commands.CommandTestUtil.NOTE_DESC_TEST;
 import static seedu.address.logic.commands.CommandTestUtil.START_TIME_DESC_TEST;
 import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;
 import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;
