@@ -38,7 +38,7 @@ public class Notes {
         if (this == other) {
             return true;
         }
-        if (!(other instanceof Description)) {
+        if (!(other instanceof Notes)) {
             return false;
         }
         Notes otherNote = (Notes) other;

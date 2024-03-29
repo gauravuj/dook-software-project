@@ -74,7 +74,7 @@ class JsonAdaptedBooking {
         final EndTime modelEnd = new EndTime(end);
 
         if (!Notes.isValidNote(this.notes)) {
-            throw new IllegalValueException(Email.MESSAGE_CONSTRAINTS);
+            throw new IllegalValueException(Notes.MESSAGE_CONSTRAINTS);
         }
         final Notes modelNote = new Notes(this.notes);
 

@@ -54,4 +54,19 @@ public class BookCommand extends Command {
         model.addBooking(toAdd);
         return new CommandResult(String.format(MESSAGE_SUCCESS, Messages.formatBooking(toAdd)));
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other == this) {
+            return true;
+        }
+
+        // instanceof handles nulls
+        if (!(other instanceof BookCommand)) {
+            return false;
+        }
+
+        BookCommand otherBookCommand = (BookCommand) other;
+        return toAdd.equals(otherBookCommand.toAdd);
+    }
 }

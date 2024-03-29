@@ -1,10 +1,7 @@
 package seedu.address.logic.parser;
 
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_END_TIME;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_NOTES;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_START_TIME;
+import static seedu.address.logic.parser.CliSyntax.*;
 
 import java.util.stream.Stream;
 
@@ -17,28 +14,29 @@ import seedu.address.model.booking.Notes;
 import seedu.address.model.booking.StartTime;
 
 /**
- * Parses input arguments and creates a new AddBookingCommand object
+ * Parses input arguments and creates a new BookCommand object
  */
 public class BookCommandParser implements Parser<BookCommand> {
     /**
-     * Parses the given {@code String} of arguments in the context of the AddBookingCommand
-     * and returns an AddBookingCommand object for execution.
+     * Parses the given {@code String} of arguments in the context of the BookCommand
+     * and returns an BookCommand object for execution.
      * @throws ParseException if the user input does not conform the expected format
      */
     public BookCommand parse(String args) throws ParseException {
         ArgumentMultimap argMultimap =
-                ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES);
+                ArgumentTokenizer.tokenize(args, PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES);
 
-        if (!arePrefixesPresent(argMultimap, PREFIX_NAME, PREFIX_START_TIME, PREFIX_END_TIME)
+        if (!arePrefixesPresent(argMultimap, PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME)
                 || !argMultimap.getPreamble().isEmpty()) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, BookCommand.MESSAGE_USAGE));
         }
 
-        argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_NAME, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES);
+        argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES);
 
-        Description description = ParserUtil.parseBookingName(argMultimap.getValue(PREFIX_NAME).get());
+        Description description = ParserUtil.parseBookingName(argMultimap.getValue(PREFIX_DESCRIPTION).get());
         StartTime start = ParserUtil.parseStartTime(argMultimap.getValue(PREFIX_START_TIME).get());
         EndTime end = ParserUtil.parseEndTime(argMultimap.getValue(PREFIX_END_TIME).get());
+
         // Parse note only if the prefix is present
         Notes note = argMultimap.getValue(PREFIX_NOTES).isPresent()
                 ? ParserUtil.parseBookingNote(argMultimap.getValue(PREFIX_NOTES).get())

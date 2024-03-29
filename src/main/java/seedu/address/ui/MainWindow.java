@@ -155,6 +155,8 @@ public class MainWindow extends UiPart<Stage> {
             styleSheet = "/view/stylesheets/LightTheme.css";
             break;
         case DARK:
+            styleSheet = "/view/stylesheets/DarkTheme.css";
+            break;
         default:
             styleSheet = "/view/stylesheets/DarkTheme.css";
         }

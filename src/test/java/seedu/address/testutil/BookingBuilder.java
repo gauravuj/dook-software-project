@@ -1,5 +1,7 @@
 package seedu.address.testutil;
 
+import seedu.address.logic.commands.BookCommand;
+import seedu.address.logic.parser.CliSyntax;
 import seedu.address.model.booking.Booking;
 import seedu.address.model.booking.Description;
 import seedu.address.model.booking.EndTime;
@@ -39,6 +41,29 @@ public class BookingBuilder {
         start = bookingToCopy.getStart();
         end = bookingToCopy.getEnd();
         this.note = bookingToCopy.getNotes();
+    }
+
+    /**
+     * Returns the parameters required to build the booking
+     */
+    public String getBookingString() {
+        StringBuilder builder = new StringBuilder();
+
+        builder.append(" ")
+                .append(CliSyntax.PREFIX_DESCRIPTION)
+                .append(this.description)
+                .append(" ")
+                .append(CliSyntax.PREFIX_START_TIME)
+                .append(this.start)
+                .append(" ")
+                .append(CliSyntax.PREFIX_END_TIME)
+                .append(this.end);
+
+        if (this.note != null) {
+            return builder.append(" ").append(CliSyntax.PREFIX_NOTES).append(this.note).toString();
+        } else {
+            return builder.toString();
+        }
     }
 
     /**
