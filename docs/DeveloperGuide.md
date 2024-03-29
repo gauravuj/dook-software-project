@@ -233,6 +233,22 @@ The following activity diagram summarizes what happens when a user executes a ne
 
 _{more aspects and alternatives to be added}_
 
+### Book Command
+It is important to understand how the `book` command is designed, so that it can be expanded upon in the future.
+
+The `book` command is used to add new bookings to Dook, with four properties. 
+
+Compulsory: `Description`, `StartTime`, `EndTime`
+Optional: `Notes`
+
+When a user wants to add a new booking, they enter
+```
+book -n CS2103T Consult -s 2023-12-31 19:00 -e 2023-12-31 23:00 -note bring worsksheet
+```
+Internally, the `book` command follows the [Command Pattern](https://nus-cs2103-ay2324s2.github.io/website/schedule/week10/topics.html#command-pattern) as shown in sequence diagram below.
+![BookCommandSequenceDiagram](images/BookCommandSequenceDiagram.png)
+
+
 ### Theme switching
 
 **Themes** practically are changed by switching the CSS file that MainWindow.java uses in
