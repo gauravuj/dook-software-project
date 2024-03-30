@@ -7,10 +7,10 @@ import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.booking.Booking;
 import seedu.address.model.booking.Description;
 import seedu.address.model.booking.EndTime;
+import seedu.address.model.booking.Notes;
 import seedu.address.model.booking.StartTime;
 import seedu.address.model.person.Email;
 import seedu.address.model.person.Phone;
-
 
 /**
  * Jackson-friendly version of {@link Booking}.
@@ -21,16 +21,18 @@ class JsonAdaptedBooking {
     private final String description;
     private final String start;
     private final String end;
+    private final String notes;
 
     /**
      * Constructs a {@code JsonAdaptedBooking} with the given Booking details.
      */
     @JsonCreator
     public JsonAdaptedBooking(@JsonProperty("description") String description, @JsonProperty("start") String start,
-                             @JsonProperty("end") String end) {
+                             @JsonProperty("end") String end, @JsonProperty("notes") String notes) {
         this.description = description;
         this.start = start;
         this.end = end;
+        this.notes = notes;
     }
 
     /**
@@ -40,6 +42,7 @@ class JsonAdaptedBooking {
         description = source.getDescription().description;
         start = source.getStart().startTimeString;
         end = source.getEnd().endTimeString;
+        notes = source.getNotes().notes;
     }
 
     /**
@@ -70,6 +73,11 @@ class JsonAdaptedBooking {
         }
         final EndTime modelEnd = new EndTime(end);
 
-        return new Booking(modelDescription, modelStart, modelEnd);
+        if (!Notes.isValidNote(this.notes)) {
+            throw new IllegalValueException(Notes.MESSAGE_CONSTRAINTS);
+        }
+        final Notes modelNote = new Notes(this.notes);
+
+        return new Booking(modelDescription, modelStart, modelEnd, modelNote);
     }
 }

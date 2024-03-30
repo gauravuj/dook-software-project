@@ -25,6 +25,8 @@ public class BookingCard extends UiPart<Region> {
     private Label startTime;
     @FXML
     private Label endTime;
+    @FXML
+    private Label notes;
 
     /**
      * Constructs a BookingCard object with the specified booking and displayed index.
@@ -39,5 +41,6 @@ public class BookingCard extends UiPart<Region> {
         description.setText(booking.getDescription().description);
         startTime.setText(booking.getStart().startTimeString);
         endTime.setText(booking.getEnd().endTimeString);
+        notes.setText(booking.getNotes().notes);
     }
 }
