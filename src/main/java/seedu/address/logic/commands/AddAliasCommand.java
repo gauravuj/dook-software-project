@@ -23,7 +23,7 @@ public class AddAliasCommand extends Command {
             + PREFIX_ALIAS + "{new alias} "
             + PREFIX_REPLACED + "{command to replace}\n"
             + "Example usage: " + COMMAND_WORD + " "
-            + PREFIX_ALIAS + "dark"
+            + PREFIX_ALIAS + "dark "
             + PREFIX_REPLACED + "theme -bg dark";
 
     private final String alias;
