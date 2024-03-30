@@ -2,16 +2,20 @@ package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
+import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
 
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
+import seedu.address.model.person.NameContainsKeywordsPredicate;
 import seedu.address.model.person.Person;
 
-
+/**
+ * Adds a professor to the address book.
+ */
 public class AddProfCommand extends Command {
     public static final String COMMAND_WORD = "prof";
 
-    public static final String MESSAGE_SUCCESS = "Professor %1s Added!";
+    public static final String MESSAGE_SUCCESS = "Professors Added!";
 
     public static final String MESSAGE_USAGE = AddProfCommand.COMMAND_WORD + "Adds a professor to the address book.\n"
             + "Parameters: "
@@ -19,51 +23,26 @@ public class AddProfCommand extends Command {
             + "Example usage: " + COMMAND_WORD + " "
             + PREFIX_NAME + "aaron";
 
-    public static final String MESSAGE_DUPLICATE_PERSON = "This person already exists in the address book";
-    String profToAdd;
+    private NameContainsKeywordsPredicate profToAdd;
 
-    public AddProfCommand(String name) {
+    /**
+     * Constructs an AddProfCommand to add the specified professor.
+     *
+     * @param name The name predicate to be used for filtering professors to be added.
+     */
+    public AddProfCommand(NameContainsKeywordsPredicate name) {
         this.profToAdd = name;
     }
 
     @Override
     public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
-
-        Person professor = fuzzyFind(profToAdd, model);
-        if (model.hasPerson(professor)) {
-            throw new CommandException(MESSAGE_DUPLICATE_PERSON);
+        model.updateFilteredProfList(profToAdd);
+        for (Person person : model.getFilteredProfList()) {
+            model.addPerson(person);
         }
-        model.addPerson(professor);
-        return new CommandResult(String.format(MESSAGE_SUCCESS, profToAdd));
+        model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
+        return new CommandResult(String.format(MESSAGE_SUCCESS));
     }
 
-    private Person fuzzyFind(String query, Model model) {
-
-        int maxScore = Integer.MIN_VALUE;
-        Person matchedPerson = null;
-        for (Person person : model.getProfData().getPersonList()) {
-            int score = fuzzyMatch(query, person.getName().fullName);
-            if (score > maxScore) {
-                maxScore = score;
-                matchedPerson = person;
-            }
-        }
-        return matchedPerson;
-    }
-
-    private static int fuzzyMatch(String s1, String s2) {
-        int score = 0;
-        int i = 0, j = 0;
-        while (i < s1.length() && j < s2.length()) {
-            if (s1.charAt(i) == s2.charAt(j)) {
-                score++;
-                i++;
-                j++;
-            } else {
-                j++;
-            }
-        }
-        return score;
-    }
 }

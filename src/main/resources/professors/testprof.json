@@ -1,0 +1,32 @@
+{
+  "persons": [
+    {
+      "name": "Sarada A",
+      "phone": "65168090",
+      "email": null,
+      "address": "COM2-02-25",
+      "tags": [
+        "SOCfaculty"
+      ],
+      "image": null
+    },
+    {
+      "name": "Praneeth Shalinda Adikari A A",
+      "phone": "66012381",
+      "email": null,
+      "address": "COM2-02-48",
+      "tags": [
+      ],
+      "image": null
+    },
+    {
+      "name": "Michael David ADAMS",
+      "phone": "66017690",
+      "email": null,
+      "address": "COM3-02-47",
+      "tags": [
+      ],
+      "image": "/images/michaeldavid.png"
+    }],
+  "bookings" : []
+}

@@ -26,6 +26,7 @@ public class ModelManager implements Model {
     private final ProfData profData;
     private final UserPrefs userPrefs;
     private final FilteredList<Person> filteredPersons;
+    private final FilteredList<Person> filteredProf;
     private final FilteredList<Booking> filteredBookings;
 
     /**
@@ -41,6 +42,7 @@ public class ModelManager implements Model {
         this.userPrefs = new UserPrefs(userPrefs);
         filteredPersons = new FilteredList<>(this.addressBook.getPersonList());
         filteredBookings = new FilteredList<>(this.addressBook.getBookingList());
+        filteredProf = new FilteredList<>(this.profData.getPersonList());
     }
 
     public ModelManager() {
@@ -220,8 +222,26 @@ public class ModelManager implements Model {
         return profData;
     }
 
+    /**
+     * Checks if the given person exists in the professor data.
+     *
+     * @param person The person to be checked for existence in the professor data. Must not be null.
+     * @return true if the person exists in the professor data, false otherwise.
+     * @throws NullPointerException If the specified person is null.
+     */
     public boolean hasProf(Person person) {
         requireNonNull(person);
         return profData.hasPerson(person);
+    }
+
+    @Override
+    public ObservableList<Person> getFilteredProfList() {
+        return filteredProf;
+    }
+
+    @Override
+    public void updateFilteredProfList(Predicate<Person> predicate) {
+        requireNonNull(predicate);
+        filteredProf.setPredicate(predicate);
     }
 }

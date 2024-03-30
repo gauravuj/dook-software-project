@@ -1,5 +1,9 @@
 package seedu.address.model;
 
+import static java.util.Objects.requireNonNull;
+
+import java.util.List;
+
 import javafx.collections.ObservableList;
 import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.model.booking.Booking;
@@ -7,10 +11,10 @@ import seedu.address.model.booking.UniqueBookingList;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.UniquePersonList;
 
-import java.util.List;
-
-import static java.util.Objects.requireNonNull;
-
+/**
+ * Represents the entire professor data. Contains the data of the professors and bookings in the address book.
+ * Guarantees: details are present and not null, field values are validated, immutable.
+ */
 public class ProfData implements ReadOnlyAddressBook {
     private final UniquePersonList professors;
     private final UniqueBookingList bookings;
@@ -21,7 +25,8 @@ public class ProfData implements ReadOnlyAddressBook {
      *
      * Note that non-static init blocks are not recommended to use. There are other ways to avoid duplication
      *   among constructors.
-     */ {
+     */
+    {
         professors = new UniquePersonList();
         bookings = new UniqueBookingList();
     }
@@ -72,6 +77,9 @@ public class ProfData implements ReadOnlyAddressBook {
     public boolean hasPerson(Person person) {
         requireNonNull(person);
         return professors.contains(person);
+    }
+    public void addPerson(Person p) {
+        professors.add(p);
     }
 
     @Override

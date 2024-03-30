@@ -59,7 +59,8 @@ public class JsonUtil {
     public static <T> Optional<T> readJsonFile(
             Path filePath, Class<T> classOfObjectToDeserialize) throws DataLoadingException {
         requireNonNull(filePath);
-
+        System.out.println(filePath);
+        System.out.println(Files.exists(filePath));
         if (!Files.exists(filePath)) {
             return Optional.empty();
         }

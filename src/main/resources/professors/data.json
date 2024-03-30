@@ -1,0 +1,3800 @@
+{
+  "persons": [
+    {
+      "name": "Sarada A",
+      "phone": "65168090",
+      "email": null,
+      "address": "COM2-02-25",
+      "tags": [
+        "SOC_faculty",
+        "Operations_Support_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Praneeth Shalinda Adikari A A",
+      "phone": "66012381",
+      "email": null,
+      "address": "COM2-02-48",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Michael David ADAMS",
+      "phone": "66017690",
+      "email": null,
+      "address": "COM3-02-47",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Divesh AGGARWAL",
+      "phone": "65162911",
+      "email": null,
+      "address": "COM3-02-09",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "AI Xin",
+      "phone": "66016657",
+      "email": null,
+      "address": "COM3-B1-24",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Aminah Ayu",
+      "phone": "65167966",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Boyd ANDERSON",
+      "phone": "66017900",
+      "email": null,
+      "address": "COM3-02-46",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Agnes ANG Hwee Ying",
+      "phone": "65165242",
+      "email": null,
+      "address": "COM1-03-43",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "ANG Cheng Lian",
+      "phone": "65161184",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Dexter ANG Wei Rong",
+      "phone": "65164889",
+      "email": null,
+      "address": "COM1-01-02",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "ANG Jia Ying",
+      "phone": "65165913",
+      "email": null,
+      "address": "COM1-03-05",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Joy ANN Pei Xuan",
+      "phone": "66017636",
+      "email": null,
+      "address": "COM1-03-30",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Anuwar Bin Shukor",
+      "phone": "66017893",
+      "email": null,
+      "address": "COM3-01-19",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Veronica AU Poh Poh",
+      "phone": "65161171",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Mark Christopher BARTHOLOMEUSZ",
+      "phone": "65161205",
+      "email": null,
+      "address": "COM1-03-07",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Arnab BHATTACHARYYA",
+      "phone": "66017898",
+      "email": null,
+      "address": "COM3-02-42",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Anand BHOJAN",
+      "phone": "65167351",
+      "email": null,
+      "address": "COM3-02-49",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Sharifah Noor Ain BINTE AHMAD ALHABSHI",
+      "phone": "66017588",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Bruno BODIN",
+      "phone": "66017805",
+      "email": null,
+      "address": "RC3-01-03F",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Stephane BRESSAN",
+      "phone": "65163543",
+      "email": null,
+      "address": "COM1-03-20",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Xavier Roger Gilbert BRESSON",
+      "phone": "66017633",
+      "email": null,
+      "address": "COM2-04-26",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Cristina CARBUNARU",
+      "phone": "65168850",
+      "email": null,
+      "address": "COM2-02-05",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Trevor Erik CARLSON",
+      "phone": "65167997",
+      "email": null,
+      "address": "COM3-02-10",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Diptarka CHAKRABORTY",
+      "phone": "65162829",
+      "email": null,
+      "address": "COM3-02-55",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Alexandria CHAN Foong Leng",
+      "phone": "66011859",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHAN Chee Heng",
+      "phone": "65168091",
+      "email": null,
+      "address": "COM1-01-02",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHAN Chee Yong",
+      "phone": "65166736",
+      "email": null,
+      "address": "COM1-03-24",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHAN Mun Choon",
+      "phone": "65167372",
+      "email": null,
+      "address": "COM3-02-15",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHAN Mun Kitt",
+      "phone": "66016679",
+      "email": null,
+      "address": "COM2-02-01",
+      "tags": [
+        "SOC_faculty",
+        "Head"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHAN Peh Yee",
+      "phone": "65161311",
+      "email": null,
+      "address": "BIZ2-04-02",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Sharon CHAN Sok Mung",
+      "phone": "66013462",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHAN Tim Fook",
+      "phone": "65167356",
+      "email": null,
+      "address": "COM1-01-06D",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHANG Ee Chien",
+      "phone": "65166168",
+      "email": null,
+      "address": "COM2-04-30",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Iris CHANG Kiat Wei",
+      "phone": "65161479",
+      "email": null,
+      "address": "COM1-03-01",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHANG YiJun",
+      "phone": "66017595",
+      "email": null,
+      "address": "COM3-02-24",
+      "tags": [
+        "SOC_faculty",
+        "NUS_Presidential_Young_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Nicholas CHEANG Thin Chi",
+      "phone": "66017661",
+      "email": null,
+      "address": "COM1-03-02",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Agnes CHEE Siew Ling",
+      "phone": "66017715",
+      "email": null,
+      "address": "COM1-03-05",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHEN Nan",
+      "phone": "66017524",
+      "email": null,
+      "address": "COM3-02-32",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHEN Tsuhan",
+      "phone": "65164544",
+      "email": null,
+      "address": "COM1-03-04",
+      "tags": [
+        "SOC_faculty",
+        "Distinguished_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Alan CHENG Holun",
+      "phone": "65168732",
+      "email": null,
+      "address": "AS6-05-03",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHENG Chek Keong",
+      "phone": "65166577",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHENG Sin Yi",
+      "phone": "66012642",
+      "email": null,
+      "address": "COM1-03-30",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHEON Yuet Ying",
+      "phone": "65162727",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHIA Fui Min",
+      "phone": "66011284",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "Henry CHIA Wai Kit",
+      "phone": "65161556",
+      "email": null,
+      "address": "COM2-03-10",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Adele CHIEW Mahn Ling",
+      "phone": "65162728",
+      "email": null,
+      "address": "COM1-02-19",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHIN Chwee Tiep",
+      "phone": "65161075",
+      "email": null,
+      "address": "COM1-03-37",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHIN Wei Ngan",
+      "phone": "65166228",
+      "email": null,
+      "address": "COM3-02-11",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Gary CHIONG Hian Boon",
+      "phone": "65164939",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHNG Lay Khim",
+      "phone": "65164358",
+      "email": null,
+      "address": "COM1-03-41",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHO Shi Pei",
+      "phone": "65164597",
+      "email": null,
+      "address": "COM2-02-19",
+      "tags": [
+        "SOC_faculty",
+        "Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHONG Ket Fah",
+      "phone": "66011037",
+      "email": null,
+      "address": "COM2-02-66",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHONG Peng Kong",
+      "phone": "65166534",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHOW Chin Ming",
+      "phone": "65166845",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jessica CHOY Ing",
+      "phone": "65166227",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Kaden CHUA Chang Hong",
+      "phone": "66011401",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "CHUA Tat Seng",
+      "phone": "65162505",
+      "email": null,
+      "address": "AS6-05-08",
+      "tags": [
+        "SOC_faculty",
+        "KITHCT_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "CUI Wei",
+      "phone": "66018750",
+      "email": null,
+      "address": "COM2-04-32",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Liv DAI Yanqin",
+      "phone": "65164589",
+      "email": null,
+      "address": "AS6-04-03A",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ashish Deepak DANDEKAR",
+      "phone": "66017631",
+      "email": null,
+      "address": "COM2-03-58",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Olivier Gerard Henri Marie DANVY",
+      "phone": "65162936",
+      "email": null,
+      "address": "COM2-03-38",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "DONG Jin Song",
+      "phone": "65164353",
+      "email": null,
+      "address": "COM2-03-19",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "EE Kiam Keong",
+      "phone": "",
+      "email": null,
+      "address": "COM2-03-15/16/17/18",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Faridah Bte Mahmud",
+      "phone": "65164292",
+      "email": null,
+      "address": "COM1-01-01",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Rhoda FOO Siew Hui",
+      "phone": "66011481",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "FOONG Sew Bun",
+      "phone": "65168413",
+      "email": null,
+      "address": "COM2-04-27",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jack GAN Yoke Lian",
+      "phone": "66011360",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Nicholas Mac Gregor GARCIA",
+      "phone": "66016654",
+      "email": null,
+      "address": "COM2-04-09",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Seth Lewis GILBERT",
+      "phone": "65162729",
+      "email": null,
+      "address": "COM2-03-23",
+      "tags": [
+        "SOC_faculty",
+        "Deans_Chair_Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ivy GOH Aiqi",
+      "phone": "66013786",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "GOH Khim Yong",
+      "phone": "65162832",
+      "email": null,
+      "address": "COM2-04-33",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Maybelline GOH Shu Qing",
+      "phone": "65161561",
+      "email": null,
+      "address": "COM2-02-14",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Systems_Analyst"
+      ],
+      "image": null
+    },
+    {
+      "name": "Summer GOH Xue Li",
+      "phone": "65161720",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "HAHN Jungpil",
+      "phone": "65167345",
+      "email": null,
+      "address": "COM3-02-43",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Steven HALIM",
+      "phone": "65167361",
+      "email": null,
+      "address": "COM2-03-37",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Charissa HAN Kait Yen",
+      "phone": "65166551",
+      "email": null,
+      "address": "COM1-01-03",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Vivien HAO Jie",
+      "phone": "65164590",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "HE Bingsheng",
+      "phone": "65167998",
+      "email": null,
+      "address": "COM3-02-12",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "HENG Cheng Suang",
+      "phone": "66012268",
+      "email": null,
+      "address": "COM2-04-41",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Martin HENZ",
+      "phone": "65166632",
+      "email": null,
+      "address": "COM3-02-05",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Alvin HO Kok Leong",
+      "phone": "65164369",
+      "email": null,
+      "address": "COM2-02-50",
+      "tags": [
+        "SOC_faculty",
+        "Principal_Systems_Engineer"
+      ],
+      "image": null
+    },
+    {
+      "name": "HO May Foong",
+      "phone": "65167364",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "HO Siew Foong",
+      "phone": "65162730",
+      "email": null,
+      "address": "COM1-03-32",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "HO Swee FongSoc Finance",
+      "phone": "65164099",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "HON Fang Rui",
+      "phone": "65161365",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Bryan HOOI Kuen Yew",
+      "phone": "66012373",
+      "email": null,
+      "address": "COM3-02-22",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "David HSU",
+      "phone": "65162978",
+      "email": null,
+      "address": "COM3-02-07",
+      "tags": [
+        "SOC_faculty",
+        "Provosts_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Wynne HSU",
+      "phone": "65167944",
+      "email": null,
+      "address": "COM2-03-05",
+      "tags": [
+        "SOC_faculty",
+        "Provosts_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "HU Conghui",
+      "phone": "66017578",
+      "email": null,
+      "address": "COM2-03-07",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "HUANG KeWei",
+      "phone": "65162786",
+      "email": null,
+      "address": "COM2-04-18",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "HUANG Zhiyong",
+      "phone": "65161170",
+      "email": null,
+      "address": "AS6-05-11",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Practice_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "David HUI Wai Kin",
+      "phone": "66016678",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "Joxan JAFFAR",
+      "phone": "65167846",
+      "email": null,
+      "address": "COM1-03-11",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Rahul JAIN",
+      "phone": "",
+      "email": null,
+      "address": "COM2-02-02",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Sanjay JAIN",
+      "phone": "65167842",
+      "email": null,
+      "address": "COM2-03-59",
+      "tags": [
+        "SOC_faculty",
+        "Provosts_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jerina Bibee",
+      "phone": "65168189",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "JIANG Kan",
+      "phone": "66017637",
+      "email": null,
+      "address": "COM2-03-24",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "JIN Chen",
+      "phone": "65166148",
+      "email": null,
+      "address": "COM2-04-35",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Vasakee DO JOHN PAUL",
+      "phone": "66013781",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "Joyce Paul",
+      "phone": "65168670",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "KAN Min Yen",
+      "phone": "65161885",
+      "email": null,
+      "address": "COM3-02-30",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Kanageswari DO Krishnan",
+      "phone": "66013087",
+      "email": null,
+      "address": "BIZ2-04-02",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Atreyi KANKANHALLI",
+      "phone": "65164865",
+      "email": null,
+      "address": "COM3-02-37",
+      "tags": [
+        "SOC_faculty",
+        "Provosts_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Mohan KANKANHALLI",
+      "phone": "65166738",
+      "email": null,
+      "address": "AS6-05-06",
+      "tags": [
+        "SOC_faculty",
+        "Provosts_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Varun KARAMSHETTY",
+      "phone": "65164091",
+      "email": null,
+      "address": "COM3-02-39",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Aditya KARANAM",
+      "phone": "65162719",
+      "email": null,
+      "address": "COM3-02-31",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Katarina Jiang Ongaigui",
+      "phone": "66011064",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Kenji KAWAGUCHI",
+      "phone": "",
+      "email": null,
+      "address": "COM3-02-52",
+      "tags": [
+        "SOC_faculty",
+        "NUS_Presidential_Young_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "KHOO Siau Cheng",
+      "phone": "65166730",
+      "email": null,
+      "address": "COM2-04-11",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Alan KOH Leong Tuan",
+      "phone": "66012750",
+      "email": null,
+      "address": "COM1-03-35",
+      "tags": [
+        "SOC_faculty",
+        "Director_Of_Administration"
+      ],
+      "image": null
+    },
+    {
+      "name": "Joy KOH Min Le",
+      "phone": "66017704",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Karen KOH Hui Keng",
+      "phone": "65168917",
+      "email": null,
+      "address": "COM1-03-06",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Stanley KOK",
+      "phone": "65162901",
+      "email": null,
+      "address": "COM2-04-20",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Molly Helene KRUKO",
+      "phone": "66012295",
+      "email": null,
+      "address": "COM2-02-18",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Edward KUNG Chong Tack",
+      "phone": "65161219",
+      "email": null,
+      "address": "BIZ2-04-02",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Manager_Business_Development"
+      ],
+      "image": null
+    },
+    {
+      "name": "KWEK Swee Seng",
+      "phone": "65164947",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Lydia Adam KWONG",
+      "phone": "66011050",
+      "email": null,
+      "address": "COM1-03-03",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Nakyung KYUNG",
+      "phone": "65166270",
+      "email": null,
+      "address": "COM3-02-41",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Evelyn LAI Pei Yee",
+      "phone": "66011073",
+      "email": null,
+      "address": "AS6-04-18",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Sam LAI Jin Wei",
+      "phone": "65167357",
+      "email": null,
+      "address": "COM1-01-01",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "LAI Zit Seng",
+      "phone": "66011088",
+      "email": null,
+      "address": "COM2-02-51",
+      "tags": [
+        "SOC_faculty",
+        "Principal_IT_Architect"
+      ],
+      "image": null
+    },
+    {
+      "name": "Nitya LAKSHMANAN",
+      "phone": "66017585",
+      "email": null,
+      "address": "COM3-02-44",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Philip LAM Wing Soon",
+      "phone": "65167369",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEE Boon Kee",
+      "phone": "65162733",
+      "email": null,
+      "address": "COM2-04-19",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Darren LEE Yu Min",
+      "phone": "65161031",
+      "email": null,
+      "address": "COM2-02-50",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Systems_Analyst"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEE Gim Hee",
+      "phone": "65162214",
+      "email": null,
+      "address": "COM2-03-54",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jeslyn LEE Chun Wei",
+      "phone": "66017551",
+      "email": null,
+      "address": "COM1-03-02",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEE Jin Xing",
+      "phone": "66012379",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Linda LEE Xinhui",
+      "phone": "65164368",
+      "email": null,
+      "address": "COM2-02-33",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEE Mong Li",
+      "phone": "65162905",
+      "email": null,
+      "address": "COM2-03-06",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Sharnie LEE Xin",
+      "phone": "65161524",
+      "email": null,
+      "address": "COM1-02-19",
+      "tags": [
+        "SOC_faculty",
+        "Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEE Wee Sun",
+      "phone": "65164526",
+      "email": null,
+      "address": "COM3-02-28",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEE Whee Hong",
+      "phone": "65161233",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEE YiChieh",
+      "phone": "65168354",
+      "email": null,
+      "address": "AS6-04-05",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEE Zheng Yi",
+      "phone": "66017895",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEK Hsiang Hui",
+      "phone": "66011049",
+      "email": null,
+      "address": "COM2-02-04",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ben LEONG Wing Lup",
+      "phone": "65164240",
+      "email": null,
+      "address": "COM2-03-20",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Gene LEONG Kah Fai",
+      "phone": "66011900",
+      "email": null,
+      "address": "COM1-03-07",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEONG Hon Wai",
+      "phone": "65162903",
+      "email": null,
+      "address": "COM1-03-17",
+      "tags": [
+        "SOC_faculty",
+        "Honorary_Fellow"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEONG Tze Yun",
+      "phone": "65166519",
+      "email": null,
+      "address": "COM3-02-06",
+      "tags": [
+        "SOC_faculty",
+        "Professor_Practice_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEONG Wai Kay",
+      "phone": "65166795",
+      "email": null,
+      "address": "COM2-02-11",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEONG Wai Kin",
+      "phone": "65164409",
+      "email": null,
+      "address": "COM1-01-03",
+      "tags": [
+        "SOC_faculty",
+        "Lab_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "LEOW Wee Kheng",
+      "phone": "65166540",
+      "email": null,
+      "address": "AS6-05-07",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Daren LER Shan Wen",
+      "phone": "65163165",
+      "email": null,
+      "address": "COM2-02-65",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Denise LI Fangyi",
+      "phone": "66017892",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "LI Jialin",
+      "phone": "66017678",
+      "email": null,
+      "address": "COM3-02-54",
+      "tags": [
+        "SOC_faculty",
+        "Sung_Kah_Kay_Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "LI Xiaofan",
+      "phone": "66017608",
+      "email": null,
+      "address": "COM2-04-10",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Susan LIAN",
+      "phone": "65161187",
+      "email": null,
+      "address": "COM1-03-03",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "LIANG Zhenkai",
+      "phone": "65161226",
+      "email": null,
+      "address": "COM1-03-16",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Brian LIM Youliang",
+      "phone": "66011084",
+      "email": null,
+      "address": "COM2-03-49",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "LIM Chew Eng",
+      "phone": "65165140",
+      "email": null,
+      "address": "COM1-01-02",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "David LIM Chan Leng",
+      "phone": "66013782",
+      "email": null,
+      "address": "COM2-02-43",
+      "tags": [
+        "SOC_faculty",
+        "Technical_Requirements_Coordinator"
+      ],
+      "image": null
+    },
+    {
+      "name": "Emily LIM Ming Li",
+      "phone": "65166215",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jane LIM Li Sze",
+      "phone": "65164371",
+      "email": null,
+      "address": "COM1-03-40",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "Pamela LIM Mai Fun",
+      "phone": "65164370",
+      "email": null,
+      "address": "COM1-02-19",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "Philip LIM Hui Lip",
+      "phone": "65164360",
+      "email": null,
+      "address": "COM2-02-52",
+      "tags": [
+        "SOC_faculty",
+        "Lead_Systems_Analyst"
+      ],
+      "image": null
+    },
+    {
+      "name": "LIM Shi Ying",
+      "phone": "65164654",
+      "email": null,
+      "address": "COM2-04-28",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "LIM Sing Ing",
+      "phone": "65161562",
+      "email": null,
+      "address": "COM2-02-14",
+      "tags": [
+        "SOC_faculty",
+        "Principal_Systems_Analyst"
+      ],
+      "image": null
+    },
+    {
+      "name": "Victor LIM Boon Hock",
+      "phone": "65162237",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Winni LIM Pei Wen",
+      "phone": "66013787",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Yuenice LIN Yue",
+      "phone": "65161510",
+      "email": null,
+      "address": "BIZ2-04-02",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "LING Tok Wang",
+      "phone": "65162734",
+      "email": null,
+      "address": "COM2-03-01",
+      "tags": [
+        "SOC_faculty",
+        "Emeritus_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "LIOW Lay Hoon",
+      "phone": "65164287",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Specialist_Associate"
+      ],
+      "image": null
+    },
+    {
+      "name": "LIU Lili",
+      "phone": "66017664",
+      "email": null,
+      "address": "COM2-03-25",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "June LOH Yurong",
+      "phone": "65161101",
+      "email": null,
+      "address": "BIZ2-04-02",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Phillips LOH Kar Mun",
+      "phone": "65166765",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "LOH Yong Chye",
+      "phone": "",
+      "email": null,
+      "address": "COM2-03-15",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jeasy LOO",
+      "phone": "65161553",
+      "email": null,
+      "address": "COM1-03-29",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "LOO Line Fong",
+      "phone": "65164481",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "LOU Hui Chu",
+      "phone": "65165124",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Esther LOW Xinyi",
+      "phone": "65161725",
+      "email": null,
+      "address": "COM1-03-03",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Joyce LOW Li Koon",
+      "phone": "66017649",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "LOW Kian Hsiang",
+      "phone": "65164719",
+      "email": null,
+      "address": "COM3-02-29",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "LOW Kok Lim",
+      "phone": "65166784",
+      "email": null,
+      "address": "AS6-04-09",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "LOW Mun Bak",
+      "phone": "65165129",
+      "email": null,
+      "address": "COM1-02-19",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Richard MA Tianbai",
+      "phone": "65164244",
+      "email": null,
+      "address": "COM3-02-14",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Vivek Sundar MAGESH",
+      "phone": "66011733",
+      "email": null,
+      "address": "COM2-02-36",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "MAH Su Zhi",
+      "phone": "65162808",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Umang MATHUR",
+      "phone": "65165219",
+      "email": null,
+      "address": "COM3-02-53",
+      "tags": [
+        "SOC_faculty",
+        "NUS_Presidential_Young_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Muhammad Rizki Aulia Rahman MAULANA",
+      "phone": "65166773",
+      "email": null,
+      "address": "COM2-02-06",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Kuldeep S MEEL",
+      "phone": "65161422",
+      "email": null,
+      "address": "COM2-03-41",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Tulika MITRA",
+      "phone": "65166839",
+      "email": null,
+      "address": "COM3-02-13",
+      "tags": [
+        "SOC_faculty",
+        "Provosts_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Mohamad Nazri Bin Sulaiman",
+      "phone": "65167341",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Amirhassan MONAJEMI",
+      "phone": "66012934",
+      "email": null,
+      "address": "COM3-B1-23",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Muhammad Shalihin Bin Ab Latif",
+      "phone": "66017672",
+      "email": null,
+      "address": "COM1-01-02",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Musa Bin Hashim",
+      "phone": "65164397",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Niranjan NAGARAJAN",
+      "phone": "65167362",
+      "email": null,
+      "address": "COM2-03-15",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Suranga Chandima NANAYAKKARA",
+      "phone": "65162797",
+      "email": null,
+      "address": "COM3-02-40",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Akshay NARAYAN",
+      "phone": "65164779",
+      "email": null,
+      "address": "COM2-02-03",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Prabhu NATARAJAN",
+      "phone": "65161105",
+      "email": null,
+      "address": "COM3-02-34",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ganesh NEELAKANTA IYER",
+      "phone": "66017601",
+      "email": null,
+      "address": "COM2-03-55",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "NEO Chee Yong",
+      "phone": "65161976",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Lisa NEW Ching Ching",
+      "phone": "65168762",
+      "email": null,
+      "address": "COM1-03-08",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Andrew NG Tek Lim",
+      "phone": "65161715",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "NG Ho Kong",
+      "phone": "65164289",
+      "email": null,
+      "address": "COM1-01-01",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "NG Hwee Tou",
+      "phone": "65168951",
+      "email": null,
+      "address": "COM3-02-48",
+      "tags": [
+        "SOC_faculty",
+        "Provosts_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ivy NG Ying Tse",
+      "phone": "65164291",
+      "email": null,
+      "address": "COM1-02-19",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "NG Kai Lee",
+      "phone": "65166843",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "NG See Kiong",
+      "phone": "66015837",
+      "email": null,
+      "address": "AS6-05-09",
+      "tags": [
+        "SOC_faculty",
+        "Professor_Practice_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "NG Teck Khim",
+      "phone": "65166962",
+      "email": null,
+      "address": "COM3-02-08",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Practice_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Victor NG Teck Wei",
+      "phone": "",
+      "email": null,
+      "address": "COM2-03-15/16/17/18",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Nur Arifah Bte Mukaral",
+      "phone": "65166733",
+      "email": null,
+      "address": "COM1-02-19",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "OH Lih Bin",
+      "phone": "65163796",
+      "email": null,
+      "address": "COM2-04-21",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ariel ONG Qian Ying",
+      "phone": "66011085",
+      "email": null,
+      "address": "COM1-03-01",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "ONG Chong Min",
+      "phone": "66013348",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Grace ONG Xing Yue",
+      "phone": "66016055",
+      "email": null,
+      "address": "COM1-03-36",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "ONG Hwei Nee Irene",
+      "phone": "65161370",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "ONG Kai Xin",
+      "phone": "66011571",
+      "email": null,
+      "address": "COM1-03-42",
+      "tags": [
+        "SOC_faculty",
+        "Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "OOI Beng Chin",
+      "phone": "65166465",
+      "email": null,
+      "address": "COM1-03-22",
+      "tags": [
+        "SOC_faculty",
+        "Lee_Kong_Chian_Centennial_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "OOI Lei Shi",
+      "phone": "65168671",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "OOI Wei Tsang",
+      "phone": "65164463",
+      "email": null,
+      "address": "AS6-05-14",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Aerin OON Shuhui",
+      "phone": "66016967",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "OW Eng Tiong",
+      "phone": "65167353",
+      "email": null,
+      "address": "COM1-01-06D",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "James PANG Yan",
+      "phone": "66013101",
+      "email": null,
+      "address": "BIZ2-03-13",
+      "tags": [
+        "SOC_faculty",
+        "CoDirector"
+      ],
+      "image": null
+    },
+    {
+      "name": "PEH Li Shiuan",
+      "phone": "66011734",
+      "email": null,
+      "address": "COM3-02-27",
+      "tags": [
+        "SOC_faculty",
+        "Provosts_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Santie PILLAI",
+      "phone": "66017943",
+      "email": null,
+      "address": "COM2-02-15",
+      "tags": [
+        "SOC_faculty",
+        "Deputy_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jerry PING Wenjie",
+      "phone": "",
+      "email": null,
+      "address": "COM2-03-15",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ivan PNG Paak Liang",
+      "phone": "65166807",
+      "email": null,
+      "address": "BIZ1-06-38",
+      "tags": [
+        "SOC_faculty",
+        "Distinguished_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Danny POO Chiang Choon",
+      "phone": "65162783",
+      "email": null,
+      "address": "COM2-04-36",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Adi Yoga Sidi PRABAWA",
+      "phone": "65166520",
+      "email": null,
+      "address": "COM2-02-55",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Dennis PUK Leung Kong",
+      "phone": "65161560",
+      "email": null,
+      "address": "COM2-02-51",
+      "tags": [
+        "SOC_faculty",
+        "IT_Architect"
+      ],
+      "image": null
+    },
+    {
+      "name": "QIAO Dandan",
+      "phone": "66013789",
+      "email": null,
+      "address": "COM2-04-15",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Rafidah Binte Zakaria",
+      "phone": "66017911",
+      "email": null,
+      "address": "COM1-03-30",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Vaibhav RAJAN",
+      "phone": "65166737",
+      "email": null,
+      "address": "COM2-04-34",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Damith Chatura RAJAPAKSE",
+      "phone": "65164359",
+      "email": null,
+      "address": "COM2-02-57",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Anand Mohan RAMCHAND",
+      "phone": "65162990",
+      "email": null,
+      "address": "COM2-03-22",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Kisenchand Nathumal RANAI",
+      "phone": "",
+      "email": null,
+      "address": "COM2-03-15",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Sanka RASNAYAKA",
+      "phone": "66017710",
+      "email": null,
+      "address": "AS6-05-13",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Frank Patrick REBENTROST",
+      "phone": "65162878",
+      "email": null,
+      "address": "COM2-04-29",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Manuel RIGGER",
+      "phone": "66017691",
+      "email": null,
+      "address": "COM2-03-29",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Rita Muhd Mohideen",
+      "phone": "66011714",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Abhik ROYCHOUDHURY",
+      "phone": "65168939",
+      "email": null,
+      "address": "COM3-02-04",
+      "tags": [
+        "SOC_faculty",
+        "Provosts_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Prateek SAXENA",
+      "phone": "66011898",
+      "email": null,
+      "address": "COM3-02-03",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jonathan SCARLETT",
+      "phone": "65161179",
+      "email": null,
+      "address": "COM3-02-57",
+      "tags": [
+        "SOC_faculty",
+        "NUS_Presidential_Young_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jason SEE Kwai Leong",
+      "phone": "65161742",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ilya SERGEY",
+      "phone": "66011466",
+      "email": null,
+      "address": "COM3-02-56",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Rudy SETIONO",
+      "phone": "65166297",
+      "email": null,
+      "address": "COM2-04-13",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Shahrizal Bin Sakaria",
+      "phone": "65166840",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "SHAO Lin",
+      "phone": "65162908",
+      "email": null,
+      "address": "COM2-03-03",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Reza SHOKRI",
+      "phone": "65164464",
+      "email": null,
+      "address": "COM2-03-60",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "SHOU Zheng Mike",
+      "phone": "66017716",
+      "email": null,
+      "address": "COM2-02-16",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Terence SIM Mong Cheng",
+      "phone": "65161180",
+      "email": null,
+      "address": "COM3-02-50",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "SIM Wan Zhen",
+      "phone": "65164888",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Dennis SIN Meng Wai",
+      "phone": "65166803",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Alex SIOW Yuen Khong",
+      "phone": "66011039",
+      "email": null,
+      "address": "COM2-03-40",
+      "tags": [
+        "SOC_faculty",
+        "Professor_Practice_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Rajendra Prasad SIRIGINA",
+      "phone": "66011664",
+      "email": null,
+      "address": "AS6-05-24",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Siti Hajar Binte Abdul Rahman",
+      "phone": "65168191",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Siti Zubaidah Binte Yusuf",
+      "phone": "66013785",
+      "email": null,
+      "address": "COM1-03-29",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Harold SOH Soon Hong",
+      "phone": "65167367",
+      "email": null,
+      "address": "COM3-02-58",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "SOO Yuen Jien",
+      "phone": "65161345",
+      "email": null,
+      "address": "COM2-02-61",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "SOW Jin Sze",
+      "phone": "65162857",
+      "email": null,
+      "address": "COM3-B1-25",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Frank Christian STEPHAN",
+      "phone": "65164246",
+      "email": null,
+      "address": "COM2-03-11",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Sufatrio",
+      "phone": "65168462",
+      "email": null,
+      "address": "COM2-03-42",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Vivy SUHENDRA",
+      "phone": "66012754",
+      "email": null,
+      "address": "COM2-04-16",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Practice_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Warut SUKSOMPONG",
+      "phone": "65163393",
+      "email": null,
+      "address": "COM2-03-35",
+      "tags": [
+        "SOC_faculty",
+        "NUS_Presidential_Young_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "SUN Chenshuo",
+      "phone": "66012380",
+      "email": null,
+      "address": "COM2-04-17",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ravi SUPPIAH",
+      "phone": "65166561",
+      "email": null,
+      "address": "COM2-03-36",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Suzanna Bte Gunawi",
+      "phone": "65161856",
+      "email": null,
+      "address": "COM1-03-29",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "SZE Eng Koon",
+      "phone": "65164367",
+      "email": null,
+      "address": "COM2-02-13",
+      "tags": [
+        "SOC_faculty",
+        "Principal_IT_Architect"
+      ],
+      "image": null
+    },
+    {
+      "name": "Aaron TAN Tuck Choy",
+      "phone": "65162906",
+      "email": null,
+      "address": "COM1-03-12",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Bernard TAN Cheng Yian",
+      "phone": "65166868",
+      "email": null,
+      "address": "COM2-04-38",
+      "tags": [
+        "SOC_faculty",
+        "Tan_Sri_Runme_Shaw_Senior_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Catharine TAN Cheng Kim",
+      "phone": "65168720",
+      "email": null,
+      "address": "COM1-03-47",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Chuan Hoo",
+      "phone": "65166903",
+      "email": null,
+      "address": "COM2-04-12",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Colin TAN Keng Yan",
+      "phone": "65167352",
+      "email": null,
+      "address": "COM2-02-08",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Daniel TAN Kuo Siong",
+      "phone": "65162363",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Danny TAN Leong Meng",
+      "phone": "65165455",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Esther TAN Meixiu",
+      "phone": "65163373",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Gary TAN Soon Huat",
+      "phone": "65166276",
+      "email": null,
+      "address": "COM2-03-50",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Gladys TAN Ting Rong",
+      "phone": "65164288",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Specialist_Associate"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Hsiao Wei",
+      "phone": "65162781",
+      "email": null,
+      "address": "COM2-02-15",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Systems_Engineer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jaime TAN Poh Yuen",
+      "phone": "65164480",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "John Elijah TAN",
+      "phone": "65164596",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Kian Lee",
+      "phone": "65162862",
+      "email": null,
+      "address": "COM1-03-23",
+      "tags": [
+        "SOC_faculty",
+        "Tan_Sri_Runme_Shaw_Senior_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Linying",
+      "phone": "65162954",
+      "email": null,
+      "address": "COM1-03-30",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Poh Suan",
+      "phone": "65164489",
+      "email": null,
+      "address": "COM1-03-01",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Rebekah TAN Mei Chiao",
+      "phone": "66012311",
+      "email": null,
+      "address": "COM1-03-29",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Robby Tantowi TAN",
+      "phone": "",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Sharmaine TAN Si Hua",
+      "phone": "65165759",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Sharon TAN Swee Lin",
+      "phone": "65164866",
+      "email": null,
+      "address": "COM2-04-31",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Shu Qi",
+      "phone": "66017597",
+      "email": null,
+      "address": "COM1-03-06",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Soon Yee",
+      "phone": "65161095",
+      "email": null,
+      "address": "COM2-02-43",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Network_Engineer"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Sun Teck",
+      "phone": "65162778",
+      "email": null,
+      "address": "COM2-03-45",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Tiow Seng",
+      "phone": "65166764",
+      "email": null,
+      "address": "AS6-04-10",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Wee Kek",
+      "phone": "65166731",
+      "email": null,
+      "address": "COM3-02-35",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAN Wei Han",
+      "phone": "65162807",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Gary TANG Wenxuan",
+      "phone": "66011921",
+      "email": null,
+      "address": "COM2-02-13",
+      "tags": [
+        "SOC_faculty",
+        "Systems_Engineer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Geraldine TANG Hui Ling",
+      "phone": "66017640",
+      "email": null,
+      "address": "COM1-03-02",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Serena TANG Wai Wah",
+      "phone": "65163079",
+      "email": null,
+      "address": "BIZ2-04-02",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Octavia TANOTO",
+      "phone": "65161551",
+      "email": null,
+      "address": "COM2-02-52",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Systems_Analyst"
+      ],
+      "image": null
+    },
+    {
+      "name": "Welly TANTONO",
+      "phone": "",
+      "email": null,
+      "address": "COM2-03-15",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Bernard TAY Choon Ngee",
+      "phone": "65164895",
+      "email": null,
+      "address": "COM1-01-03",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jenny TAY Puay Lay",
+      "phone": "66017638",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "TAY Yong Chiang",
+      "phone": "65168926",
+      "email": null,
+      "address": "COM2-02-59",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Edward TENG Yao Zhong",
+      "phone": "65163336",
+      "email": null,
+      "address": "COM1-01-01",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "TEO Hock Hai",
+      "phone": "65162979",
+      "email": null,
+      "address": "COM2-04-37",
+      "tags": [
+        "SOC_faculty",
+        "Provosts_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jesline TEO Geok Peng",
+      "phone": "66011716",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "TEO Pei Pei",
+      "phone": "65166562",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "TEO Tat Khai",
+      "phone": "65167362",
+      "email": null,
+      "address": "COM2-03-15",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "TEO Yong Meng",
+      "phone": "65162830",
+      "email": null,
+      "address": "COM2-04-39",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Vikineswari Stephanie THEGARAJAN",
+      "phone": "65165535",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "TOH Mui Kiat",
+      "phone": "65166735",
+      "email": null,
+      "address": "COM1-02-19B",
+      "tags": [
+        "SOC_faculty",
+        "Deputy_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "Rachel TOH Bee Hoon",
+      "phone": "65165355",
+      "email": null,
+      "address": "COM1-03-36",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Anthony TUNG Kum Hoe",
+      "phone": "65166389",
+      "email": null,
+      "address": "COM1-03-21",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jithin VACHERY",
+      "phone": "66016656",
+      "email": null,
+      "address": "COM3-02-38",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Prasanna Karthik VAIRAM",
+      "phone": "65166122",
+      "email": null,
+      "address": "AS6-04-20",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ambuj VARSHNEY",
+      "phone": "65167055",
+      "email": null,
+      "address": "COM3-02-25",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Prashant Nalini VASUDEVAN",
+      "phone": "66016927",
+      "email": null,
+      "address": "COM3-02-23",
+      "tags": [
+        "SOC_faculty",
+        "NUS_Presidential_Young_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Bimlesh WADHWA",
+      "phone": "65162973",
+      "email": null,
+      "address": "COM2-02-62",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Daniel WANG ChengEn",
+      "phone": "65161552",
+      "email": null,
+      "address": "COM1-03-27",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "WANG Fangci",
+      "phone": "65165419",
+      "email": null,
+      "address": "BIZ2-04-02",
+      "tags": [
+        "SOC_faculty",
+        "Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "WANG Jingxian",
+      "phone": "65165763",
+      "email": null,
+      "address": "COM2-03-32",
+      "tags": [
+        "SOC_faculty",
+        "NUS_Presidential_Young_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "WANG Qiuhong",
+      "phone": "66017642",
+      "email": null,
+      "address": "COM3-02-36",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "WANG Ye",
+      "phone": "65162980",
+      "email": null,
+      "address": "AS6-04-08",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Christian Von Der WETH",
+      "phone": "66012414",
+      "email": null,
+      "address": "COM3-02-45",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Kartika Octaviani WIRAWAN",
+      "phone": "66011041",
+      "email": null,
+      "address": "COM1-01-06",
+      "tags": [
+        "SOC_faculty",
+        "Laboratory_Technologist"
+      ],
+      "image": null
+    },
+    {
+      "name": "Angelia WONG Li Xuan",
+      "phone": "65161424",
+      "email": null,
+      "address": "COM1-03-42",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "Caslyn WONG Lei Mun",
+      "phone": "65163090",
+      "email": null,
+      "address": "COM1-03-46",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Diana WONG Peiying",
+      "phone": "66011086",
+      "email": null,
+      "address": "COM1-02-19",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "WONG Lim Soon",
+      "phone": "65162902",
+      "email": null,
+      "address": "COM2-03-57",
+      "tags": [
+        "SOC_faculty",
+        "KITHCT_Chair_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "WONG Weng Fai",
+      "phone": "65166902",
+      "email": null,
+      "address": "COM2-03-56",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "XIAO Xiaokui",
+      "phone": "65161559",
+      "email": null,
+      "address": "COM1-03-25",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Audrey XIE Cuishan",
+      "phone": "66017617",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Shamantha YAN Shiya",
+      "phone": "",
+      "email": null,
+      "address": "COM2-03-15",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "Shane YAN Shiyan",
+      "phone": "",
+      "email": null,
+      "address": "COM2-03-15",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "YANG Lu",
+      "phone": "65166791",
+      "email": null,
+      "address": "COM2-02-46",
+      "tags": [
+        "SOC_faculty",
+        "Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Teresa YANG Lee Inn",
+      "phone": "66016209",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Manager"
+      ],
+      "image": null
+    },
+    {
+      "name": "Angela YAO Yingjie",
+      "phone": "66017948",
+      "email": null,
+      "address": "COM3-02-26",
+      "tags": [
+        "SOC_faculty",
+        "Deans_Chair_Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Jonavers YAP Te Quan",
+      "phone": "66013102",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Executive"
+      ],
+      "image": null
+    },
+    {
+      "name": "Roland YAP Hock Chuan",
+      "phone": "65162972",
+      "email": null,
+      "address": "COM2-03-09",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Amanda YEE Wai Leng",
+      "phone": "66015953",
+      "email": null,
+      "address": "COM1-03-29",
+      "tags": [
+        "SOC_faculty",
+        "Management_Assistant_Officer"
+      ],
+      "image": null
+    },
+    {
+      "name": "YEO Ann Kian",
+      "phone": "65162780",
+      "email": null,
+      "address": "COM2-02-53",
+      "tags": [
+        "SOC_faculty",
+        "Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "YEO Wee Kiang",
+      "phone": "65164262",
+      "email": null,
+      "address": "COM3-B1-22",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Francis YEOH",
+      "phone": "65161298",
+      "email": null,
+      "address": "COM2-04-24",
+      "tags": [
+        "SOC_faculty",
+        "Professorial_Fellow"
+      ],
+      "image": null
+    },
+    {
+      "name": "Anna YONG Ann Na",
+      "phone": "66017317",
+      "email": null,
+      "address": "",
+      "tags": [
+        "SOC_faculty",
+        "Associate_Director"
+      ],
+      "image": null
+    },
+    {
+      "name": "YOU Yang",
+      "phone": "66017698",
+      "email": null,
+      "address": "COM3-02-51",
+      "tags": [
+        "SOC_faculty",
+        "NUS_Presidential_Young_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "YU Haifeng",
+      "phone": "65166802",
+      "email": null,
+      "address": "COM2-04-25",
+      "tags": [
+        "SOC_faculty",
+        "Deans_Chair_Associate_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "Ahmad Sapon ZAINUDDIN",
+      "phone": "",
+      "email": null,
+      "address": "COM3-01-19",
+      "tags": [
+        "SOC_faculty",
+        "Software_Engineer"
+      ],
+      "image": null
+    },
+    {
+      "name": "ZHAI Yingda",
+      "phone": "66012365",
+      "email": null,
+      "address": "COM3-02-33",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "ZHANG Jiaheng",
+      "phone": "66015482",
+      "email": null,
+      "address": "COM2-03-08",
+      "tags": [
+        "SOC_faculty",
+        "Assistant_Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "ZHANG Yang",
+      "phone": "66011241",
+      "email": null,
+      "address": "COM2-04-14",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    },
+    {
+      "name": "ZHAO Jin",
+      "phone": "66011083",
+      "email": null,
+      "address": "COM2-02-10",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "ZHAO Rui",
+      "phone": "",
+      "email": null,
+      "address": "COM2-03-15",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "ZHAO Yiliang",
+      "phone": "",
+      "email": null,
+      "address": "COM2-03-15",
+      "tags": [
+        "SOC_faculty",
+        "PartTime_Lecturer"
+      ],
+      "image": null
+    },
+    {
+      "name": "ZHOU Lifeng",
+      "phone": "65164746",
+      "email": null,
+      "address": "COM2-02-56",
+      "tags": [
+        "SOC_faculty",
+        "Senior_Lecturer_Educator_Track"
+      ],
+      "image": null
+    },
+    {
+      "name": "Roger ZIMMERMANN",
+      "phone": "65167949",
+      "email": null,
+      "address": "AS6-05-05",
+      "tags": [
+        "SOC_faculty",
+        "Professor"
+      ],
+      "image": null
+    }
+  ],
+  "bookings": []
+}

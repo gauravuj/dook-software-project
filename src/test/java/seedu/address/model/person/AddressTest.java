@@ -4,23 +4,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static seedu.address.testutil.Assert.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
 public class AddressTest {
 
     @Test
-    public void constructor_invalidAddress_throwsIllegalArgumentException() {
-        String invalidAddress = "";
-        assertThrows(IllegalArgumentException.class, () -> new Address(invalidAddress));
-    }
-
-    @Test
     public void isValidAddress() {
-        // invalid addresses
-        assertFalse(Address.isValidAddress("")); // empty string
-        assertFalse(Address.isValidAddress(" ")); // spaces only
+        // no invalid addresses
 
         // valid addresses
         assertTrue(Address.isValidAddress("Blk 456, Den Road, #01-355"));

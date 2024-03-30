@@ -18,13 +18,14 @@ public class StorageManager implements Storage {
 
     private static final Logger logger = LogsCenter.getLogger(StorageManager.class);
     private AddressBookStorage addressBookStorage;
-    private AddressBookStorage profStorage;
+    private ProfDataStorage profStorage;
     private UserPrefsStorage userPrefsStorage;
 
     /**
      * Creates a {@code StorageManager} with the given {@code AddressBookStorage} and {@code UserPrefStorage}.
      */
-    public StorageManager(AddressBookStorage addressBookStorage, AddressBookStorage profStorage, UserPrefsStorage userPrefsStorage) {
+    public StorageManager(AddressBookStorage addressBookStorage, ProfDataStorage profStorage,
+                          UserPrefsStorage userPrefsStorage) {
         this.addressBookStorage = addressBookStorage;
         this.profStorage = profStorage;
         this.userPrefsStorage = userPrefsStorage;
@@ -81,18 +82,18 @@ public class StorageManager implements Storage {
 
     @Override
     public Path getProfFilePath() {
-        return profStorage.getAddressBookFilePath();
+        return profStorage.getProfFilePath();
     }
 
     @Override
     public Optional<ReadOnlyAddressBook> readProfData() throws DataLoadingException {
-        return readProfData(profStorage.getAddressBookFilePath());
+        return readProfData(profStorage.getProfFilePath());
     }
 
     @Override
     public Optional<ReadOnlyAddressBook> readProfData(Path filePath) throws DataLoadingException {
         logger.fine("Attempting to read data from file: " + filePath);
-        return profStorage.readAddressBook(filePath);
+        return profStorage.readProfData(filePath);
     }
 
 }
