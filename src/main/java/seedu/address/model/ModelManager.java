@@ -23,26 +23,30 @@ public class ModelManager implements Model {
     private static final Logger logger = LogsCenter.getLogger(ModelManager.class);
 
     private final AddressBook addressBook;
+    private final ProfData profData;
     private final UserPrefs userPrefs;
     private final FilteredList<Person> filteredPersons;
+    private final FilteredList<Person> filteredProf;
     private final FilteredList<Booking> filteredBookings;
 
     /**
      * Initializes a ModelManager with the given addressBook and userPrefs.
      */
-    public ModelManager(ReadOnlyAddressBook addressBook, ReadOnlyUserPrefs userPrefs) {
+    public ModelManager(ReadOnlyAddressBook addressBook, ReadOnlyAddressBook profData, ReadOnlyUserPrefs userPrefs) {
         requireAllNonNull(addressBook, userPrefs);
 
         logger.fine("Initializing with address book: " + addressBook + " and user prefs " + userPrefs);
 
         this.addressBook = new AddressBook(addressBook);
+        this.profData = new ProfData(profData);
         this.userPrefs = new UserPrefs(userPrefs);
         filteredPersons = new FilteredList<>(this.addressBook.getPersonList());
         filteredBookings = new FilteredList<>(this.addressBook.getBookingList());
+        filteredProf = new FilteredList<>(this.profData.getPersonList());
     }
 
     public ModelManager() {
-        this(new AddressBook(), new UserPrefs());
+        this(new AddressBook(), new AddressBook(), new UserPrefs());
     }
 
     //=========== UserPrefs ==================================================================================
@@ -205,5 +209,39 @@ public class ModelManager implements Model {
     }
     public Theme getTheme() {
         return userPrefs.getTheme();
+    }
+
+    //=========== Professor =========================
+
+    public void setProfData(ReadOnlyAddressBook profData) {
+        this.profData.resetData(profData);
+    }
+
+    @Override
+    public ReadOnlyAddressBook getProfData() {
+        return profData;
+    }
+
+    /**
+     * Checks if the given person exists in the professor data.
+     *
+     * @param person The person to be checked for existence in the professor data. Must not be null.
+     * @return true if the person exists in the professor data, false otherwise.
+     * @throws NullPointerException If the specified person is null.
+     */
+    public boolean hasProf(Person person) {
+        requireNonNull(person);
+        return profData.hasPerson(person);
+    }
+
+    @Override
+    public ObservableList<Person> getFilteredProfList() {
+        return filteredProf;
+    }
+
+    @Override
+    public void updateFilteredProfList(Predicate<Person> predicate) {
+        requireNonNull(predicate);
+        filteredProf.setPredicate(predicate);
     }
 }

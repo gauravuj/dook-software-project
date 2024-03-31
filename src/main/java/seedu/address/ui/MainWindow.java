@@ -71,7 +71,6 @@ public class MainWindow extends UiPart<Stage> {
         setWindowDefaultSize(logic.getGuiSettings());
 
         setAccelerators();
-        System.out.println(logic.getGuiSettings().getTheme());
         setTheme(logic.getGuiSettings());
 
         helpWindow = new HelpWindow();
@@ -209,8 +208,6 @@ public class MainWindow extends UiPart<Stage> {
     private CommandResult executeCommand(String commandText) throws CommandException, ParseException {
         try {
             Alias aliases = logic.getAlias();
-            System.out.println("here is wut the map gets:\n");
-            System.out.println(aliases.getAlias(commandText));
             if (aliases.getAlias(commandText) != null) {
                 commandText = aliases.getAlias(commandText);
             }

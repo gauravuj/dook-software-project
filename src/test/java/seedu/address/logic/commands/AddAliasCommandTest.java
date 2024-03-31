@@ -15,6 +15,7 @@ import javafx.collections.ObservableList;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.commons.core.Theme;
 import seedu.address.model.Model;
+import seedu.address.model.ProfData;
 import seedu.address.model.ReadOnlyAddressBook;
 import seedu.address.model.ReadOnlyUserPrefs;
 import seedu.address.model.alias.Alias;
@@ -150,7 +151,17 @@ public class AddAliasCommandTest {
         }
 
         @Override
+        public ObservableList<Person> getFilteredProfList() {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
         public void updateFilteredPersonList(Predicate<Person> predicate) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public void updateFilteredProfList(Predicate<Person> predicate) {
             throw new AssertionError("This method should not be called.");
         }
 
@@ -196,6 +207,11 @@ public class AddAliasCommandTest {
 
         @Override
         public Theme getTheme() {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public ProfData getProfData() {
             throw new AssertionError("This method should not be called.");
         }
     }

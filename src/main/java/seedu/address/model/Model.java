@@ -82,12 +82,14 @@ public interface Model {
 
     /** Returns an unmodifiable view of the filtered person list */
     ObservableList<Person> getFilteredPersonList();
+    ObservableList<Person> getFilteredProfList();
 
     /**
      * Updates the filter of the filtered person list to filter by the given {@code predicate}.
      * @throws NullPointerException if {@code predicate} is null.
      */
     void updateFilteredPersonList(Predicate<Person> predicate);
+    void updateFilteredProfList(Predicate<Person> predicate);
 
     /**
      * Adds the given booking
@@ -119,4 +121,6 @@ public interface Model {
 
     void addAlias(String alias, String toReplace);
     Theme getTheme();
+
+    public ReadOnlyAddressBook getProfData();
 }
