@@ -2,7 +2,10 @@ package seedu.address.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.*;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_DESCRIPTION;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_START_TIME;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_END_TIME;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_NOTES;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -43,7 +46,8 @@ public class UpdateCommandParser implements Parser<UpdateCommand> {
         UpdateBookingDescriptor updateBookingDescriptor = new UpdateBookingDescriptor();
 
         if (argMultimap.getValue(PREFIX_DESCRIPTION).isPresent()) {
-            updateBookingDescriptor.setDescription(ParserUtil.parseBookingName(argMultimap.getValue(PREFIX_DESCRIPTION).get()));
+            updateBookingDescriptor.setDescription(
+                    ParserUtil.parseBookingName(argMultimap.getValue(PREFIX_DESCRIPTION).get()));
         }
         if (argMultimap.getValue(PREFIX_START_TIME).isPresent()) {
             updateBookingDescriptor.setStart(ParserUtil.parseStartTime(argMultimap.getValue(PREFIX_START_TIME).get()));

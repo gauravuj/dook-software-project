@@ -1,18 +1,27 @@
 package seedu.address.logic.commands;
 
+import static java.util.Objects.requireNonNull;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_START_TIME;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_DESCRIPTION;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_END_TIME;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_NOTES;
+import static seedu.address.model.Model.PREDICATE_SHOW_ALL_BOOKINGS;
+
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.CollectionUtil;
 import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.logic.Messages;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
-import seedu.address.model.booking.*;
-
-import java.util.*;
-
-import static java.util.Objects.requireNonNull;
-import static seedu.address.logic.parser.CliSyntax.*;
-import static seedu.address.model.Model.PREDICATE_SHOW_ALL_BOOKINGS;
+import seedu.address.model.booking.Booking;
+import seedu.address.model.booking.Description;
+import seedu.address.model.booking.StartTime;
+import seedu.address.model.booking.EndTime;
+import seedu.address.model.booking.Notes;
 
 /**
  * Edits the details of an existing person in the address book.
@@ -78,10 +87,12 @@ public class UpdateCommand extends Command {
      * Creates and returns a {@code Booking} with the details of {@code bookingToUpdate}
      * updated with {@code updateBookingDescriptor}.
      */
-    private static Booking createUpdatedBooking(Booking bookingToUpdate, UpdateBookingDescriptor updateBookingDescriptor) {
+    private static Booking createUpdatedBooking(Booking bookingToUpdate,
+                                                UpdateBookingDescriptor updateBookingDescriptor) {
         assert bookingToUpdate != null;
 
-        Description updatedDescription = updateBookingDescriptor.getDescription().orElse(bookingToUpdate.getDescription());
+        Description updatedDescription = updateBookingDescriptor.getDescription()
+                .orElse(bookingToUpdate.getDescription());
         StartTime updatedStartTime = updateBookingDescriptor.getStart().orElse(bookingToUpdate.getStart());
         EndTime updatedEndTime = updateBookingDescriptor.getEnd().orElse(bookingToUpdate.getEnd());
         Notes updatedNotes = updateBookingDescriptor.getNote().orElse(bookingToUpdate.getNotes());
