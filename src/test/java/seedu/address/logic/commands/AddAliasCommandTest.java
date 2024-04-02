@@ -181,6 +181,11 @@ public class AddAliasCommandTest {
         }
 
         @Override
+        public void setBooking(Booking target, Booking updatedBooking) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
         public ObservableList<Booking> getFilteredBookingList() {
             throw new AssertionError("This method should not be called.");
         }

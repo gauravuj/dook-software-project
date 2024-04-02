@@ -61,7 +61,6 @@ public class TypicalBookings {
 
     public static List<Booking> getTypicalBooking() {
         return new ArrayList<>(Arrays.asList(
-                CS1231_CONSULT, CS2101_CONSULT, CS2103T_CONSULT, CS2109S_CONSULT,
-                GENERIC_BOOKING));
+                CS1231_CONSULT, CS2101_CONSULT, CS2103T_CONSULT, CS2109S_CONSULT));
     }
 }
