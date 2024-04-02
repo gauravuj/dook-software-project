@@ -3,9 +3,17 @@ package seedu.address.logic.commands;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static seedu.address.logic.commands.CommandTestUtil.*;
-import static seedu.address.testutil.TypicalIndexes.*;
+import static seedu.address.logic.commands.CommandTestUtil.DESC_DIFF;
+import static seedu.address.logic.commands.CommandTestUtil.DESC_STD;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_BOOKING_DESCRIPTION;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_END_TIME;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_NOTE;
+import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;
+import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
+import static seedu.address.logic.commands.CommandTestUtil.showBookingAtIndex;
 import static seedu.address.testutil.TypicalBookings.getTypicalAddressBook;
+import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_BOOKING;
+import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_BOOKING;
 
 import org.junit.jupiter.api.Test;
 
@@ -34,7 +42,8 @@ public class UpdateCommandTest {
         UpdateBookingDescriptor descriptor = new UpdateBookingDescriptorBuilder(updatedBooking).build();
         UpdateCommand updateCommand = new UpdateCommand(INDEX_FIRST_BOOKING, descriptor);
 
-        String expectedMessage = String.format(UpdateCommand.MESSAGE_UPDATE_BOOKING_SUCCESS, Messages.format(updatedBooking));
+        String expectedMessage = String.format(UpdateCommand.MESSAGE_UPDATE_BOOKING_SUCCESS,
+                Messages.format(updatedBooking));
 
         Model expectedModel = new ModelManager(new AddressBook(model.getAddressBook()),
                 new ProfData(model.getProfData()),
@@ -53,12 +62,14 @@ public class UpdateCommandTest {
         Booking updatedBooking = bookingInList.withDescription(VALID_BOOKING_DESCRIPTION).withEndTime(VALID_END_TIME)
                 .withNote(VALID_NOTE).build();
 
-        UpdateBookingDescriptor descriptor = new UpdateBookingDescriptorBuilder().withDescription(VALID_BOOKING_DESCRIPTION)
+        UpdateBookingDescriptor descriptor = new UpdateBookingDescriptorBuilder()
+                .withDescription(VALID_BOOKING_DESCRIPTION)
                 .withEndTime(VALID_END_TIME)
                 .withNotes(VALID_NOTE).build();
         UpdateCommand updateCommand = new UpdateCommand(indexLastBooking, descriptor);
 
-        String expectedMessage = String.format(UpdateCommand.MESSAGE_UPDATE_BOOKING_SUCCESS, Messages.format(updatedBooking));
+        String expectedMessage = String.format(UpdateCommand.MESSAGE_UPDATE_BOOKING_SUCCESS,
+                Messages.format(updatedBooking));
 
         Model expectedModel = new ModelManager(new AddressBook(model.getAddressBook()),
                 new ProfData(model.getProfData()),
@@ -73,7 +84,8 @@ public class UpdateCommandTest {
         UpdateCommand updateCommand = new UpdateCommand(INDEX_FIRST_BOOKING, new UpdateBookingDescriptor());
         Booking editedPerson = model.getFilteredBookingList().get(INDEX_FIRST_BOOKING.getZeroBased());
 
-        String expectedMessage = String.format(UpdateCommand.MESSAGE_UPDATE_BOOKING_SUCCESS, Messages.format(editedPerson));
+        String expectedMessage = String.format(UpdateCommand.MESSAGE_UPDATE_BOOKING_SUCCESS,
+                Messages.format(editedPerson));
 
         Model expectedModel = new ModelManager(new AddressBook(model.getAddressBook()),
                 new ProfData(model.getProfData()),
@@ -84,12 +96,12 @@ public class UpdateCommandTest {
 
     @Test
     public void execute_filteredList_success() {
-        showBookingAtIndex(model, INDEX_FIRST_PERSON);
+        showBookingAtIndex(model, INDEX_FIRST_BOOKING);
 
         Booking bookingInFilteredList = model.getFilteredBookingList().get(INDEX_FIRST_BOOKING.getZeroBased());
         Booking updatedBooking =
                 new BookingBuilder(bookingInFilteredList).withDescription(VALID_BOOKING_DESCRIPTION).build();
-        UpdateCommand updateCommand = new UpdateCommand(INDEX_FIRST_PERSON,
+        UpdateCommand updateCommand = new UpdateCommand(INDEX_FIRST_BOOKING,
                 new UpdateBookingDescriptorBuilder().withDescription(VALID_BOOKING_DESCRIPTION).build());
 
         String expectedMessage = String.format(UpdateCommand.MESSAGE_UPDATE_BOOKING_SUCCESS,
@@ -126,7 +138,8 @@ public class UpdateCommandTest {
     @Test
     public void execute_invalidBookingIndexUnfilteredList_failure() {
         Index outOfBoundIndex = Index.fromOneBased(model.getFilteredBookingList().size() + 1);
-        UpdateBookingDescriptor descriptor = new UpdateBookingDescriptorBuilder().withDescription(VALID_BOOKING_DESCRIPTION).build();
+        UpdateBookingDescriptor descriptor = new UpdateBookingDescriptorBuilder()
+                .withDescription(VALID_BOOKING_DESCRIPTION).build();
         UpdateCommand updateCommand = new UpdateCommand(outOfBoundIndex, descriptor);
 
         assertCommandFailure(updateCommand, model, Messages.MESSAGE_INVALID_BOOKING_DISPLAYED_INDEX);
