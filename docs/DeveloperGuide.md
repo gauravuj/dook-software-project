@@ -233,10 +233,47 @@ The following activity diagram summarizes what happens when a user executes a ne
 
 _{more aspects and alternatives to be added}_
 
-### \[Proposed\] Data archiving
+### Book Command
+It is important to understand how the `book` command is designed, so that it can be expanded upon in the future.
 
-_{Explain here how the data archiving feature will be implemented}_
+The `book` command is used to add new bookings to Dook, with four attributes. 
 
+Compulsory: `Description`, `StartTime`, `EndTime`
+Optional: `Notes`
+
+When a user wants to add a new booking, they enter
+```
+book -n CS2103T Consult -s 2023-12-31 19:00 -e 2023-12-31 23:00 -note bring worsksheet
+```
+Internally, the `book` command is then parsed and executed via the [Command Pattern](https://nus-cs2103-ay2324s2.github.io/website/schedule/week10/topics.html#command-pattern) as shown in sequence diagram below.
+![BookCommandSequenceDiagram](images/BookCommandSequenceDiagram.png)
+
+#### Booking logic
+The `book` command has restrictions on bookings that can be added.
+1. Compulsory attributes must be there (i.e. `Description`, `StartTime`, `EndTime`)
+2. Nothing between command word `book` and  first flag `-n`
+3. No duplicates
+
+The following activity diagram showcases the order of checks.
+
+![BookCommandActivityDiagram](images/BookCommandActivityDiagram.png)
+
+### Theme switching
+
+**Themes** practically are changed by switching the CSS file that MainWindow.java uses in
+/resources/view/stylesheets.
+* Current Themes
+    * DarkTheme.css
+    * LightTheme.css
+
+![ThemeModelSequenceDiagram](images/ThemeModelSequenceDiagram.png)
+
+Themes are referenced internally as a Class in guiSettings. After parsing the theme command,
+LogicManager will call the setTheme command of the ModelManager. From the model above we can see that,
+subsequently userPref and guiSetting is called to set the current Theme as the DarkTheme.
+
+On the Ui side when the Command Result of logic.excute(Command) is found to be a **themeCommand**, it programmatically
+sets scene's stylesheet to the respective CSS file associated with the theme.
 
 --------------------------------------------------------------------------------------------------------------------
 

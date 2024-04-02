@@ -24,7 +24,7 @@ import seedu.address.model.booking.Booking;
  */
 public class CancelCommandTest {
 
-    private Model model = new ModelManager(getTypicalAddressBook(), new UserPrefs());
+    private Model model = new ModelManager(getTypicalAddressBook(), getTypicalAddressBook(), new UserPrefs());
 
     @Test
     public void execute_validIndexUnfilteredList_success() {
@@ -34,7 +34,7 @@ public class CancelCommandTest {
         String expectedMessage = String.format(CancelCommand.MESSAGE_CANCEL_BOOKING_SUCCESS,
                                                bookingToCancel.getDescription().description + " cancelled!");
 
-        ModelManager expectedModel = new ModelManager(model.getAddressBook(), new UserPrefs());
+        ModelManager expectedModel = new ModelManager(model.getAddressBook(), model.getProfData(), new UserPrefs());
         expectedModel.cancelBooking(bookingToCancel);
 
         assertCommandSuccess(cancelCommand, model, expectedMessage, expectedModel);
@@ -58,7 +58,7 @@ public class CancelCommandTest {
         String expectedMessage = String.format(CancelCommand.MESSAGE_CANCEL_BOOKING_SUCCESS,
                                                bookingToCancel.getDescription().description + " cancelled!");
 
-        Model expectedModel = new ModelManager(model.getAddressBook(), new UserPrefs());
+        Model expectedModel = new ModelManager(model.getAddressBook(), model.getProfData(), new UserPrefs());
         expectedModel.cancelBooking(bookingToCancel);
         showNoBooking(expectedModel);
 

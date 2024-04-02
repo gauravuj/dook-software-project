@@ -1,0 +1,29 @@
+@startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+skinparam defaultTextAlignment center
+
+start
+
+
+:User executes book command;
+:Parse the input parameters;
+
+if () then ([Missing compulsory attribute])
+    :Display parse error;
+else ([else])
+    if () then ([Extra values between book and first flag])
+        :Display parse error;
+    else ([else])
+        if () then ([Booking isDuplicate])
+            :Display duplicate error;
+        else ([else])
+            :Add booking to Dook;
+            :Display success message;
+        endif
+    endif
+endif
+
+stop
+@enduml
