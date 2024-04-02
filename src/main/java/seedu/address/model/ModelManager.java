@@ -172,6 +172,13 @@ public class ModelManager implements Model {
         return addressBook.hasBooking(booking);
     }
 
+    @Override
+    public void setBooking(Booking target, Booking updatedBooking) {
+        requireAllNonNull(target, updatedBooking);
+
+        addressBook.setBooking(target, updatedBooking);
+    }
+
     //=========== Filtered Booking List Accessors =============================================================
 
     /**
