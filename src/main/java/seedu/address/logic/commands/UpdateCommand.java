@@ -1,10 +1,10 @@
 package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_START_TIME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_DESCRIPTION;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_END_TIME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NOTES;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_START_TIME;
 import static seedu.address.model.Model.PREDICATE_SHOW_ALL_BOOKINGS;
 
 import java.util.List;
@@ -19,9 +19,9 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.booking.Booking;
 import seedu.address.model.booking.Description;
-import seedu.address.model.booking.StartTime;
 import seedu.address.model.booking.EndTime;
 import seedu.address.model.booking.Notes;
+import seedu.address.model.booking.StartTime;
 
 /**
  * Edits the details of an existing person in the address book.
