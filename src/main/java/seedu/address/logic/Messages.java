@@ -66,12 +66,4 @@ public class Messages {
                 .append(booking.getNotes());
         return builder.toString();
     }
-    public static String formatBooking(Booking booking) {
-        return "Booking created!";
-    }
-
-    public static String formatCancel(Booking booking) {
-        return booking.getDescription().description + " cancelled!";
-    }
-
 }
