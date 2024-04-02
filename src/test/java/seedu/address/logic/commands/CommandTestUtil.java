@@ -73,7 +73,7 @@ public class CommandTestUtil {
     public static final String VALID_END_TIME = "2023-12-31 23:00";
     public static final String VALID_NOTE = "Hello World";
 
-    public static final String BOOKING_DESC_TEST = PREFIX_DESCRIPTION + VALID_BOOKING_DESCRIPTION;
+    public static final String BOOKING_DESC_TEST = " " + PREFIX_DESCRIPTION + VALID_BOOKING_DESCRIPTION;
     public static final String START_TIME_DESC_TEST = " " + PREFIX_START_TIME + VALID_START_TIME;
     public static final String END_TIME_DESC_TEST = " " + PREFIX_END_TIME + VALID_END_TIME;
     public static final String NOTE_DESC_TEST = " " + PREFIX_NOTES + VALID_NOTE;
