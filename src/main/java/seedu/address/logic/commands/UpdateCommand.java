@@ -35,6 +35,8 @@ public class UpdateCommand extends Command {
 
     public static final String MESSAGE_UPDATE_BOOKING_SUCCESS = "UPDATES BOOKING: %1$s";
     public static final String MESSAGE_NOT_UPDATED = "At least one field to update must be provided.";
+    public static final String MESSAGE_DUPLICATE_BOOKING = "This booking already exists in the address book.";
+
 
     private final Index index;
     private final UpdateBookingDescriptor updateBookingDescriptor;
@@ -62,6 +64,10 @@ public class UpdateCommand extends Command {
 
         Booking bookingToUpdate = lastShownList.get(index.getZeroBased());
         Booking updatedBooking = createUpdatedBooking(bookingToUpdate, updateBookingDescriptor);
+
+        if (!bookingToUpdate.equals(updatedBooking) && model.hasBooking(updatedBooking)) {
+            throw new CommandException(MESSAGE_DUPLICATE_BOOKING);
+        }
 
         model.setBooking(bookingToUpdate, updatedBooking);
         model.updateFilteredBookingList(PREDICATE_SHOW_ALL_BOOKINGS);

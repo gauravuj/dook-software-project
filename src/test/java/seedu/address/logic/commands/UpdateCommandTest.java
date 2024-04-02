@@ -104,6 +104,26 @@ public class UpdateCommandTest {
     }
 
     @Test
+    public void execute_duplicateBookingUnfilteredList_failure() {
+        Booking firstBooking = model.getFilteredBookingList().get(INDEX_FIRST_BOOKING.getZeroBased());
+        UpdateCommand.UpdateBookingDescriptor descriptor = new UpdateBookingDescriptorBuilder(firstBooking).build();
+        UpdateCommand updateCommand = new UpdateCommand(INDEX_SECOND_BOOKING, descriptor);
+
+        assertCommandFailure(updateCommand, model, UpdateCommand.MESSAGE_DUPLICATE_BOOKING);
+    }
+
+    @Test
+    public void execute_duplicateBookingFilteredList_failure() {
+        showBookingAtIndex(model, INDEX_FIRST_BOOKING);
+
+        // edit person in filtered list into a duplicate in address book
+        Booking bookingInList = model.getAddressBook().getBookingList().get(INDEX_SECOND_BOOKING.getZeroBased());
+        UpdateCommand updateCommand = new UpdateCommand(INDEX_FIRST_BOOKING,
+                new UpdateBookingDescriptorBuilder(bookingInList).build());
+
+        assertCommandFailure(updateCommand, model, UpdateCommand.MESSAGE_DUPLICATE_BOOKING);
+    }
+    @Test
     public void execute_invalidBookingIndexUnfilteredList_failure() {
         Index outOfBoundIndex = Index.fromOneBased(model.getFilteredBookingList().size() + 1);
         UpdateBookingDescriptor descriptor = new UpdateBookingDescriptorBuilder().withDescription(VALID_BOOKING_DESCRIPTION).build();
