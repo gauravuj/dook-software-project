@@ -172,7 +172,7 @@ public class ModelManager implements Model {
         return addressBook.hasBooking(booking);
     }
 
-    //=========== Filtered Person List Accessors =============================================================
+    //=========== Filtered Booking List Accessors =============================================================
 
     /**
      * Returns an unmodifiable view of the list of {@code Booking} backed by the
