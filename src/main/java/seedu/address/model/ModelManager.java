@@ -167,12 +167,24 @@ public class ModelManager implements Model {
     }
 
     @Override
+    public void cancelAllBookings() {
+        addressBook.clearAllBookings();
+    }
+
+    @Override
     public boolean hasBooking(Booking booking) {
         requireNonNull(booking);
         return addressBook.hasBooking(booking);
     }
 
-    //=========== Filtered Person List Accessors =============================================================
+    @Override
+    public void setBooking(Booking target, Booking updatedBooking) {
+        requireAllNonNull(target, updatedBooking);
+
+        addressBook.setBooking(target, updatedBooking);
+    }
+
+    //=========== Filtered Booking List Accessors =============================================================
 
     /**
      * Returns an unmodifiable view of the list of {@code Booking} backed by the

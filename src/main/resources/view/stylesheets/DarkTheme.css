@@ -147,12 +147,32 @@
     -fx-font-family: "Source Code Pro";
     -fx-font-size: 20px;
     -fx-font-weight: bold;
-    -fx-text-fill: black;
+}
+
+.cell_big_id {
+    -fx-font-family: "Hack";
+    -fx-font-size: 90px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(255, 255, 255, 0.66) !important;
 }
 
 .cell_small_label {
     -fx-font-family: "Segoe UI";
     -fx-font-size: 12px;
+}
+
+.cell_tag_end_time {
+    -fx-background-color: #f37373;
+    -fx-text-fill: #fff8f8 !important;
+    -fx-padding: 2 10 2 10;
+    -fx-background-radius: 10px;
+}
+
+.cell_tag_start_time {
+    -fx-background-color: #c0f373;
+    -fx-text-fill: #2fa404 !important;
+    -fx-padding: 2 10 2 10;
+    -fx-background-radius: 10px;
 }
 
 .stack-pane {
