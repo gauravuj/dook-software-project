@@ -109,6 +109,12 @@ public interface Model {
      */
     boolean hasBooking(Booking booking);
 
+    /**
+     * Replaces the given booking {@code target} with {@code updatedPerson}.
+     * {@code target} must exist in the address book.
+     */
+    void setBooking(Booking target, Booking updatedBooking);
+
     ObservableList<Booking> getFilteredBookingList();
 
     void setTheme(Theme theme);

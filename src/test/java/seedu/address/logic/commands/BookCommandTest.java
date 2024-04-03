@@ -39,7 +39,7 @@ public class BookCommandTest {
 
         CommandResult commandResult = new BookCommand(validBooking).execute(modelStub);
 
-        assertEquals(String.format(BookCommand.MESSAGE_SUCCESS, Messages.formatBooking(validBooking)),
+        assertEquals(String.format(BookCommand.MESSAGE_SUCCESS, Messages.format(validBooking)),
                      commandResult.getFeedbackToUser());
         assertEquals(Arrays.asList(validBooking), modelStub.bookingsAdded);
     }
@@ -145,6 +145,11 @@ public class BookCommandTest {
 
         @Override
         public boolean hasBooking(Booking booking) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public void setBooking(Booking target, Booking updatedBooking) {
             throw new AssertionError("This method should not be called.");
         }
 
