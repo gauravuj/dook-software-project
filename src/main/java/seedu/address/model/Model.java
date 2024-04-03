@@ -102,6 +102,8 @@ public interface Model {
      */
     void cancelBooking(Booking target);
 
+    void cancelAllBookings();
+
     /**
      * Returns True if booking exists, else False
      */
@@ -126,7 +128,9 @@ public interface Model {
     Alias getAlias();
 
     void addAlias(String alias, String toReplace);
+
     Theme getTheme();
 
     public ReadOnlyAddressBook getProfData();
+
 }

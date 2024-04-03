@@ -3,6 +3,7 @@ package seedu.address.ui;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.Region;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
@@ -49,6 +50,8 @@ public class CommandBox extends UiPart<Region> {
             }
             setStyleToDefault();
         });
+
+        setupScrollingOnCommandTextField();
     }
 
     /**
@@ -101,6 +104,29 @@ public class CommandBox extends UiPart<Region> {
         commandTextField.positionCaret(commandTextField.getText().length());
     }
 
+    /**
+     * Sets up the ability to "scroll" horizontally in the text field using the mouse wheel.
+     */
+    private void setupScrollingOnCommandTextField() {
+        commandTextField.addEventFilter(ScrollEvent.SCROLL, event -> {
+            double deltaX = event.getDeltaX();
+            double deltaY = event.getDeltaY();
+            double effectiveDelta = Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : deltaY;
+
+            int caretPosition = commandTextField.getCaretPosition();
+
+            if (effectiveDelta < 0) { // Scroll left or down
+                if (caretPosition < commandTextField.getText().length()) {
+                    commandTextField.positionCaret(caretPosition + 1);
+                }
+            } else if (effectiveDelta > 0) { // Scroll right or up
+                if (caretPosition > 0) {
+                    commandTextField.positionCaret(caretPosition - 1);
+                }
+            }
+            event.consume();
+        });
+    }
 
     /**
      * Represents a function that can execute commands.

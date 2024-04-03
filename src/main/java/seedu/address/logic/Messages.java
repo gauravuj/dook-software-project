@@ -66,4 +66,14 @@ public class Messages {
                 .append(booking.getNotes());
         return builder.toString();
     }
+
+    /**
+     * Formats the cancellation message for a booking.
+     * @param bookingToDelete The booking that was cancelled.
+     * @return A formatted cancellation message.
+     */
+    public static String formatCancel(Booking bookingToDelete) {
+        return String.format("Booking cancelled: %s", bookingToDelete.toString());
+    }
+
 }

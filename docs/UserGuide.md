@@ -2,7 +2,7 @@
 layout: page
 title: User Guide
 ---
-This guide provides and overview and explains the essential features of Dook.
+This guide provides an overview and explains the essential features of Dook.
 
 ## What is Dook?
 An **elegant desktop application** for **NUS computing students** to easily manage consultations. This lightweight platform was enables users to quickly view and manage consultations and
@@ -66,7 +66,7 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
 1. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar dook.jar` command to run the application.<br>
    If you are unfamiliar with the command terminal, follow [this](https://tutorials.codebar.io/command-line/introduction/tutorial.html)
    A GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
-   ![Ui](docs/images/NewUi.png)
+   ![Ui image](images/NewUi.png)
 
 1. Type a command in the command box and press Enter to execute it. <br>
    Some example commands you can try:
@@ -115,7 +115,7 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
 
 ### Viewing help : `help`
 
-Shows a message explaning how to access the help page.
+Shows a message explaining how to access the help page.
 
 ![help message](images/helpMessage.png)
 
@@ -323,14 +323,13 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 
 ### Booking List Command summary
 
-| Action        | Format, Examples                                                                                                                   |
-|---------------|------------------------------------------------------------------------------------------------------------------------------------|
-| **Book**      | `book -n DESCRIPTION -s START_TIME -e END_TIME` <br> e.g., `book -n John's Birthday Party -s 2024-03-01 19:00 -e 2024-03-01 23:00` |
-| **View**      | `view -b`                                                                                                                          |
-| **Cancel**    | `cancel INDEX` or `cancel -a` or `cancel sudo -a` <br> e.g., `cancel 2`                                                            |
-| **Edit**      | `edit INDEX [-n DESCRIPTION] [-s START_TIME] [-e END_TIME]`<br> e.g.,`edit 2 -n Prof Aaron's Consultation -s 2024-03-01 14:30`     |
-| **Search**    | `search KEYWORD [MORE_KEYWORDS]`<br> e.g., `search Prof Lee's Consultation`                                                        |
-| **Free Time** | `check -ft -n NAME`<br> e.g., `check -ft -n Prof Damith`                                                                           |
+| Action        | Format, Examples                                                                                                                     |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| **Book**      | `book -n DESCRIPTION -s START_TIME -e END_TIME` <br> e.g., `book -n Consult with Prof Aaron -s 2024-03-01 19:00 -e 2024-03-01 23:00` |
+| **View**      | `view -b`                                                                                                                            |
+| **Cancel**    | `cancel INDEX` <br> e.g., `cancel 2`                                                                                                 |
+| **Edit**      | `edit INDEX [-n DESCRIPTION] [-s START_TIME] [-e END_TIME]`<br> e.g.,`edit 2 -n Prof Aaron's Consultation -s 2024-03-01 14:30`       |
+| **Search**    | `search KEYWORD [MORE_KEYWORDS]`<br> e.g., `search Prof Lee's Consultation`                                                          |
 
 [Back To ToC](#table-of-contents)
 

@@ -167,6 +167,11 @@ public class ModelManager implements Model {
     }
 
     @Override
+    public void cancelAllBookings() {
+        addressBook.clearAllBookings();
+    }
+
+    @Override
     public boolean hasBooking(Booking booking) {
         requireNonNull(booking);
         return addressBook.hasBooking(booking);
