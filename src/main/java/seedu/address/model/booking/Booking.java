@@ -4,7 +4,6 @@ import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
 import java.util.Objects;
 
-import seedu.address.commons.util.ToStringBuilder;
 
 /**
  * Represents a booking
@@ -72,11 +71,10 @@ public class Booking {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .add("description", description)
-                .add("start", start)
-                .add("end", end)
-                .add("note", note)
-                .toString();
+        return String.format("%s; Start time: %s; End time: %s; Notes: %s",
+                description,
+                start,
+                end,
+                note);
     }
 }

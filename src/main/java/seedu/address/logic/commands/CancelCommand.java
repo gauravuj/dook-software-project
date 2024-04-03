@@ -24,7 +24,7 @@ public class CancelCommand extends Command {
             + "Example usage: " + COMMAND_WORD + " 1 (deletes booking at index 1)";
 
     public static final String MESSAGE_CANCEL_ALL_SUCCESS = "Cancelled all bookings!";
-    public static final String MESSAGE_CANCEL_BOOKING_SUCCESS = "Cancelled Booking: %1$s";
+    public static final String MESSAGE_CANCEL_BOOKING_SUCCESS = "Cancelled Booking: %s";
 
     private final Index targetIndex;
     private final boolean cancelAll;
@@ -68,8 +68,7 @@ public class CancelCommand extends Command {
 
             Booking bookingToDelete = lastShownList.get(targetIndex.getZeroBased());
             model.cancelBooking(bookingToDelete);
-            return new CommandResult(String.format(MESSAGE_CANCEL_BOOKING_SUCCESS,
-                    Messages.formatCancel(bookingToDelete)));
+            return new CommandResult(String.format(MESSAGE_CANCEL_BOOKING_SUCCESS, bookingToDelete));
         }
     }
 
