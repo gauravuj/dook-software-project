@@ -49,6 +49,7 @@ public class CommandListPanel extends UiPart<Region> {
                 new CommandInfo("update", "Updates a consultation"),
                 new CommandInfo("cancel", "Cancels a consultation"),
                 new CommandInfo("search", "Search a consultation"),
+                new CommandInfo("alias", "Creates a new alias for a native command"),
                 new CommandInfo("theme", "Changes the current theme")
         );
 

@@ -88,6 +88,20 @@ public class UniqueBookingList implements Iterable<Booking> {
         }
     }
 
+
+    /**
+     * Clears all bookings from the list.
+     * Throws an exception if the list is already empty, mirroring the behavior of remove.
+     *
+     * @throws PersonNotFoundException if no bookings exist to be cleared.
+     */
+    public void clear() {
+        if (internalList.isEmpty()) {
+            throw new PersonNotFoundException();
+        }
+        internalList.clear();
+    }
+
     /**
      * Returns an unmodifiable view of the list.
      *
