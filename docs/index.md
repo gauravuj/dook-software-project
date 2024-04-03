@@ -6,7 +6,7 @@ title: Dook
 [![CI Status](https://github.com/AY2324S2-CS2103T-W11-3/tp/workflows/Java%20CI/badge.svg)](https://github.com/AY2324S2-CS2103T-W11-3/tp/actions)
 [![codecov](https://codecov.io/gh/AY2324S2-CS2103T-W11-3/tp/branch/master/graph/badge.svg)](https://codecov.io/gh/AY2324S2-CS2103T-W11-3/tp)
 
-![Ui](images/NewUi.png)
+![Ui](images/Ui.png)
 
 **Dook** is an application to help **NUS School of Computing (SoC) students find contacts within SoC** and **book consultation slots with their Professors and Teaching Assistants**.<br>
 
