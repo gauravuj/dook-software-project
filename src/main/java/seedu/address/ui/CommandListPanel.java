@@ -44,6 +44,7 @@ public class CommandListPanel extends UiPart<Region> {
                 new CommandInfo("clear", "Clears all records"),
                 new CommandInfo("find", "Find contacts using keyword"),
                 new CommandInfo("help", "Shows help"),
+                new CommandInfo("prof", "Adds a new Prof with the given name from NUS SoC"),
                 new CommandInfo("book", "Books a consultation"),
                 new CommandInfo("view", "Views all consultations"),
                 new CommandInfo("update", "Updates a consultation"),
