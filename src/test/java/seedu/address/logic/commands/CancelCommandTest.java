@@ -32,7 +32,7 @@ public class CancelCommandTest {
         CancelCommand cancelCommand = new CancelCommand(INDEX_FIRST_BOOKING);
 
         String expectedMessage = String.format(CancelCommand.MESSAGE_CANCEL_BOOKING_SUCCESS,
-                                               bookingToCancel.getDescription().description + " cancelled!");
+                Messages.format(bookingToCancel));
 
         ModelManager expectedModel = new ModelManager(model.getAddressBook(), model.getProfData(), new UserPrefs());
         expectedModel.cancelBooking(bookingToCancel);
@@ -56,7 +56,7 @@ public class CancelCommandTest {
         CancelCommand cancelCommand = new CancelCommand(INDEX_FIRST_BOOKING);
 
         String expectedMessage = String.format(CancelCommand.MESSAGE_CANCEL_BOOKING_SUCCESS,
-                                               bookingToCancel.getDescription().description + " cancelled!");
+                Messages.format(bookingToCancel));
 
         Model expectedModel = new ModelManager(model.getAddressBook(), model.getProfData(), new UserPrefs());
         expectedModel.cancelBooking(bookingToCancel);

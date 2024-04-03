@@ -55,12 +55,25 @@ public class Messages {
     /**
      * Formats the {@code booking} for display to the user.
      */
-    public static String formatBooking(Booking booking) {
-        return "Booking created!";
+    public static String format(Booking booking) {
+        final StringBuilder builder = new StringBuilder();
+        builder.append(booking.getDescription())
+                .append("; Start time: ")
+                .append(booking.getStart())
+                .append("; End time: ")
+                .append(booking.getEnd())
+                .append("; Notes: ")
+                .append(booking.getNotes());
+        return builder.toString();
     }
 
-    public static String formatCancel(Booking booking) {
-        return booking.getDescription().description + " cancelled!";
+    /**
+     * Formats the cancellation message for a booking.
+     * @param bookingToDelete The booking that was cancelled.
+     * @return A formatted cancellation message.
+     */
+    public static String formatCancel(Booking bookingToDelete) {
+        return String.format("Booking cancelled: %s", bookingToDelete.toString());
     }
 
 }

@@ -52,7 +52,7 @@ public class BookCommand extends Command {
         }
 
         model.addBooking(toAdd);
-        return new CommandResult(String.format(MESSAGE_SUCCESS, Messages.formatBooking(toAdd)));
+        return new CommandResult(String.format(MESSAGE_SUCCESS, Messages.format(toAdd)));
     }
 
     @Override

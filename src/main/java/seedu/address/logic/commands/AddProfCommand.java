@@ -10,39 +10,54 @@ import seedu.address.model.person.NameContainsKeywordsPredicate;
 import seedu.address.model.person.Person;
 
 /**
- * Adds a professor to the address book.
+ * Adds professors to the address book. Can add all professors or those matching a given name.
  */
 public class AddProfCommand extends Command {
     public static final String COMMAND_WORD = "prof";
 
     public static final String MESSAGE_SUCCESS = "Professors Added!";
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds professors to the address book.\n"
+            + "Parameters: -a (to add all professors) or "
+            + PREFIX_NAME + "NAME (to add professors by name)\n"
+            + "Example: " + COMMAND_WORD + " -a\n"
+            + "Example: " + COMMAND_WORD + " " + PREFIX_NAME + "Aaron";
 
-    public static final String MESSAGE_USAGE = AddProfCommand.COMMAND_WORD + "Adds a professor to the address book.\n"
-            + "Parameters: "
-            + PREFIX_NAME + "{name}"
-            + "Example usage: " + COMMAND_WORD + " "
-            + PREFIX_NAME + "aaron";
-
-    private NameContainsKeywordsPredicate profToAdd;
+    private final boolean addAll;
+    private final NameContainsKeywordsPredicate profPredicate;
 
     /**
-     * Constructs an AddProfCommand to add the specified professor.
-     *
-     * @param name The name predicate to be used for filtering professors to be added.
+     * Constructor for creating an {@code AddProfCommand} to add all professors.
+     * This constructor sets the command to add all professors without filtering by name.
      */
-    public AddProfCommand(NameContainsKeywordsPredicate name) {
-        this.profToAdd = name;
+    public AddProfCommand() {
+        this.addAll = true;
+        this.profPredicate = null;
+    }
+
+    /**
+     * Constructor for creating an {@code AddProfCommand} with a specific name filter.
+     * This constructor sets the command to add professors filtered by the specified name predicate.
+     *
+     * @param profPredicate The {@code NameContainsKeywordsPredicate} used for filtering professors by name.
+     */
+    public AddProfCommand(NameContainsKeywordsPredicate profPredicate) {
+        this.profPredicate = profPredicate;
+        this.addAll = false;
     }
 
     @Override
     public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
-        model.updateFilteredProfList(profToAdd);
+        if (addAll) {
+            model.updateFilteredProfList(PREDICATE_SHOW_ALL_PERSONS);
+        } else {
+            requireNonNull(profPredicate);
+            model.updateFilteredProfList(profPredicate);
+        }
         for (Person person : model.getFilteredProfList()) {
             model.addPerson(person);
         }
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
-        return new CommandResult(String.format(MESSAGE_SUCCESS));
+        return new CommandResult(MESSAGE_SUCCESS);
     }
-
 }
