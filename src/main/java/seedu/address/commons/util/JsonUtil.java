@@ -60,6 +60,7 @@ public class JsonUtil {
             Path filePath, Class<T> classOfObjectToDeserialize) throws DataLoadingException {
         requireNonNull(filePath);
         System.out.println(filePath);
+        System.out.println("Exists?");
         System.out.println(Files.exists(filePath));
         if (!Files.exists(filePath)) {
             return Optional.empty();
