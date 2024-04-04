@@ -89,6 +89,13 @@ public class UniqueBookingList implements Iterable<Booking> {
     }
 
     /**
+     * Clears all bookings from the list.
+     */
+    public void clear() {
+        internalList.clear();
+    }
+
+    /**
      * Returns an unmodifiable view of the list.
      *
      * @return An unmodifiable ObservableList of bookings.

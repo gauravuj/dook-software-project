@@ -137,7 +137,14 @@ public class AddressBook implements ReadOnlyAddressBook {
         bookings.remove(booking);
     }
 
-    //// util methods
+    /**
+     * Removes all bookings from this {@code AddressBook}.
+     */
+    public void clearAllBookings() {
+        bookings.clear();
+    }
+
+    // Util Methods
 
     @Override
     public String toString() {

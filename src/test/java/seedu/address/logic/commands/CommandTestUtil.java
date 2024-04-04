@@ -26,6 +26,7 @@ import seedu.address.model.booking.DescriptionContainsKeywordsPredicate;
 import seedu.address.model.person.NameContainsKeywordsPredicate;
 import seedu.address.model.person.Person;
 import seedu.address.testutil.EditPersonDescriptorBuilder;
+import seedu.address.testutil.UpdateBookingDescriptorBuilder;
 
 /**
  * Contains helper methods for testing commands.
@@ -67,14 +68,18 @@ public class CommandTestUtil {
     public static final EditCommand.EditPersonDescriptor DESC_BOB;
 
     public static final String VALID_BOOKING_DESCRIPTION = "Test Booking";
+    public static final String VALID_BOOKING_DESCRIPTION_DIFF = "Diff Booking";
     public static final String VALID_START_TIME = "2023-12-31 19:00";
     public static final String VALID_END_TIME = "2023-12-31 23:00";
     public static final String VALID_NOTE = "Hello World";
 
-    public static final String BOOKING_DESC_TEST = PREFIX_DESCRIPTION + VALID_BOOKING_DESCRIPTION;
+    public static final String BOOKING_DESC_TEST = " " + PREFIX_DESCRIPTION + VALID_BOOKING_DESCRIPTION;
     public static final String START_TIME_DESC_TEST = " " + PREFIX_START_TIME + VALID_START_TIME;
     public static final String END_TIME_DESC_TEST = " " + PREFIX_END_TIME + VALID_END_TIME;
     public static final String NOTE_DESC_TEST = " " + PREFIX_NOTES + VALID_NOTE;
+
+    public static final UpdateCommand.UpdateBookingDescriptor DESC_STD;
+    public static final UpdateCommand.UpdateBookingDescriptor DESC_DIFF;
 
     static {
         DESC_AMY = new EditPersonDescriptorBuilder().withName(VALID_NAME_AMY)
@@ -83,6 +88,13 @@ public class CommandTestUtil {
         DESC_BOB = new EditPersonDescriptorBuilder().withName(VALID_NAME_BOB)
                 .withPhone(VALID_PHONE_BOB).withEmail(VALID_EMAIL_BOB).withAddress(VALID_ADDRESS_BOB)
                 .withTags(VALID_TAG_HUSBAND, VALID_TAG_FRIEND).build();
+    }
+
+    static {
+        DESC_STD = new UpdateBookingDescriptorBuilder().withDescription(VALID_BOOKING_DESCRIPTION)
+                .withStartTime(VALID_START_TIME).withEndTime(VALID_END_TIME).withNotes(VALID_NOTE).build();
+        DESC_DIFF = new UpdateBookingDescriptorBuilder().withDescription(VALID_BOOKING_DESCRIPTION_DIFF)
+                .withStartTime(VALID_START_TIME).withEndTime(VALID_END_TIME).withNotes(VALID_NOTE).build();
     }
 
     /**

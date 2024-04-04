@@ -14,16 +14,24 @@ public class CancelCommandParser implements Parser<CancelCommand> {
     /**
      * Parses the given {@code String} of arguments in the context of the CancelCommand
      * and returns a CancelCommand object for execution.
+     * If the argument is "-a", it creates a CancelCommand to cancel all bookings.
+     * Otherwise, it attempts to parse the argument as an index for a single booking cancellation.
      *
      * @throws ParseException if the user input does not conform the expected format
      */
     public CancelCommand parse(String args) throws ParseException {
-        try {
-            Index index = ParserUtil.parseIndex(args);
-            return new CancelCommand(index);
-        } catch (ParseException pe) {
-            throw new ParseException(
-                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, CancelCommand.MESSAGE_USAGE), pe);
+        String trimmedArgs = args.trim();
+
+        if (trimmedArgs.equals("-a")) {
+            return new CancelCommand(true); // Cancel all bookings
+        } else {
+            try {
+                Index index = ParserUtil.parseIndex(trimmedArgs);
+                return new CancelCommand(index); // Cancel a specific booking by index
+            } catch (ParseException pe) {
+                throw new ParseException(
+                        String.format(MESSAGE_INVALID_COMMAND_FORMAT, CancelCommand.MESSAGE_USAGE), pe);
+            }
         }
     }
 }

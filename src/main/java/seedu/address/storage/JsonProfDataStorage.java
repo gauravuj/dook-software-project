@@ -45,6 +45,7 @@ public class JsonProfDataStorage implements ProfDataStorage {
      */
     @Override
     public Optional<ReadOnlyAddressBook> readProfData() throws DataLoadingException {
+        System.out.println(filePath + " here");
         return readProfData(filePath);
     }
 
@@ -58,9 +59,12 @@ public class JsonProfDataStorage implements ProfDataStorage {
      */
     public Optional<ReadOnlyAddressBook> readProfData(Path filePath) throws DataLoadingException {
         requireNonNull(filePath);
+        // issue
         Optional<JsonSerializableProfData> jsonProfData = JsonUtil.readJsonFile(
                 Paths.get(this.getClass().getResource(filePath.toString()).getPath()), JsonSerializableProfData.class);
+        System.out.println(jsonProfData);
         if (!jsonProfData.isPresent()) {
+            System.out.println("CALLEd");
             return Optional.empty();
         }
         try {

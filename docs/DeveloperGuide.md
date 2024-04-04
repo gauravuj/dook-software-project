@@ -236,7 +236,7 @@ _{more aspects and alternatives to be added}_
 ### Book Command
 It is important to understand how the `book` command is designed, so that it can be expanded upon in the future.
 
-The `book` command is used to add new bookings to Dook, with four attributes. 
+The `book` command is used to add new bookings to Dook, with four attributes.
 
 Compulsory: `Description`, `StartTime`, `EndTime`
 Optional: `Notes`
@@ -347,11 +347,11 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 **Extensions**
 * **2a. The contact details are invalid**
     * **2a1. Dook shows an error message**
-    
+
     Use Case ends
 * **3a. Duplicate contact added**
     * **3a1. Dook shows an error message**
-    
+
     Use case ends
 
 **Use Case: Delete a Contact**
@@ -514,13 +514,13 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 3. A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
 4. The system architecture should be designed to efficiently handle growth in data volume, capable of supporting at least 10 times the initial data volume without a complete overhaul.
 5. The system should include automated backup capabilities to prevent data loss and provide options for data recovery in case of system failure.
-6. Application should be able to use online and offline. 
+6. Application should be able to use online and offline.
 
 *{More to be added}*
 
 ### Glossary
 
-* **Professor**: Lecturer / Researcher in the National University of Singapore 
+* **Professor**: Lecturer / Researcher in the National University of Singapore
 * **SoC**: School of Computing in NUS
 * **Tutor**: Professor or Teaching Assistant in NUS SoC
 * **Consultation slot**: Time interval dedicated to a meeting

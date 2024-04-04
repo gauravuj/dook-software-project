@@ -76,3 +76,4 @@ deactivate BookCommand
 [<--LogicManager
 deactivate LogicManager
 @enduml
+
