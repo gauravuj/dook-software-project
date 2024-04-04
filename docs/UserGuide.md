@@ -206,12 +206,14 @@ It will open a window similar to this:
 
 --------------------------------------------------------------------------------------------------------------------
 
-### Adding a person: `add`
+### Adding a contact: `add`
 
-```
-add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS [t/TAG]…​
-```
-Adds a new person to the address book.
+With every contact book, we need to be able to create contacts. You have just made a new friend in your tutorial and 
+decided to save his contact for future collaboration purposes. 
+
+This command adds a new person to the contact book!
+
+Format: `add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS -t TAG…​`
 
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
@@ -229,15 +231,43 @@ Examples:
 * `add -n John Doe -p 98765432 -e johnd@example.com -a John street, block 123, #01-01`
 * `add -n Betsy Crowe -t friend -e betsycrowe@example.com -a Newgate Prison -p 1234567 -t criminal`
 
-### Listing all persons : `list`
+### Adding a Professor
 
-Shows a list of all persons in the address book.
+You have just taken CS2040S and you now have a favorite Professor in SoC!
+
+This command is specialized for adding a Professor to the contact book, allowing you to maintain their contact details at
+your fingertips. 
+
+Format: `prof -n NAME` (Adds a professor individually)
+Format: `prof -a` (Adds all staff in SoC to contact book)
+
+| Param            | Remarks                                                                                                        |
+|------------------|----------------------------------------------------------------------------------------------------------------|
+| **NAME**         | Must be non-null and unique                                                                                    |
+
+Examples:
+* `prof -n seth`
+
+<div markdown="block" class="alert alert-danger">
+:exclamation: **Warnings** <br>
+While adding all professors is included as an option, we generally advise adding professors individually unless you decide 
+having the whole SoC staff faculty in your contact book is necessary!
+</div>
+
+### Listing all contacts : `list`
+
+You decided one day to touch base with all your course-mates and friends in NUS. 
+
+This command lets you easily view all the people in your contacts!
 
 Format: `list`
 
-### Editing a person : `edit`
+### Editing a contacts : `edit`
 
-Edits an existing person in the address book.
+You just had a catchup with an old friend and you realised he changed his primary contact number because he recently 
+migrated overseas. 
+
+The command allows you to update an existing contact's details in the contact book.
 
 Format: `edit INDEX [-n NAME] [-p PHONE] [-e EMAIL] [-a ADDRESS] [-t TAG]…​`
 
@@ -245,16 +275,35 @@ Format: `edit INDEX [-n NAME] [-p PHONE] [-e EMAIL] [-a ADDRESS] [-t TAG]…​`
 * At least one of the optional fields must be provided.
 * Existing values will be updated to the input values.
 * When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.
-* You can remove all the person’s tags by typing `-t` without
-    specifying any tags after it.
+
+| Param            | Remarks                                                                                                        |
+|------------------|----------------------------------------------------------------------------------------------------------------|
+| **NAME**         | Must be non-null and unique                                                                                    |
+| **PHONE_NUMBER** | Optional, only numbers and minimum 3 digits                                                                    |
+| **EMAIL**        | Optional, follow standard email formats (i.e xxx@xxx)                                                          |
+| **ADDRESS**      | Optional                                                                                                       |
+| **TAG**          | Optional, each tag should start with -t (i.e. for two tags `friend`, `groupmate` use `-t friend -t groupmate`) |
 
 Examples:
-*  `edit 1 -p 91234567 -e johndoe@example.com` Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively.
-*  `edit 2 -n Betsy Crower -t` Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags.
+* `edit 1 -p 91234567 -e johndoe@example.com` Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively.
+* `edit 2 -n Betsy Crower -t` Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags.
+* 
+<div markdown="block" class="alert alert-info">:information_source: **Information**  
+When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.
+</div>
 
-### Locating persons by name: `find`
+<div markdown="span" class="alert alert-success">:bulb: **Tip:**
+You can remove all the person’s tags by typing `-t` without specifying any tags after it.
+</div>
 
-Finds persons whose names contain any of the given keywords.
+### Locating contacts by name: `find`
+
+Imagine you have just met a wonderful group of NUS students at a networking event, and you've added their details to the
+contact book. A few days later, you want to send a follow-up email to one of them, but their name escapes you. You remember
+it started with "John"
+
+This command allows you to quickly retrieve all names that match, ensuring you can maintain that crucial connection without
+a hitch.
 
 Format: `find KEYWORD [MORE_KEYWORDS]`
 
@@ -271,15 +320,21 @@ Examples:
 
   ![result for 'find alex david'](images/findAlexDavidResult.png)
 
-### Deleting a person : `delete`
+<div markdown="block" class="alert alert-info">:information_source: **Information** 
+This command will also fetch all existing Professors in the contact book if there is a match!
+</div>
 
-Deletes the specified person from the address book.
+### Deleting a contact : `delete`
+
+Your contact book is starting to look cluttered, and you realise you no longer certain contacts' details.
+
+This command deletes the specified person from the contact book, ensuring your contacts remain relevant and up-to-date.
 
 Format: `delete INDEX`
 
 * Deletes the person at the specified `INDEX`.
 * The index refers to the index number shown in the displayed person list.
-* The index **must be a positive integer** 1, 2, 3, …​
+* The index **must be a positive number** 1, 2, 3, …​
 
 Examples:
 * `list` followed by `delete 2` deletes the 2nd person in the address book.
@@ -395,15 +450,17 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 
 ### Address Book Command summary
 
-| Action     | Format, Examples                                                                                                                                                                |
-|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Add**    | `add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS [-t TAG]…​` <br> e.g., `add -n John Doe -p 22224444 -e jamesho@example.com -a 123, Clementi Rd, 1234665 -t friend t/colleague` |
-| **Delete** | `delete INDEX`<br> e.g., `delete 3`                                                                                                                                             |
-| **Edit**   | `edit INDEX [-n NAME] [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG]…​`<br> e.g.,`edit 2 -n James Lee -e jameslee@example.com`                                              |
-| **Find**   | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`                                                                                                                      |
-| **List**   | `list`                                                                                                                                                                          |
-| **Clear**  | `clear`                                                                                                                                                                         |
-| **Help**   | `help`                                                                                                                                                                          |
+| Action            | Format, Examples                                                                                                                                                                |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Add**           | `add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS [-t TAG]…​` <br> e.g., `add -n John Doe -p 22224444 -e jamesho@example.com -a 123, Clementi Rd, 1234665 -t friend t/colleague` |
+| **Add Professor** | `prof -n NAME` or `prof -a`                                                                                                                                                     |
+| **Delete**        | `delete INDEX`<br> e.g., `delete 3`                                                                                                                                             |
+| **Edit**          | `edit INDEX [-n NAME] [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG]…​`<br> e.g.,`edit 2 -n James Lee -e jameslee@example.com`                                              |
+| **Find**          | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`                                                                                                                      |
+| **List**          | `list`                                                                                                                                                                          |
+| **Clear**         | `clear`                                                                                                                                                                         |
+| **Help**          | `help`                                                                                                                                                                          |
+ 
 
 ### Booking List Command summary
 
