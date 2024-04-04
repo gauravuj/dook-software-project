@@ -4,11 +4,12 @@ import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
 
+import java.util.function.Predicate;
+
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.person.Person;
-
-import java.util.function.Predicate;
+import seedu.address.model.person.exceptions.DuplicatePersonException;
 
 /**
  * Adds professors to the address book. Can add all professors or those matching a given name.
@@ -48,7 +49,11 @@ public class ProfCommand extends Command {
         }
 
         for (Person person : model.getFilteredProfList()) {
-            model.addPerson(person);
+            try {
+                model.addPerson(person);
+            } catch (DuplicatePersonException e) {
+                throw new CommandException("Error: Professor already in contacts");
+            }
         }
 
         // reset user view
