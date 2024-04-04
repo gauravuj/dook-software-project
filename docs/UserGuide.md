@@ -2,11 +2,15 @@
 layout: page
 title: User Guide
 ---
-This guide provides an overview and explains the essential features of Dook.
 
 ## What is Dook?
-An **elegant desktop application** for **NUS computing students** to easily manage consultations. This lightweight platform was enables users to quickly view and manage consultations and
-people. Dook blends the power of a nimble [**Command Line Interface (CLI)**](#glossary) together with the intuitive accessibility of a 
+
+![UiPreview](images/UserGuideFront.png)
+
+An **elegant minimalistic desktop application** made especially for **NUS Computing students** to easily manage their academic consultations and contacts all-in-one place. This lightweight 
+platform enables users to quickly view and manage their consultations with people.
+
+Dook blends the power of a nimble [**Command Line Interface (CLI)**](#glossary) together with the intuitive accessibility of a 
 [**Graphical User Interface (GUI)**](#glossary). 
 
 Designed for the dynamic needs of the NUS 
@@ -25,7 +29,7 @@ We hope that this guide will familiarise you with the [CLI](#glossary) commands 
 are unfamiliar with some jargon here, do have a quick look at our [glossary](#glossary) below! :)
 
 * For **first-time users**, please take a look at our [Quick Start](#quick-start) section to start an end-to-end tutorial for Dook.
-* For **seasoned users** who have used _Dook_ before, do take a look at our [Command Summary](#command-summary) for a refresher!
+* For **seasoned users** who know command line and/or have used _Dook_ before, do take a look at our [Command Summary](#command-summary) for a refresher!
 
 Throughout this guide, we also use coloured boxes to provide any important or extra pointers that we hope you would find useful.
 
@@ -55,40 +59,125 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
 
 --------------------------------------------------------------------------------------------------------------------
 
-## Installation and Quick start
+## Quick start
 
-1. Ensure you have [Java](#faq) `11` or above installed in your Computer.
+1. Ensure you have [Java 11](#faq) or above installed in your Computer. If  If you have never downloaded it before, 
+   download from [here.](https://www.oracle.com/sg/java/technologies/javase/jdk11-archive-downloads.html)
 
-1. Download the latest `dook.jar` from [here](https://github.com/AY2324S2-CS2103T-W11-3/tp/releases).
+2. Download the latest version of [Dook](https://github.com/AY2324S2-CS2103T-W11-3/tp/releases) in your computer.
 
-1. Copy the file to the folder you want to use as the _home folder_ for your AddressBook.
+3. Copy the file to an empty folder you want to use as the `home folder` for Dook.
 
-1. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar dook.jar` command to run the application.<br>
-   If you are unfamiliar with the command terminal, follow [this](https://tutorials.codebar.io/command-line/introduction/tutorial.html)
-   A GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
-   ![Ui image](images/NewUi.png)
+4. From the home folder, open “Terminal” on macOS or “Command Prompt” in Windows, and type `java -jar Dook.jar` to run the application. <br>
+   A GUI similar to the below should appear in a few seconds.
 
-1. Type a command in the command box and press Enter to execute it. <br>
+   ![Ui image](images/UserGuideApp.png)
+
+<div markdown="block" class="alert alert-info">
+:information_source: **Information** 
+
+If you are unfamiliar with the command terminal, follow this [guideline.](https://tutorials.codebar.io/command-line/introduction/tutorial.html)
+</div>
+
+
+5. Type a command in the command box and press Enter to execute it. <br>
    Some example commands you can try:
 
+   * `help` : Opens the help window.
+   
    * `list` : Lists all contacts.
 
-   * `add -n John Doe -p 98765432 -e johnd@example.com -a John street, block 123, #01-01` : Adds a contact named `John Doe` to the Address Book.
+   * `add -n Prof Damith -p 98765432 -e damithch@example.com -a COM1-02-57` : Adds a contact named `Prof Damith` to the Dook address book.
 
-   * `delete 3` : Deletes the 3rd contact shown in the current list.
+   * `book -n CS2103T Consultation -s 2024-04-21 14:00 -e 2024-04-21 16:00` : Adds a new booking for `CS2103T Consultation` from `2024-04-21 14:00` to `2024-04-21 16:00`.
 
-   * `clear` : Deletes all contacts.
-
-   * `book -n John's Birthday Party -s 2023-12-31 19:00 -e 2023-12-31 23:00` : Adds a new booking for `John's Birthday Party` from `2023-12-31 19:00` to `2023-12-31 23:00`.
-
-   * `cancel 3` : Deletes the 3rd booking shown in the current list.
+   * `search CS2101 Consultation` : Finds the consultation(s) named `CS2101 Consultation` from the list.
 
    * `exit` : Exits the app.
 
-1. Refer to the [Features](#features) below for details of each command.
+6. Please refer to the [Features](#features) below for details of each command.
+
+[Back To ToC](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
 
+## Familiarising yourself with Dook Interface
+The main interface is divided into **two main panels** (Booking and Contact) and **4 small components** (listed below). There's a menu bar at the top with two buttons `File`
+ and `Help`, and at the bottom there's a status bar displaying the location of the `addressbook.json` file.
+
+<div markdown="block" class="alert alert-info">
+:information_source: **Information** 
+
+A [JSON](#glossary) file is a text-based format for storing and exchanging data. JSON stands for JavaScript Object Notation.
+</div>
+
+![Main panel](images/MainPanel.png)
+
+1. `Contact List`: Displays all contacts in the Dook address book.
+2. `Booking List`: Shows all the bookings the user currently has.
+3. `Result Box`: Displays the output after each command is executed.
+4. `Command Box`: Allows users to enter commands. 
+
+### Contact Card
+![Contact Card](images/ContactCard.png)
+
+Each `Contact card` Includes the following information:
+1. `Prof Damith Rajapakse` - Contact Name
+2. `65164359` - Phone Number 
+3. `COM2-02-57` - Address
+4. `damithch@comp.nus.edu.sg` - Email 
+5. `Professor` - Tag (it can be 0 or more)
+
+<div markdown="block" class="alert alert-success">
+:bulb: **Tips** 
+
+You can easily add a new contact using the [add](#adding-a-person-add) command or update the existing information with the [edit](#editing-a-person--edit) command.
+</div>
+
+### Booking Card
+![Booking Card](images/BookingCard.png)
+
+Each `Booking card` Includes the following information:
+1. `CS2103T Consult` - Consultation Title
+2. `2024-03-21 12:00` - Start Date and Time
+3. `2024-03-21 14:00` - End Date and Time
+4. `Attend as early as possible...` - Notes or Descriptions for the consultation
+
+<div markdown="block" class="alert alert-success">
+:bulb: **Tips** 
+
+You can easily update the following details with the [update](#editing-a-person--edit) command or [cancel](#cancelling-a-booking--cancel) any existing bookings immediately.
+</div>
+
+### Result Box
+
+Displays two kinds of information/indication based on the command executed.
+
+**Upon Success:**
+![Result Box](images/ResultBox_Success.png)
+
+**Upon Failure:**
+![Result Box](images/ResultBox_Error.png)
+
+### Help Window
+
+Displays a window with `Command Box Panel` and `Take me to UG` link.
+1. `Command Box Panel` - it consists of all the commands native to Dook.
+2. `Take me to UG` - takes you directly to this User Guide for more details on each feature.
+
+**Format:** `help`
+
+**Instruction:**
+1. Type `help` in the `Command Box` to open this window,
+2. Or, press `Help` Button on the main interface.
+
+It will open a window similar to this:
+
+![help message](images/HelpWindow.png)
+
+[Back To ToC](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------------------------
 ## Features
 
 <div markdown="block" class="alert alert-info">
@@ -113,14 +202,9 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
 * If you are using a PDF version of this document, be careful when copying and pasting commands that span multiple lines as space characters surrounding line-breaks may be omitted when copied over to the application.
 </div>
 
-### Viewing help : `help`
+[Back To ToC](#table-of-contents)
 
-Shows a message explaining how to access the help page.
-
-![help message](images/helpMessage.png)
-
-Format: `help`
-
+--------------------------------------------------------------------------------------------------------------------
 
 ### Adding a person: `add`
 
@@ -314,40 +398,44 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 | Action     | Format, Examples                                                                                                                                                                |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Add**    | `add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS [-t TAG]…​` <br> e.g., `add -n John Doe -p 22224444 -e jamesho@example.com -a 123, Clementi Rd, 1234665 -t friend t/colleague` |
-| **Clear**  | `clear`                                                                                                                                                                         |
 | **Delete** | `delete INDEX`<br> e.g., `delete 3`                                                                                                                                             |
 | **Edit**   | `edit INDEX [-n NAME] [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG]…​`<br> e.g.,`edit 2 -n James Lee -e jameslee@example.com`                                              |
 | **Find**   | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`                                                                                                                      |
 | **List**   | `list`                                                                                                                                                                          |
+| **Clear**  | `clear`                                                                                                                                                                         |
 | **Help**   | `help`                                                                                                                                                                          |
 
 ### Booking List Command summary
 
-| Action        | Format, Examples                                                                                                                     |
-|---------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **Book**      | `book -n DESCRIPTION -s START_TIME -e END_TIME` <br> e.g., `book -n Consult with Prof Aaron -s 2024-03-01 19:00 -e 2024-03-01 23:00` |
-| **View**      | `view -b`                                                                                                                            |
-| **Cancel**    | `cancel INDEX` <br> e.g., `cancel 2`                                                                                                 |
-| **Edit**      | `edit INDEX [-n DESCRIPTION] [-s START_TIME] [-e END_TIME]`<br> e.g.,`edit 2 -n Prof Aaron's Consultation -s 2024-03-01 14:30`       |
-| **Search**    | `search KEYWORD [MORE_KEYWORDS]`<br> e.g., `search Prof Lee's Consultation`                                                          |
+| Action     | Format, Examples                                                                                                                     |
+|------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| **Book**   | `book -n DESCRIPTION -s START_TIME -e END_TIME` <br> e.g., `book -n Consult with Prof Aaron -s 2024-03-01 19:00 -e 2024-03-01 23:00` |
+| **View**   | `view`                                                                                                                               |
+| **Update** | `update INDEX [-n DESCRIPTION] [-s START_TIME] [-e END_TIME]`<br> e.g.,`edit 2 -n Prof Aaron's Consultation -s 2024-03-01 14:30`     |
+| **Search** | `search KEYWORD [MORE_KEYWORDS]`<br> e.g., `search Prof Lee's Consultation`                                                          |
+| **Cancel** | `cancel INDEX` or `cancel -a`<br> e.g., `cancel 2`                                                                                   |
+
 
 [Back To ToC](#table-of-contents)
 
 ## Glossary
 
-| Term                                                 | Meaning                                                                                                                                                                                                                          |
-|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CLI (Command Line Interface)                         | A text based interface where users type in commands instead of interacting with the application's graphics.                                                                                                                      |
-| CSV                                                  | A text file format that uses commas to separate values. It is supported by a wide range of software, including Microsoft Excel.                                                                                                  |
-| Command                                              | A line of instructions that you input into the command box. Also see: Command box                                                                                                                                                |
-| Command Box <a name="command-box"></a>               | A box for you to input commands.                                                                                                                                                                                                 |
-| Command Output Box <a name="command-output-box"></a> | A box that displays the results of the command you keyed in. It will tell you whether the command you entered has successfully run, or if there is an error in your command that needs to be fixed. Refer to []() for a picture. |
-| Contact List <a name="contact-list"></a>             | The Contact list is the list of contacts on the left side of the application.                                                                                                                                                    |
-| Booking List <a name="booking-list"></a>             | The Booking list is the list of bookings on the right side of the application.                                                                                                                                                   |
-| GUI (Graphic User Interface)                         | A graphical based interface where users interact the the application's graphics like buttons or scrollpanes. Also see: CLI                                                                                                       |
-| Prefix                                               | A letter or phrase before an input.                                                                                                                                                                                              |
-| Tag                                                  | A text phrase used to categorise employees by. A tag must be either a Student, Professor, or Teaching Assistant (TA)                                                                                                             |
-| Index                                                | The number labelling each employee in the employee list.                                                                                                                                                                         |
-| Web browser                                          | An application to serve the web like Internet Explorer, Google Chrome or Firefox. In fact, you are probably using one to access this guide right now!                                                                            |
+| Term                                                                                                                                                                           | Meaning                                                                                                                                                                                                                                                                                      |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[CLI (Command Line Interface)](https://en.wikipedia.org/wiki/Command-line_interface)**                                                                                       | A text-based interface where users type in commands instead of interacting with the application's graphics.                                                                                                                                                                                  |
+| **[CSV](https://en.wikipedia.org/wiki/Comma-separated_values)**                                                                                                                | A text file format that uses commas to separate values. It is supported by a wide range of software, including Microsoft Excel.                                                                                                                                                              |
+| **[Command](https://en.wikipedia.org/wiki/Command_(computing))**                                                                                                               | A line of instructions that you input into the command box. Also see: Command Box                                                                                                                                                                                                            |
+| **[Command Box](https://www.codecademy.com/articles/command-line-commands)** <a name="command-box"></a>                                                                        | A box for you to input commands.                                                                                                                                                                                                                                                             |
+| **[Command Output Box](https://stackoverflow.com/questions/3038392/do-you-know-any-command-line-http-fetching-utility-like-wget)** <a name="command-output-box"></a>           | A box that displays the results of the command you keyed in. It will tell you whether the command you entered has successfully run, or if there is an error in your command that needs to be fixed. Refer to []() for a picture.                                                             |
+| **[Contact List](https://support.microsoft.com/en-us/office/create-and-share-contact-groups-in-outlook-com-34a9c07e-9a4c-4ec4-a272-bc35a9c8c253)** <a name="contact-list"></a> | The Contact list is the list of contacts on the left side of the application.                                                                                                                                                                                                                |
+| **[Booking List](https://www.smartsheet.com/free-excel-booking-templates)** <a name="booking-list"></a>                                                                        | The Booking list is the list of bookings on the right side of the application.                                                                                                                                                                                                               |
+| **[GUI (Graphic User Interface)](https://en.wikipedia.org/wiki/Graphical_user_interface)**                                                                                     | A graphical based interface where users interact with the application's graphics like buttons or scroll panes. Also see: CLI                                                                                                                                                                 |
+| **[JSON](https://www.json.org/json-en.html)**                                                                                                                                  | A JSON (JavaScript Object Notation) file is a lightweight data interchange format that's easy for humans to read and write and easy for machines to parse and generate. JSON files typically use the `.json` extension and consist of key/value pairs similar to JavaScript object literals. |
+| **[Prefix](https://techterms.com/definition/prefix)**                                                                                                                          | A letter or phrase before an input.                                                                                                                                                                                                                                                          |
+| **[Tag](https://en.wikipedia.org/wiki/Tag_(metadata))**                                                                                                                        | A text phrase used to categorize employees by. A tag must be either a Student, Professor, or Teaching Assistant (TA)                                                                                                                                                                         |
+| **[Index](https://en.wikipedia.org/wiki/Index_(computer_science))**                                                                                                            | The number labeling each employee in the employee list.                                                                                                                                                                                                                                      |
+| **[Web browser](https://www.mozilla.org/en-US/firefox/new/)**                                                                                                                  | An application to serve the web like Internet Explorer, Google Chrome, or Firefox. In fact, you are probably using one to access this guide right now!                                                                                                                                       |
+
+
 
 [Back To ToC](#table-of-contents)
