@@ -3,6 +3,8 @@ layout: page
 title: User Guide
 ---
 
+--------------------------------------------------------------------------------------------------------------------
+
 ## What is Dook?
 
 ![UiPreview](images/UserGuideFront.png)
@@ -101,8 +103,8 @@ If you are unfamiliar with the command terminal, follow this [guideline.](https:
 
 --------------------------------------------------------------------------------------------------------------------
 
-## Familiarising yourself with Dook Interface
-The main interface is divided into **two main panels** (Booking and Contact) and **4 small components** (listed below). There's a menu bar at the top with two buttons `File`
+## Understanding the Interface
+The main interface is divided into **two main panels** (Booking and Contact) and **4 smaller elements** (shown below). There's a menu bar at the top with two buttons `File`
  and `Help`, and at the bottom there's a status bar displaying the location of the `addressbook.json` file.
 
 <div markdown="block" class="alert alert-info">
@@ -205,13 +207,14 @@ It will open a window similar to this:
 [Back To ToC](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+### Contact Management
 
-### Adding a person: `add`
+#### Adding a person: `add`
+Suppose you met a new person and would like to add their details to Dook, use the command format specified below.
 
 ```
 add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS [t/TAG]…​
 ```
-Adds a new person to the address book.
 
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
@@ -225,17 +228,17 @@ Adds a new person to the address book.
 A person can have any number of tags (including 0)
 </div>
 
-Examples:
+For example:
 * `add -n John Doe -p 98765432 -e johnd@example.com -a John street, block 123, #01-01`
 * `add -n Betsy Crowe -t friend -e betsycrowe@example.com -a Newgate Prison -p 1234567 -t criminal`
 
-### Listing all persons : `list`
+#### Listing all persons : `list`
 
 Shows a list of all persons in the address book.
 
 Format: `list`
 
-### Editing a person : `edit`
+#### Editing a person : `edit`
 
 Edits an existing person in the address book.
 
@@ -252,7 +255,7 @@ Examples:
 *  `edit 1 -p 91234567 -e johndoe@example.com` Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively.
 *  `edit 2 -n Betsy Crower -t` Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags.
 
-### Locating persons by name: `find`
+#### Locating persons by name: `find`
 
 Finds persons whose names contain any of the given keywords.
 
@@ -271,7 +274,7 @@ Examples:
 
   ![result for 'find alex david'](images/findAlexDavidResult.png)
 
-### Deleting a person : `delete`
+#### Deleting a person : `delete`
 
 Deletes the specified person from the address book.
 
@@ -285,7 +288,9 @@ Examples:
 * `list` followed by `delete 2` deletes the 2nd person in the address book.
 * `find Betsy` followed by `delete 1` deletes the 1st person in the results of the `find` command.
 
-### Adding a booking : `book`
+### Booking Management
+
+#### Adding a booking : `book`
 
 Adds the specified booking to the address book.
 
@@ -297,7 +302,7 @@ Format: `-n DESCRIPTION -s START_TIME -e END_TIME`
 Examples:
 * `book -n John's Birthday Party -s 2023-12-31 19:00 -e 2023-12-31 23:00`
 
-### Cancelling a booking : `cancel`
+#### Cancelling a booking : `cancel`
 
 Cancels the specified booking from the address book.
 
@@ -310,7 +315,7 @@ Format: `cancel INDEX`
 Examples:
 * `cancel 2` cancels the 2nd booking in the booking list.
 
-### Searching for a booking : `search`
+#### Searching for a booking : `search`
 
 Searches for the specified booking from the address book.
 
@@ -321,7 +326,7 @@ Format: `search KEYWORD [MORE_KEYWORDS]`
 * Persons matching at least one keyword will be returned (i.e. `OR` search).
   e.g. `John` will return `Johns Birthday Party`, `Dinner with John`
 
-### Clearing all contact entries : `clear`
+#### Clearing all contact entries : `clear`
 
 Clears all contact entries from the address book.
 
