@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.logic.commands.AddAliasCommand;
 import seedu.address.logic.commands.AddCommand;
-import seedu.address.logic.commands.AddProfCommand;
 import seedu.address.logic.commands.BookCommand;
 import seedu.address.logic.commands.CancelCommand;
 import seedu.address.logic.commands.ClearCommand;
@@ -21,6 +20,7 @@ import seedu.address.logic.commands.ExitCommand;
 import seedu.address.logic.commands.FindCommand;
 import seedu.address.logic.commands.HelpCommand;
 import seedu.address.logic.commands.ListCommand;
+import seedu.address.logic.commands.ProfCommand;
 import seedu.address.logic.commands.SearchCommand;
 import seedu.address.logic.commands.ThemeCommand;
 import seedu.address.logic.commands.UpdateCommand;
@@ -104,7 +104,7 @@ public class AddressBookParser {
         case AddAliasCommand.COMMAND_WORD:
             return new AddAliasCommandParser().parse(arguments);
 
-        case AddProfCommand.COMMAND_WORD:
+        case ProfCommand.COMMAND_WORD:
             return new AddProfCommandParser().parse(arguments);
 
         case UpdateCommand.COMMAND_WORD:

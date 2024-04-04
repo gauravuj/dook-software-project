@@ -2,9 +2,11 @@ package seedu.address.storage;
 
 import static java.util.Objects.requireNonNull;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Optional;
+import java.util.Scanner;
 import java.util.logging.Logger;
 
 import seedu.address.commons.core.LogsCenter;
@@ -32,7 +34,7 @@ public class JsonProfDataStorage implements ProfDataStorage {
     }
 
     public Path getProfFilePath() {
-        return filePath;
+        return this.filePath;
     }
 
 
@@ -59,9 +61,19 @@ public class JsonProfDataStorage implements ProfDataStorage {
      */
     public Optional<ReadOnlyAddressBook> readProfData(Path filePath) throws DataLoadingException {
         requireNonNull(filePath);
-        // issue
-        Optional<JsonSerializableProfData> jsonProfData = JsonUtil.readJsonFile(
-                Paths.get(this.getClass().getResource(filePath.toString()).getPath()), JsonSerializableProfData.class);
+
+        Optional<JsonSerializableProfData> jsonProfData;
+
+        try {
+            ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+            InputStream inputStream = classloader.getResourceAsStream("professors/data.json");
+            Scanner s = new Scanner(inputStream).useDelimiter("\\A");
+            String profJsonString = s.hasNext() ? s.next() : "";
+            jsonProfData = Optional.of(JsonUtil.fromJsonString(profJsonString, JsonSerializableProfData.class));
+        } catch (IOException e) {
+            throw new DataLoadingException(e);
+        }
+
         System.out.println(jsonProfData);
         if (!jsonProfData.isPresent()) {
             System.out.println("CALLEd");

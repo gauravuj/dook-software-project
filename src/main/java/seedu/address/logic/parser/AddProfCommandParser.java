@@ -2,18 +2,19 @@ package seedu.address.logic.parser;
 
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
+import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-import seedu.address.logic.commands.AddProfCommand;
+import seedu.address.logic.commands.ProfCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.person.NameContainsKeywordsPredicate;
 
 /**
  * Parses input arguments and creates a new AddProfCommand object
  */
-public class AddProfCommandParser implements Parser<AddProfCommand> {
+public class AddProfCommandParser implements Parser<ProfCommand> {
 
     /**
      * Parses the given {@code String} of arguments in the context of the AddProfCommand
@@ -21,27 +22,27 @@ public class AddProfCommandParser implements Parser<AddProfCommand> {
      *
      * @throws ParseException if the user input does not conform to the expected format
      */
-    public AddProfCommand parse(String args) throws ParseException {
+    public ProfCommand parse(String args) throws ParseException {
         // Trim and check if the argument is exactly "-a" for adding all professors
         String trimmedArgs = args.trim();
         if (trimmedArgs.equals("-a")) {
             // Add all professors
-            return new AddProfCommand();
+            return new ProfCommand(PREDICATE_SHOW_ALL_PERSONS);
         } else {
             // Process adding professors by name
             ArgumentMultimap argMultimap = ArgumentTokenizer.tokenize(args, PREFIX_NAME);
 
             if (!arePrefixesPresent(argMultimap, PREFIX_NAME) || !argMultimap.getPreamble().isEmpty()) {
-                throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddProfCommand.MESSAGE_USAGE));
+                throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, ProfCommand.MESSAGE_USAGE));
             }
 
             String nameString = argMultimap.getValue(PREFIX_NAME).get().trim();
             if (nameString.isEmpty()) {
-                throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddProfCommand.MESSAGE_USAGE));
+                throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, ProfCommand.MESSAGE_USAGE));
             }
 
             String[] nameKeywords = nameString.split("\\s+");
-            return new AddProfCommand(new NameContainsKeywordsPredicate(Arrays.asList(nameKeywords)));
+            return new ProfCommand(new NameContainsKeywordsPredicate(Arrays.asList(nameKeywords)));
         }
     }
 
