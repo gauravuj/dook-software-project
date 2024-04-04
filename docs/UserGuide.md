@@ -7,13 +7,13 @@ title: User Guide
 
 ![UiPreview](images/UserGuideFront.png)
 
-An **elegant minimalistic desktop application** made especially for **NUS Computing students** to easily manage their academic consultations and contacts all-in-one place. This lightweight 
+An **elegant minimalistic desktop application** made especially for **NUS Computing students** to easily manage their academic consultations and contacts all-in-one place. This lightweight
 platform enables users to quickly view and manage their consultations with people.
 
-Dook blends the power of a nimble [**Command Line Interface (CLI)**](#glossary) together with the intuitive accessibility of a 
-[**Graphical User Interface (GUI)**](#glossary). 
+Dook blends the power of a nimble [**Command Line Interface (CLI)**](#glossary) together with the intuitive accessibility of a
+[**Graphical User Interface (GUI)**](#glossary).
 
-Designed for the dynamic needs of the NUS 
+Designed for the dynamic needs of the NUS
 School of Computing (SoC) community, Dook centralizes faculty information
 in an innovative manner, allowing one to easily find their professors by taking advantage of the basic CLI familiarity of SoC students.
 
@@ -34,13 +34,13 @@ are unfamiliar with some jargon here, do have a quick look at our [glossary](#gl
 Throughout this guide, we also use coloured boxes to provide any important or extra pointers that we hope you would find useful.
 
 <div markdown="block" class="alert alert-info">
-:information_source: **Information** 
+:information_source: **Information**
 
 Content in blue boxes provides additional information and contextual knowledge you need to better understand Dook.
 </div>
 
 <div markdown="block" class="alert alert-success">
-:bulb: **Tips** 
+:bulb: **Tips**
 
 Content in green boxes provides tips and good practices to help you use the application more efficiently.
 </div>
@@ -61,7 +61,7 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
 
 ## Quick start
 
-1. Ensure you have [Java 11](#faq) or above installed in your Computer. If  If you have never downloaded it before, 
+1. Ensure you have [Java 11](#faq) or above installed in your Computer. If  If you have never downloaded it before,
    download from [here.](https://www.oracle.com/sg/java/technologies/javase/jdk11-archive-downloads.html)
 
 2. Download the latest version of [Dook](https://github.com/AY2324S2-CS2103T-W11-3/tp/releases) in your computer.
@@ -74,7 +74,7 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
    ![Ui image](images/UserGuideApp.png)
 
 <div markdown="block" class="alert alert-info">
-:information_source: **Information** 
+:information_source: **Information**
 
 If you are unfamiliar with the command terminal, follow this [guideline.](https://tutorials.codebar.io/command-line/introduction/tutorial.html)
 </div>
@@ -84,7 +84,7 @@ If you are unfamiliar with the command terminal, follow this [guideline.](https:
    Some example commands you can try:
 
    * `help` : Opens the help window.
-   
+
    * `list` : Lists all contacts.
 
    * `add -n Prof Damith -p 98765432 -e damithch@example.com -a COM1-02-57` : Adds a contact named `Prof Damith` to the Dook address book.
@@ -106,7 +106,7 @@ The main interface is divided into **two main panels** (Booking and Contact) and
  and `Help`, and at the bottom there's a status bar displaying the location of the `addressbook.json` file.
 
 <div markdown="block" class="alert alert-info">
-:information_source: **Information** 
+:information_source: **Information**
 
 A [JSON](#glossary) file is a text-based format for storing and exchanging data. JSON stands for JavaScript Object Notation.
 </div>
@@ -116,20 +116,20 @@ A [JSON](#glossary) file is a text-based format for storing and exchanging data.
 1. `Contact List`: Displays all contacts in the Dook address book.
 2. `Booking List`: Shows all the bookings the user currently has.
 3. `Result Box`: Displays the output after each command is executed.
-4. `Command Box`: Allows users to enter commands. 
+4. `Command Box`: Allows users to enter commands.
 
 ### Contact Card
 ![Contact Card](images/ContactCard.png)
 
 Each `Contact card` Includes the following information:
 1. `Prof Damith Rajapakse` - Contact Name
-2. `65164359` - Phone Number 
+2. `65164359` - Phone Number
 3. `COM2-02-57` - Address
-4. `damithch@comp.nus.edu.sg` - Email 
+4. `damithch@comp.nus.edu.sg` - Email
 5. `Professor` - Tag (it can be 0 or more)
 
 <div markdown="block" class="alert alert-success">
-:bulb: **Tips** 
+:bulb: **Tips**
 
 You can easily add a new contact using the [add](#adding-a-person-add) command or update the existing information with the [edit](#editing-a-person--edit) command.
 </div>
@@ -144,7 +144,7 @@ Each `Booking card` Includes the following information:
 4. `Attend as early as possible...` - Notes or Descriptions for the consultation
 
 <div markdown="block" class="alert alert-success">
-:bulb: **Tips** 
+:bulb: **Tips**
 
 You can easily update the following details with the [update](#editing-a-person--edit) command or [cancel](#cancelling-a-booking--cancel) any existing bookings immediately.
 </div>
@@ -208,8 +208,8 @@ It will open a window similar to this:
 
 ### Adding a contact: `add`
 
-With every contact book, we need to be able to create contacts. You have just made a new friend in your tutorial and 
-decided to save his contact for future collaboration purposes. 
+With every contact book, we need to be able to create contacts. You have just made a new friend in your tutorial and
+decided to save his contact for future collaboration purposes.
 
 This command adds a new person to the contact book!
 
@@ -236,7 +236,7 @@ Examples:
 You have just taken CS2040S and you now have a favorite Professor in SoC!
 
 This command is specialized for adding a Professor to the contact book, allowing you to maintain their contact details at
-your fingertips. 
+your fingertips.
 
 Format: `prof -n NAME` (Adds a professor individually)
 Format: `prof -a` (Adds all staff in SoC to contact book)
@@ -250,13 +250,13 @@ Examples:
 
 <div markdown="block" class="alert alert-danger">
 :exclamation: **Warnings** <br>
-While adding all professors is included as an option, we generally advise adding professors individually unless you decide 
+While adding all professors is included as an option, we generally advise adding professors individually unless you decide
 having the whole SoC staff faculty in your contact book is necessary!
 </div>
 
 ### Listing all contacts : `list`
 
-You decided one day to touch base with all your course-mates and friends in NUS. 
+You decided one day to touch base with all your course-mates and friends in NUS.
 
 This command lets you easily view all the people in your contacts!
 
@@ -264,8 +264,8 @@ Format: `list`
 
 ### Editing a contacts : `edit`
 
-You just had a catchup with an old friend and you realised he changed his primary contact number because he recently 
-migrated overseas. 
+You just had a catchup with an old friend and you realised he changed his primary contact number because he recently
+migrated overseas.
 
 The command allows you to update an existing contact's details in the contact book.
 
@@ -287,8 +287,8 @@ Format: `edit INDEX [-n NAME] [-p PHONE] [-e EMAIL] [-a ADDRESS] [-t TAG]…​`
 Examples:
 * `edit 1 -p 91234567 -e johndoe@example.com` Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively.
 * `edit 2 -n Betsy Crower -t` Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags.
-* 
-<div markdown="block" class="alert alert-info">:information_source: **Information**  
+
+<div markdown="block" class="alert alert-info">:information_source: **Information**
 When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.
 </div>
 
@@ -320,7 +320,7 @@ Examples:
 
   ![result for 'find alex david'](images/findAlexDavidResult.png)
 
-<div markdown="block" class="alert alert-info">:information_source: **Information** 
+<div markdown="block" class="alert alert-info">:information_source: **Information**
 This command will also fetch all existing Professors in the contact book if there is a match!
 </div>
 
@@ -386,7 +386,7 @@ Format: `clear`
 
 **:exclamation: Destructive Command!**<br>
 
-This command is **irreversible**, and all your data will be lost. 
+This command is **irreversible**, and all your data will be lost.
 Please use this command with caution!
 
 </div>
@@ -423,8 +423,8 @@ _Details coming soon ..._
 **A**: Follow this [link](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A) for steps to download Java 11.
 
 **Q**: How do I transfer my data to another Computer?<br>
-**A**: Go to the application's home directory and copy the `data/addressbook.json` file containing your data into the empty 
-data folder created by Dook on the other computer. 
+**A**: Go to the application's home directory and copy the `data/addressbook.json` file containing your data into the empty
+data folder created by Dook on the other computer.
 
 **Q**: Oh no! I have accidentally closed Dook without using the `exit` command? Do I lose all my data?
 **A**: Not to worry! Dook automatically saves all data after every change, so no data will be lost!
@@ -460,7 +460,7 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 | **List**          | `list`                                                                                                                                                                          |
 | **Clear**         | `clear`                                                                                                                                                                         |
 | **Help**          | `help`                                                                                                                                                                          |
- 
+
 
 ### Booking List Command summary
 
