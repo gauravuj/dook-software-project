@@ -14,7 +14,7 @@ import seedu.address.model.person.NameContainsKeywordsPredicate;
 /**
  * Parses input arguments and creates a new AddProfCommand object
  */
-public class AddProfCommandParser implements Parser<ProfCommand> {
+public class ProfCommandParser implements Parser<ProfCommand> {
 
     /**
      * Parses the given {@code String} of arguments in the context of the AddProfCommand

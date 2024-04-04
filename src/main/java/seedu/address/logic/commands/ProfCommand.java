@@ -35,6 +35,7 @@ public class ProfCommand extends Command {
      * @param profPredicate The {@code NameContainsKeywordsPredicate} used for filtering professors by name.
      */
     public ProfCommand(Predicate<Person> profPredicate) {
+        requireNonNull(profPredicate);
         this.profPredicate = profPredicate;
     }
 
@@ -59,5 +60,20 @@ public class ProfCommand extends Command {
         // reset user view
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
         return new CommandResult(MESSAGE_SUCCESS);
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other == this) {
+            return true;
+        }
+
+        // instanceof handles nulls
+        if (!(other instanceof ProfCommand)) {
+            return false;
+        }
+
+        ProfCommand otherProfCommand = (ProfCommand) other;
+        return profPredicate.equals(otherProfCommand.profPredicate);
     }
 }
