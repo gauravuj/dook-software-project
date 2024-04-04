@@ -214,11 +214,10 @@ It will open a window similar to this:
 With every contact book, we need to be able to create contacts. You have just made a new friend in your tutorial and
 decided to save his contact for future collaboration purposes.
 
-This command adds that new person to the contact book!
-
 ```
 add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS -t TAG…​
 ```
+
 
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
@@ -302,6 +301,10 @@ edit INDEX [-n NAME] [-p PHONE] [-e EMAIL] [-a ADDRESS] [-t TAG]…​
 Examples:
 * `edit 1 -p 91234567 -e johndoe@example.com` Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively.
 * `edit 2 -n Betsy Crower -t` Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags.
+
+<div markdown="block" class="alert alert-info">:information_source: **Information**
+When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.
+</div>
 
 <div markdown="span" class="alert alert-success">:bulb: **Tip:**
 You can remove all the person’s tags by typing `-t` without specifying any tags after it.
