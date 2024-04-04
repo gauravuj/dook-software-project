@@ -334,7 +334,7 @@ Here is the current state of a contact information before updating:
 
 ![Success Add Command Contact](images/AddCommandContactsSuccess.png)
 
-Upon executing the command `edit 1 -n John Lim -p 23456789 -a 311, Rochor Ave 1, #01-01, johnl@example.com -t friend`, 
+Upon executing the command `edit 1 -n John Lim -p 23456789 -a 311, Rochor Ave 1, #01-01, johnl@example.com -t friend`,
 below would be the expected output:
 
 ![Success Edit Command](images/EditCommandSuccess.png)
@@ -383,11 +383,11 @@ Below shows all the current contacts in our contact list, say we have 3 contacts
 
 Say we only want contacts with "John" in our contact list, we shall execute `find John` to achieve this.
 
-Below shows the expected output after running the command, there is only 1 contact with `John` in their name: 
+Below shows the expected output after running the command, there is only 1 contact with `John` in their name:
 
 ![Find Command Success](images/FindCommandSuccess.png)
 
-Below shows the expected contact list after running the command: 
+Below shows the expected contact list after running the command:
 
 ![Find Command Contact Success](images/FindCommandContactsSuccess.png)
 
@@ -412,11 +412,11 @@ Format: `delete INDEX`
 Examples:
 * `list` followed by `delete 2` deletes the 2nd person in the address book.
 
-Below shows the current state of our contact list: 
+Below shows the current state of our contact list:
 
 ![Delete Command Contacts Before](images/DeleteCommandContactsBefore.png)
 
-Say we want to remove `Sarah Jacobs` from our contact list, as she migrated overseas to pursue her masters, and we lost contact. 
+Say we want to remove `Sarah Jacobs` from our contact list, as she migrated overseas to pursue her masters, and we lost contact.
 We observe that she is index number **3** in our contact list. As such, we will run `delete 3` in our command box.
 
 Below is the expected output after running `delete 3`:
