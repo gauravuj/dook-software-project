@@ -228,12 +228,29 @@ add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS -t TAG…​
 | **TAG**          | Optional, each tag should start with -t (i.e. for two tags `friend`, `groupmate` use `-t friend -t groupmate`) |
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+
 A person can have any number of tags (including 0)
 </div>
 
 For example:
 * `add -n John Doe -p 98765432 -e johnd@example.com -a John street, block 123, #01-01`
 * `add -n Betsy Crowe -t friend -e betsycrowe@example.com -a Newgate Prison -p 1234567 -t criminal`
+
+Below shows the successful output upon executing `add`:
+
+![Success Add Command](images/AddCommandSucess.png)
+
+Below shows the contact list upon successful adding of contact:
+
+![Success Add Command Contact](images/AddCommandContactsSuccess.png)
+
+In the event that the command entered is invalid, the below error message will be shown:
+
+![Invalid Add Command Contact](images/AddCommandInvalid.png)
+
+In the event that there is an existing user in the contact book, the below error message will be shown:
+
+![Duplicate Add Command Contact](images/AddCommandDuplicate.png)
 
 #### Adding a Professor
 
@@ -245,6 +262,7 @@ To add a specific Professor to the Dook,
 ```
 prof -n NAME
 ```
+
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
 | **NAME**         | Must be non-null and unique                                                                                    |
@@ -252,7 +270,7 @@ prof -n NAME
 Examples:
 * `prof -n seth`
 
-You can also easily add all SOC staff faculty to Dook with one command:
+You can also easily add all SoC staff faculty to Dook with one command:
 
 ```
 prof -a
@@ -260,9 +278,11 @@ prof -a
 
 
 <div markdown="block" class="alert alert-danger">
-:exclamation: **Warnings** <br>
+:exclamation: **Warning** <br>
+
 While adding all professors is included as feature, we generally advise against this. You might find adding professors individually more useful unless you decide
 having the whole SoC staff faculty in your contact book is necessary!
+
 </div>
 
 #### Listing all contacts : `list`
@@ -272,6 +292,14 @@ You decided one day to touch base with all your course-mates and friends in NUS.
 This command lets you easily view all the people in your contacts!
 
 Format: `list`
+
+Below shows the successful output upon executing `list`:
+
+![List Command Success](images/ListCommandSuccess.png)
+
+Below shows the contact list upon executing `list`:
+
+![List Command Contact Success](images/ListCommandContacts.png)
 
 ### Editing a contact : `edit`
 
@@ -302,12 +330,29 @@ Examples:
 * `edit 1 -p 91234567 -e johndoe@example.com` Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively.
 * `edit 2 -n Betsy Crower -t` Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags.
 
+Here is the current state of a contact information before updating:
+
+![Success Add Command Contact](images/AddCommandContactsSuccess.png)
+
+Upon executing the command `edit 1 -n John Lim -p 23456789 -a 311, Rochor Ave 1, #01-01, johnl@example.com -t friend`,
+below would be the expected output:
+
+![Success Edit Command](images/EditCommandSuccess.png)
+
+Here is the updated state of the contact information after updating:
+
+![Success Edit Command Contact](images/EditCommandContactsSuccess.png)
+
 <div markdown="block" class="alert alert-info">:information_source: **Information**
+
 When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.
+
 </div>
 
 <div markdown="span" class="alert alert-success">:bulb: **Tip:**
+
 You can remove all the person’s tags by typing `-t` without specifying any tags after it.
+
 </div>
 
 #### Locating contacts by name: `find`
@@ -332,12 +377,25 @@ Examples:
 * `find John` returns `john` and `John Doe`
 * `find alex david` returns `Alex Yeoh`, `David Li`<br>
 
-  ![result for 'find alex david'](images/findAlexDavidResult.png)
+Below shows all the current contacts in our contact list, say we have 3 contacts, `John Doe`, `Peter Doe` and `Sarah Jacobs`:
+
+![List Command Contact Success](images/ListCommandContacts.png)
+
+Say we only want contacts with "John" in our contact list, we shall execute `find John` to achieve this.
+
+Below shows the expected output after running the command, there is only 1 contact with `John` in their name:
+
+![Find Command Success](images/FindCommandSuccess.png)
+
+Below shows the expected contact list after running the command:
+
+![Find Command Contact Success](images/FindCommandContactsSuccess.png)
 
 <div markdown="block" class="alert alert-info">:information_source: **Information**
-This command will also fetch all existing Professors in the contact book if there is a match!
-</div>
 
+This command will also fetch all existing Professors in the contact book if there is a match!
+
+</div>
 
 #### Deleting a contact : `delete`
 
@@ -353,7 +411,37 @@ Format: `delete INDEX`
 
 Examples:
 * `list` followed by `delete 2` deletes the 2nd person in the address book.
-* `find Betsy` followed by `delete 1` deletes the 1st person in the results of the `find` command.
+
+Below shows the current state of our contact list:
+
+![Delete Command Contacts Before](images/DeleteCommandContactsBefore.png)
+
+Say we want to remove `Sarah Jacobs` from our contact list, as she migrated overseas to pursue her masters, and we lost contact.
+We observe that she is index number **3** in our contact list. As such, we will run `delete 3` in our command box.
+
+Below is the expected output after running `delete 3`:
+
+![Delete Command Success](images/DeleteCommandSuccess.png)
+
+Below is the expected contact list after running `delete 3`, we observe `Sarah Jacobs` no longer exists in our contact list.
+
+![Delete Command Contacts Success](imgaes/DeleteCommandContactsSuccess.png)
+
+<div markdown="block" class="alert alert-success">
+:bulb: **Tips**
+
+`find John` followed by `delete 1` deletes the 1st person with the name `John`.
+
+</div>
+
+<div markdown="block" class="alert alert-danger">
+
+**:exclamation: Destructive Command!**<br>
+
+This command is **irreversible**, the deleted contact information will be lost!
+
+</div>
+
 
 ### Booking Management
 
