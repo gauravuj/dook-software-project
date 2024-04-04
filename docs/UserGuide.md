@@ -3,6 +3,8 @@ layout: page
 title: User Guide
 ---
 
+--------------------------------------------------------------------------------------------------------------------
+
 ## What is Dook?
 
 ![UiPreview](images/UserGuideFront.png)
@@ -101,8 +103,8 @@ If you are unfamiliar with the command terminal, follow this [guideline.](https:
 
 --------------------------------------------------------------------------------------------------------------------
 
-## Familiarising yourself with Dook Interface
-The main interface is divided into **two main panels** (Booking and Contact) and **4 small components** (listed below). There's a menu bar at the top with two buttons `File`
+## Understanding the Interface
+The main interface is divided into **two main panels** (Booking and Contact) and **4 smaller elements** (shown below). There's a menu bar at the top with two buttons `File`
  and `Help`, and at the bottom there's a status bar displaying the location of the `addressbook.json` file.
 
 <div markdown="block" class="alert alert-info">
@@ -205,15 +207,17 @@ It will open a window similar to this:
 [Back To ToC](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+### Contact Management
 
 ### Adding a contact: `add`
 
 With every contact book, we need to be able to create contacts. You have just made a new friend in your tutorial and
 decided to save his contact for future collaboration purposes.
 
-This command adds a new person to the contact book!
+```
+add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS -t TAG…​
+```
 
-Format: `add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS -t TAG…​`
 
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
@@ -227,20 +231,20 @@ Format: `add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS -t TAG…​`
 A person can have any number of tags (including 0)
 </div>
 
-Examples:
+For example:
 * `add -n John Doe -p 98765432 -e johnd@example.com -a John street, block 123, #01-01`
 * `add -n Betsy Crowe -t friend -e betsycrowe@example.com -a Newgate Prison -p 1234567 -t criminal`
 
-### Adding a Professor
+#### Adding a Professor
 
-You have just taken CS2040S and you now have a favorite Professor in SoC!
-
-This command is specialized for adding a Professor to the contact book, allowing you to maintain their contact details at
+You have just taken CS2040S and you now have a favorite Professor in SoC! You would like to stay in contact with them and have their updated contact details at
 your fingertips.
 
-Format: `prof -n NAME` (Adds a professor individually)
-Format: `prof -a` (Adds all staff in SoC to contact book)
+To add a specific Professor to the Dook,
 
+```
+prof -n NAME
+```
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
 | **NAME**         | Must be non-null and unique                                                                                    |
@@ -248,13 +252,20 @@ Format: `prof -a` (Adds all staff in SoC to contact book)
 Examples:
 * `prof -n seth`
 
+You can also easily add all SOC staff faculty to Dook with one command:
+
+```
+prof -a
+```
+
+
 <div markdown="block" class="alert alert-danger">
 :exclamation: **Warnings** <br>
-While adding all professors is included as an option, we generally advise adding professors individually unless you decide
+While adding all professors is included as feature, we generally advise against this. You might find adding professors individually more useful unless you decide
 having the whole SoC staff faculty in your contact book is necessary!
 </div>
 
-### Listing all contacts : `list`
+#### Listing all contacts : `list`
 
 You decided one day to touch base with all your course-mates and friends in NUS.
 
@@ -262,14 +273,16 @@ This command lets you easily view all the people in your contacts!
 
 Format: `list`
 
-### Editing a contacts : `edit`
+### Editing a contact : `edit`
 
-You just had a catchup with an old friend and you realised he changed his primary contact number because he recently
-migrated overseas.
+You just had a catchup with an old friend and realised he changed his phone number because after
+migrating overseas.
 
-The command allows you to update an existing contact's details in the contact book.
+The command allows you to update an existing contact's details.
 
-Format: `edit INDEX [-n NAME] [-p PHONE] [-e EMAIL] [-a ADDRESS] [-t TAG]…​`
+```
+edit INDEX [-n NAME] [-p PHONE] [-e EMAIL] [-a ADDRESS] [-t TAG]…​
+```
 
 * Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed person list. The index **must be a positive integer** 1, 2, 3, …​
 * At least one of the optional fields must be provided.
@@ -278,7 +291,8 @@ Format: `edit INDEX [-n NAME] [-p PHONE] [-e EMAIL] [-a ADDRESS] [-t TAG]…​`
 
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
-| **NAME**         | Must be non-null and unique                                                                                    |
+| **INDEX**        | Must be an integer in the range [1, number of contacts displayed]                                              |
+| **NAME**         | Optional                                                                                                       |
 | **PHONE_NUMBER** | Optional, only numbers and minimum 3 digits                                                                    |
 | **EMAIL**        | Optional, follow standard email formats (i.e xxx@xxx)                                                          |
 | **ADDRESS**      | Optional                                                                                                       |
@@ -296,7 +310,7 @@ When editing tags, the existing tags of the person will be removed i.e adding of
 You can remove all the person’s tags by typing `-t` without specifying any tags after it.
 </div>
 
-### Locating contacts by name: `find`
+#### Locating contacts by name: `find`
 
 Imagine you have just met a wonderful group of NUS students at a networking event, and you've added their details to the
 contact book. A few days later, you want to send a follow-up email to one of them, but their name escapes you. You remember
@@ -324,7 +338,8 @@ Examples:
 This command will also fetch all existing Professors in the contact book if there is a match!
 </div>
 
-### Deleting a contact : `delete`
+
+#### Deleting a contact : `delete`
 
 Your contact book is starting to look cluttered, and you realise you no longer certain contacts' details.
 
@@ -340,7 +355,9 @@ Examples:
 * `list` followed by `delete 2` deletes the 2nd person in the address book.
 * `find Betsy` followed by `delete 1` deletes the 1st person in the results of the `find` command.
 
-### Adding a booking : `book`
+### Booking Management
+
+#### Adding a booking : `book`
 
 Adds the specified booking to the address book.
 
@@ -352,7 +369,7 @@ Format: `-n DESCRIPTION -s START_TIME -e END_TIME`
 Examples:
 * `book -n John's Birthday Party -s 2023-12-31 19:00 -e 2023-12-31 23:00`
 
-### Cancelling a booking : `cancel`
+#### Cancelling a booking : `cancel`
 
 Cancels the specified booking from the address book.
 
@@ -365,7 +382,7 @@ Format: `cancel INDEX`
 Examples:
 * `cancel 2` cancels the 2nd booking in the booking list.
 
-### Searching for a booking : `search`
+#### Searching for a booking : `search`
 
 Searches for the specified booking from the address book.
 
@@ -376,7 +393,7 @@ Format: `search KEYWORD [MORE_KEYWORDS]`
 * Persons matching at least one keyword will be returned (i.e. `OR` search).
   e.g. `John` will return `Johns Birthday Party`, `Dinner with John`
 
-### Clearing all contact entries : `clear`
+#### Clearing all contact entries : `clear`
 
 Clears all contact entries from the address book.
 
