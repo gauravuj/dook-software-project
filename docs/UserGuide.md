@@ -268,7 +268,9 @@ prof -n NAME
 | **NAME**         | Must be non-null and unique                                                                                    |
 
 Examples:
-* `prof -n seth`
+* `prof -n aaron`
+
+![Prof Aaron Contact](images/profaaron.png)
 
 You can also easily add all SoC staff faculty to Dook with one command:
 
@@ -495,6 +497,42 @@ This command is **irreversible**, and all your data will be lost.
 Please use this command with caution!
 
 </div>
+
+###  Changing themes in Dook : `theme`
+
+Dook comes preinstalled with a light and dark theme.
+
+![Dark Theme](images/darktheme.png)
+
+![Light Theme](images/lighttheme.png)
+
+Format: `-bg THEME(light/dark)`
+* changes the current theme to either dark/light
+* dark theme is the *default* on a new launch
+* Dook remembers your preferences!, it loads the most recent selected theme on launch.
+
+Examples:
+* `theme -bg light`
+
+Any unknown theme will be met with an error message
+
+![Theme_Command_Failure](images/themefailure.png)
+
+New themes are currently being added.
+
+###   Adding aliases in Dook : `alias`
+
+#### **Warning! For advance users only**
+
+Dook allows the aliasing of whole commands to any input of the users choice
+
+Format: `-al NEW_COMMAND -r COMMAND_TO_REPLACE`
+
+* commands like *theme -bg light* can be aliased to just *light* for convenience
+* aliases **cannot** be deleted as of the current version
+* aliases immediate tries to execute the replaced command, *does not work as a macro*
+* therefore aliases such as replacing **add -n** to **addn** does not work as intended, as add -n will be 
+immediately executed and met by an error
 
 
 ### Exiting the program : `exit`
