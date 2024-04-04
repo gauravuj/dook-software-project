@@ -425,7 +425,7 @@ Below is the expected output after running `delete 3`:
 
 Below is the expected contact list after running `delete 3`, we observe `Sarah Jacobs` no longer exists in our contact list.
 
-![Delete Command Contacts Success](imgaes/DeleteCommandContactsSuccess.png)
+![Delete Command Contacts Success](images/DeleteCommandContactsSuccess.png)
 
 <div markdown="block" class="alert alert-success">
 :bulb: **Tips**
