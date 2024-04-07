@@ -16,6 +16,7 @@ repositories {
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
 }
 
+
 checkstyle {
     toolVersion = '10.2'
 }
@@ -71,6 +72,10 @@ dependencies {
 
 shadowJar {
     archiveFileName = 'addressbook.jar'
+}
+
+processResources {
+    duplicatesStrategy = 'exclude'
 }
 
 defaultTasks 'clean', 'test'

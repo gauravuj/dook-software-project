@@ -28,13 +28,22 @@ public class BookCommandParser implements Parser<BookCommand> {
     public BookCommand parse(String args) throws ParseException {
         ArgumentMultimap argMultimap =
                 ArgumentTokenizer.tokenize(args, PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES);
-
-        if (!arePrefixesPresent(argMultimap, PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME)
+        System.out.println("START TEST");
+        if (!arePrefixesPresent(argMultimap, PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES)
                 || !argMultimap.getPreamble().isEmpty()) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, BookCommand.MESSAGE_USAGE));
         }
 
         argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES);
+
+//        if (argMultimap.getValue(PREFIX_NOTES).isPresent()) {
+//            System.out.println("TEST");
+//            if (argMultimap.getValue(PREFIX_NOTES) == null) {
+//                throw new ParseException("Booking notes missing");
+//            }
+//        } else {
+//            System.out.println("TEST ELSE");
+//        }
 
         Description description = ParserUtil.parseBookingName(argMultimap.getValue(PREFIX_DESCRIPTION).get());
         StartTime start = ParserUtil.parseStartTime(argMultimap.getValue(PREFIX_START_TIME).get());
