@@ -470,7 +470,7 @@ If you want to remind yourself of your consult tomorrow, you can add it to Dook.
 | **DESCRIPTION** | Must be non-null and unique              |
 | **START_TIME**  | Must follow format of `2023-12-31 19:00` |
 | **END_TIME**    | Must follow format of `2023-12-31 19:00` |
-| **NOTE**        | Optional                                 |
+| **NOTE**        | Must be non-null and unique              |
 
 Examples:
 * `book -n CS2101 Consult -s 2023-12-31 19:00 -e 2023-12-31 23:00 -note DO HOMEWORK`
