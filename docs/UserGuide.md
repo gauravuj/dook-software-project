@@ -538,12 +538,12 @@ Done searching for your bookings with your favourite professor? Lets display all
 view
 ```
 
-#### Clearing all bookings entries : `clear`
+#### Clearing all bookings entries : `cancel -a`
 
 Want a fresh start? Quickly clears all your bookings with:
 
  ```
- clear
+ cancel -a
  ```
 
 <div markdown="block" class="alert alert-danger">
@@ -563,7 +563,7 @@ Dook comes preinstalled with a light and dark theme.
 
 ![Light Theme](images/lighttheme.png)
 
-Format: `-bg THEME(light/dark)`
+Format: `theme -bg light/dark`
 * changes the current theme to either dark/light
 * dark theme is the *default* on a new launch
 * Dook remembers your preferences!, it loads the most recent selected theme on launch.
@@ -604,7 +604,7 @@ AddressBook data are saved automatically after any command that changes the data
 
 ### Editing the data file
 
-AddressBook data are saved automatically as a JSON file `[JAR file location]/data/addressbook.json`. Advanced users are welcome to update data directly by editing that data file.
+AddressBook data are saved automatically as a JSON file:<br> `[JAR file location]/data/addressbook.json`. <br>Advanced users are welcome to update data directly by editing that data file.
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
 If your changes to the data file makes its format invalid, AddressBook will discard all data and start with an empty data file at the next run. Hence, it is recommended to take a backup of the file before editing it.<br>
@@ -615,17 +615,17 @@ Furthermore, certain edits can cause the AddressBook to behave in unexpected way
 
 ## FAQ
 
-**Q**: How do I install Java 11?
+**Q**: How do I install Java 11?<br>
 **A**: Follow this [link](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A) for steps to download Java 11.
 
 **Q**: How do I transfer my data to another Computer?<br>
 **A**: Go to the application's home directory and copy the `data/addressbook.json` file containing your data into the empty
 data folder created by Dook on the other computer.
 
-**Q**: Oh no! I have accidentally closed Dook without using the `exit` command? Do I lose all my data?
+**Q**: Oh no! I have accidentally closed Dook without using the `exit` command? Do I lose all my data?<br>
 **A**: Not to worry! Dook automatically saves all data after every change, so no data will be lost!
 
-**Q**: Do I need Internet connection to use Dook?
+**Q**: Do I need Internet connection to use Dook?<br>
 **A**: Nope! Dook works fully offline and online!
 
 --------------------------------------------------------------------------------------------------------------------
