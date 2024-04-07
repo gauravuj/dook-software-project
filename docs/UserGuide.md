@@ -27,6 +27,7 @@ We hope that you will find this guide helpful in maximising your Dook experience
 --------------------------------------------------------------------------------------------------------------------
 
 ## Using the Guide
+
 We hope that this guide will familiarise you with the [CLI](#glossary) commands and [GUI](#glossary) and interface. If you
 are unfamiliar with some jargon here, do have a quick look at our [glossary](#glossary) below! :)
 
@@ -56,6 +57,7 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
 --------------------------------------------------------------------------------------------------------------------
 
 ## Table of Contents
+
 * Table of Contents
 {:toc}
 
@@ -66,44 +68,50 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
 1. Ensure you have [Java 11](#faq) or above installed in your Computer. If  If you have never downloaded it before,
    download from [here.](https://www.oracle.com/sg/java/technologies/javase/jdk11-archive-downloads.html)
 
-2. Download the latest version of [Dook](https://github.com/AY2324S2-CS2103T-W11-3/tp/releases) in your computer.
+1. Download the latest version of [Dook](https://github.com/AY2324S2-CS2103T-W11-3/tp/releases) in your computer.
 
-3. Copy the file to an empty folder you want to use as the `home folder` for Dook.
+1. Copy the file to an empty folder you want to use as the `home folder` for Dook.
 
-4. From the home folder, open “Terminal” on macOS or “Command Prompt” in Windows, and type `java -jar Dook.jar` to run the application. <br>
-   A GUI similar to the below should appear in a few seconds.
+1. Depending on your operating system, either open “Terminal” on macOS or “Command Prompt” in Windows, and type `java -jar Dook.jar` to run the application. <br>
+   
+You should see a GUI similar to the one shown below pop up in a few seconds.
 
    ![Ui image](images/UserGuideApp.png)
 
 <div markdown="block" class="alert alert-info">
 :information_source: **Information**
 
-If you are unfamiliar with the command terminal, follow this [guideline.](https://tutorials.codebar.io/command-line/introduction/tutorial.html)
+New to the command line? Don't worry, checkout this [guide](https://tutorials.codebar.io/command-line/introduction/tutorial.html)
 </div>
 
+### The basics
 
-5. Type a command in the command box and press Enter to execute it. <br>
-   Some example commands you can try:
+Here are some sample commands to get you going! 
+
+Input the commands below into the [command box](##-understanding-the-interface) and press Enter to execute it. 
+<br>
+Some example commands you can try:
 
    * `help` : Opens the help window.
 
    * `list` : Lists all contacts.
 
-   * `add -n Prof Damith -p 98765432 -e damithch@example.com -a COM1-02-57` : Adds a contact named `Prof Damith` to the Dook address book.
+   * `add -n Bob Smith -p 98765432 -e bsmith@example.com -a Bedok 693021` : Adds a contact named `Bob Smith` to the Dook address book.
 
    * `book -n CS2103T Consultation -s 2024-04-21 14:00 -e 2024-04-21 16:00` : Adds a new booking for `CS2103T Consultation` from `2024-04-21 14:00` to `2024-04-21 16:00`.
 
-   * `search CS2101 Consultation` : Finds the consultation(s) named `CS2101 Consultation` from the list.
+   * `search CS2103T Consultation` : Finds the consultation you just added above from the list.
 
    * `exit` : Exits the app.
 
-6. Please refer to the [Features](#features) below for details of each command.
+For additional commands, please refer to the [Features section](#features) below for details of every available command.
 
-[Back To ToC](#table-of-contents)
+[Back To Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
 
 ## Understanding the Interface
+
 The main interface is divided into **two main panels** (Booking and Contact) and **4 smaller elements** (shown below). There's a menu bar at the top with two buttons `File`
  and `Help`, and at the bottom there's a status bar displaying the location of the `addressbook.json` file.
 
@@ -209,7 +217,7 @@ It will open a window similar to this:
 --------------------------------------------------------------------------------------------------------------------
 ### Contact Management
 
-### Adding a contact: `add`
+#### Adding a contact: `add`
 
 With every contact book, we need to be able to create contacts. You have just made a new friend in your tutorial and
 decided to save his contact for future collaboration purposes.
@@ -268,7 +276,9 @@ prof -n NAME
 | **NAME**         | Must be non-null and unique                                                                                    |
 
 Examples:
-* `prof -n seth`
+* `prof -n aaron`
+
+![Prof Aaron Contact](images/profaaron.png)
 
 You can also easily add all SoC staff faculty to Dook with one command:
 
@@ -447,54 +457,139 @@ This command is **irreversible**, the deleted contact information will be lost!
 
 #### Adding a booking : `book`
 
-Adds the specified booking to the address book.
+If you want to remind yourself of your consult tomorrow, you can add it to Dook.
 
-Format: `-n DESCRIPTION -s START_TIME -e END_TIME`
+```
+-n DESCRIPTION -s START_TIME -e END_TIME -note NOTE
+```
+* Duplicate bookings are not allowed! This means that across two bookings, you cannot have all four params to be the exact same.
+* For now: start and end time formats must be in `yyyy-mm-d hh:mm` (we are working to expand this!)
 
-* Creates a booking with the specified parameters.
-* Start and end time formats are in yyyy-mm-d hh:mm.
+| Param           | Remarks                                  |
+|-----------------|------------------------------------------|
+| **DESCRIPTION** | Must be non-null and unique              |
+| **START_TIME**  | Must follow format of `2023-12-31 19:00` |
+| **END_TIME**    | Must follow format of `2023-12-31 19:00` |
+| **NOTE**        | Optional                                 |
 
 Examples:
-* `book -n John's Birthday Party -s 2023-12-31 19:00 -e 2023-12-31 23:00`
+* `book -n CS2101 Consult -s 2023-12-31 19:00 -e 2023-12-31 23:00 -note DO HOMEWORK`
+
+#### Updating bookings: `update`
+
+Did the meeting date change? Or perhaps you want to add extra reminders in the notes? Try:
+```
+update INDEX -n {description} -s {start_time} -e {end_time} -note {note}
+```
+* The index refers to the index number shown in the displayed booking list.
+* Other params are optional and entered only if you want to update current data.
+
+| Param           | Remarks                                            |
+|-----------------|----------------------------------------------------|
+| **INDEX**       | Refers to currently displayed bookings             |
+| **DESCRIPTION** | Optional                                           |
+| **START_TIME**  | Optional, Must follow format of `2023-12-31 19:00` |
+| **END_TIME**    | Optional, Must follow format of `2023-12-31 19:00` |
+| **NOTE**        | Optional                                           |
+
 
 #### Cancelling a booking : `cancel`
 
-Cancels the specified booking from the address book.
+Did an appointment get cancelled or postponed? You can easily cancel bookings from the address book using:
 
-Format: `cancel INDEX`
+```
+cancel INDEX
+```
 
 * Deletes the booking at the specified `INDEX`.
 * The index refers to the index number shown in the displayed booking list.
-* The index **must be a positive integer** 1, 2, 3, …​
 
 Examples:
-* `cancel 2` cancels the 2nd booking in the booking list.
+* `cancel 2` cancels the 2nd booking shown in the booking list.
+
+<div markdown="block" class="alert alert-success">
+:bulb: **Tips**
+
+You might want to use [search](###-searching-for-a-booking) to display the booking in the GUI first to easily find its INDEX.
+</div>
 
 #### Searching for a booking : `search`
 
-Searches for the specified booking from the address book.
+Have too many bookings? Worry not, as you can searche for specific bookings using:
 
-Format: `search KEYWORD [MORE_KEYWORDS]`
+```
+search KEYWORD [MORE_KEYWORDS]
+```
 
-* The search is case-insensitive. e.g `john` will match `John`
-* The order of the keywords does not matter. e.g. `Hans Bo` will match `Bo Hans`
-* Persons matching at least one keyword will be returned (i.e. `OR` search).
-  e.g. `John` will return `Johns Birthday Party`, `Dinner with John`
+* The search is case-insensitive. e.g `coNsUlT` will match `Consult`
+* The order of the keywords does not matter. e.g. `consult CS2103` will match `CS2103 Consult`
+* Bookings matching at least one keyword will be returned (i.e. `OR` search).
+  e.g. `Consult` will return `CS2103 Consult`, `CS5300 Consult`
 
-#### Clearing all contact entries : `clear`
+<div markdown="block" class="alert alert-success">
+:bulb: **Tips**
 
-Clears all contact entries from the address book.
+Want to see all your bookings again? Try the [view command](###-searching-for-a-booking) .
+</div>
 
-Format: `clear`
+#### Viewing all bookings : `view`
+Done searching for your bookings with your favourite professor? Lets display all your bookings using:
+```
+view
+```
+
+#### Clearing all bookings entries : `clear`
+
+Want a fresh start? Quickly clears all your bookings with:
+
+ ```
+ clear
+ ```
 
 <div markdown="block" class="alert alert-danger">
 
-**:exclamation: Destructive Command!**<br>
+**:exclamation: Be careful!**<br>
 
 This command is **irreversible**, and all your data will be lost.
 Please use this command with caution!
 
 </div>
+
+###  Changing themes in Dook : `theme`
+
+Dook comes preinstalled with a light and dark theme.
+
+![Dark Theme](images/darktheme.png)
+
+![Light Theme](images/lighttheme.png)
+
+Format: `-bg THEME(light/dark)`
+* changes the current theme to either dark/light
+* dark theme is the *default* on a new launch
+* Dook remembers your preferences!, it loads the most recent selected theme on launch.
+
+Examples:
+* `theme -bg light`
+
+Any unknown theme will be met with an error message
+
+![Theme_Command_Failure](images/themefailure.png)
+
+New themes are currently being added.
+
+###   Adding aliases in Dook : `alias`
+
+#### **Warning! For advance users only**
+
+Dook allows the aliasing of whole commands to any input of the users choice
+
+Format: `-al NEW_COMMAND -r COMMAND_TO_REPLACE`
+
+* commands like *theme -bg light* can be aliased to just *light* for convenience
+* aliases **cannot** be deleted as of the current version
+* aliases immediate tries to execute the replaced command, *does not work as a macro*
+* therefore aliases such as replacing **add -n** to **addn** does not work as intended, as add -n will be 
+immediately executed and met by an error
 
 
 ### Exiting the program : `exit`
@@ -505,7 +600,7 @@ Format: `exit`
 
 ### Saving the data
 
-AddressBook data are saved in the hard disk automatically after any command that changes the data. There is no need to save manually.
+AddressBook data are saved automatically after any command that changes the data. There is no need to save manually.
 
 ### Editing the data file
 
@@ -515,10 +610,6 @@ AddressBook data are saved automatically as a JSON file `[JAR file location]/dat
 If your changes to the data file makes its format invalid, AddressBook will discard all data and start with an empty data file at the next run. Hence, it is recommended to take a backup of the file before editing it.<br>
 Furthermore, certain edits can cause the AddressBook to behave in unexpected ways (e.g., if a value entered is outside of the acceptable range). Therefore, edit the data file only if you are confident that you can update it correctly.
 </div>
-
-### Archiving data files `[coming in v2.0]`
-
-_Details coming soon ..._
 
 --------------------------------------------------------------------------------------------------------------------
 

@@ -105,7 +105,7 @@ public class AddressBookParser {
             return new AddAliasCommandParser().parse(arguments);
 
         case ProfCommand.COMMAND_WORD:
-            return new AddProfCommandParser().parse(arguments);
+            return new ProfCommandParser().parse(arguments);
 
         case UpdateCommand.COMMAND_WORD:
             return new UpdateCommandParser().parse(arguments);
