@@ -460,7 +460,7 @@ This command is **irreversible**, the deleted contact information will be lost!
 If you want to remind yourself of your consult tomorrow, you can add it to Dook.
 
 ```
--n DESCRIPTION -s START_TIME -e END_TIME -note NOTE
+book -n DESCRIPTION -s START_TIME -e END_TIME -note NOTE
 ```
 * Duplicate bookings are not allowed! This means that across two bookings, you cannot have all four params to be the exact same.
 * For now: start and end time formats must be in `yyyy-mm-d hh:mm` (we are working to expand this!)
