@@ -5,7 +5,6 @@ import static seedu.address.commons.util.AppUtil.checkArgument;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.time.format.ResolverStyle;
 
 /**
  * Represents a Booking's start time in the address book.
@@ -15,8 +14,7 @@ public class StartTime {
 
     public static final String MESSAGE_CONSTRAINTS = "Start times must be in the format of YYYY-MM-DD HH:MM "
             + "(ISO_LOCAL_DATE_TIME).";
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d HH:mm")
-            .withResolverStyle(ResolverStyle.STRICT);
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
     public final String startTimeString;
     public final LocalDateTime startTime;

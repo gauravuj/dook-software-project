@@ -13,8 +13,8 @@ import seedu.address.model.booking.StartTime;
 public class BookingBuilder {
 
     public static final String DEFAULT_DESCRIPTION = "Default booking description";
-    public static final String DEFAULT_START_TIME = "2023-12-31 19:00";
-    public static final String DEFAULT_END_TIME = "2023-12-31 21:00";
+    public static final String DEFAULT_START_TIME = "2023-12-22 19:00";
+    public static final String DEFAULT_END_TIME = "2023-12-22 21:00";
     public static final String DEFAULT_NOTE = "Hello World!";
 
     private Description description;
