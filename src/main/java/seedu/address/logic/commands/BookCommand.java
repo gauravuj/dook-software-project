@@ -32,6 +32,7 @@ public class BookCommand extends Command {
             + PREFIX_START_TIME + "2023-12-31 19:00 "
             + PREFIX_END_TIME + "2023-12-31 23:00 "
             + PREFIX_NOTES + "Bring cake";
+    public static final String MESSAGE_NOTE_MISSING = "Error: Please fill in a non-empty note!";
     private final Booking toAdd;
 
     /**

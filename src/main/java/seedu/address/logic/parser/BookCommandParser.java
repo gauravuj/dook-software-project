@@ -6,6 +6,7 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_END_TIME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NOTES;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_START_TIME;
 
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import seedu.address.logic.commands.BookCommand;
@@ -28,22 +29,18 @@ public class BookCommandParser implements Parser<BookCommand> {
     public BookCommand parse(String args) throws ParseException {
         ArgumentMultimap argMultimap =
                 ArgumentTokenizer.tokenize(args, PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES);
-        System.out.println("START TEST");
-        if (!arePrefixesPresent(argMultimap, PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES)
+        
+        if (!arePrefixesPresent(argMultimap, PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME)
                 || !argMultimap.getPreamble().isEmpty()) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, BookCommand.MESSAGE_USAGE));
         }
 
         argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES);
 
-//        if (argMultimap.getValue(PREFIX_NOTES).isPresent()) {
-//            System.out.println("TEST");
-//            if (argMultimap.getValue(PREFIX_NOTES) == null) {
-//                throw new ParseException("Booking notes missing");
-//            }
-//        } else {
-//            System.out.println("TEST ELSE");
-//        }
+        // If note field is empty
+        if (argMultimap.getValue(PREFIX_NOTES).isEmpty()) {
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, BookCommand.MESSAGE_NOTE_MISSING));
+        }
 
         Description description = ParserUtil.parseBookingName(argMultimap.getValue(PREFIX_DESCRIPTION).get());
         StartTime start = ParserUtil.parseStartTime(argMultimap.getValue(PREFIX_START_TIME).get());
