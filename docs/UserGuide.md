@@ -383,6 +383,13 @@ Format: `find KEYWORD [MORE_KEYWORDS]`
 * Persons matching at least one keyword will be returned (i.e. `OR` search).
   e.g. `Hans Bo` will return `Hans Gruber`, `Bo Yang`
 
+<div markdown="block" class="alert alert-info">
+:information_source: **Information**
+
+For now, we can only `find` contacts by name - future implementations would include finding by other fields as well,
+so stay tuned!
+</div>
+
 Examples:
 * `find John` returns `john` and `John Doe`
 * `find alex david` returns `Alex Yeoh`, `David Li`<br>
