@@ -311,7 +311,7 @@ Below shows the contact list upon executing `list`:
 
 ![List Command Contact Success](images/ListCommandContacts.png)
 
-### Editing a contact : `edit`
+#### Editing a contact : `edit`
 
 You just had a catchup with an old friend and realised he changed his phone number because after
 migrating overseas.
@@ -555,7 +555,9 @@ Please use this command with caution!
 
 </div>
 
-###  Changing themes in Dook : `theme`
+### Other features
+
+####  Changing themes in Dook : `theme`
 
 Dook comes preinstalled with a light and dark theme.
 
@@ -577,32 +579,38 @@ Any unknown theme will be met with an error message
 
 New themes are currently being added.
 
-###   Adding aliases in Dook : `alias`
+#### Adding aliases in Dook : `alias`
 
-#### **Warning! For advance users only**
+For commands that you use often, Dook allows the aliasing of them to any input of your choice.
 
-Dook allows the aliasing of whole commands to any input of the users choice
+```
+-al NEW_COMMAND -r COMMAND_TO_REPLACE
+```
 
-Format: `-al NEW_COMMAND -r COMMAND_TO_REPLACE`
+* For example, if you like swapping between themes, you can enter `-al light -r theme -bg light`
+* This results in `theme -bg light` being shortened to `light`
 
-* commands like *theme -bg light* can be aliased to just *light* for convenience
-* aliases **cannot** be deleted as of the current version
-* aliases immediate tries to execute the replaced command, *does not work as a macro*
-* therefore aliases such as replacing **add -n** to **addn** does not work as intended, as add -n will be 
-immediately executed and met by an error
+<div markdown="block" class="alert alert-danger">
+:exclamation: **Warning** <br>
 
+**This feature is meant for advanced users, please be careful**
 
-### Exiting the program : `exit`
+This feature is still in beta, note:
+* Aliases **cannot** be deleted as of the current version
+* Aliases must be for the entire command (i.e. cannot replace `add -n` with `addn`)
+</div>
+
+#### Exiting the program : `exit`
 
 Exits the program.
 
 Format: `exit`
 
-### Saving the data
+#### Saving the data
 
 AddressBook data are saved automatically after any command that changes the data. There is no need to save manually.
 
-### Editing the data file
+#### Editing the data file
 
 AddressBook data are saved automatically as a JSON file `[JAR file location]/data/addressbook.json`. Advanced users are welcome to update data directly by editing that data file.
 
