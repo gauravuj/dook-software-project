@@ -477,7 +477,7 @@ book -n DESCRIPTION -s START_TIME -e END_TIME -note NOTE
 | **DESCRIPTION** | Must be non-null and unique              |
 | **START_TIME**  | Must follow format of `2023-12-31 19:00` |
 | **END_TIME**    | Must follow format of `2023-12-31 19:00` |
-| **NOTE**        | Must be non-null and unique              |
+| **NOTE**        | Must be non-null                         |
 
 Examples:
 * `book -n CS2101 Consult -s 2023-12-31 19:00 -e 2023-12-31 23:00 -note DO HOMEWORK`
@@ -566,38 +566,50 @@ Please use this command with caution!
 
 Dook comes preinstalled with a light and dark theme.
 
-![Dark Theme](images/darktheme.png)
-
-![Light Theme](images/lighttheme.png)
-
 Format: `theme -bg light/dark`
-* changes the current theme to either dark/light
-* dark theme is the *default* on a new launch
-* Dook remembers your preferences!, it loads the most recent selected theme on launch.
+
+* Changes the current theme to either dark/light
+* Dark theme is the *default* on a new launch
+* Dook remembers your preferences, it loads the most recent selected theme on launch.
 
 Examples:
 * `theme -bg light`
 
-Any unknown theme will be met with an error message
+Below shows the application before executing `theme -bg light`:
+
+![Dark Theme](images/darktheme.png)
+
+Below shows the application after executing `theme -bg light`:
+
+![Light Theme](images/lighttheme.png)
+
+Below shows the error message upon executing an invalid theme: 
 
 ![Theme_Command_Failure](images/themefailure.png)
 
+
+<div markdown="block" class="alert alert-info">:information_source: **Information**
+
 New themes are currently being added.
+
+</div>
 
 ###   Adding aliases in Dook : `alias`
 
-#### **Warning! For advance users only**
+<div markdown="block" class="alert alert-danger">
 
-Dook allows the aliasing of whole commands to any input of the users choice
+**:exclamation: For advanced users only!**<br>
+
+</div>
+
+Dook allows the aliasing of whole commands to any input of the users choice:
 
 Format: `-al NEW_COMMAND -r COMMAND_TO_REPLACE`
 
-* commands like *theme -bg light* can be aliased to just *light* for convenience
-* aliases **cannot** be deleted as of the current version
-* aliases immediate tries to execute the replaced command, *does not work as a macro*
-* therefore aliases such as replacing **add -n** to **addn** does not work as intended, as add -n will be 
-immediately executed and met by an error
-
+* Commands like *theme -bg light* can be aliased to just *light* for convenience
+* Aliases **cannot** be deleted as of the current version
+* Aliases immediately tries to execute the replaced command, *does not work as a macro*
+* Aliases such as replacing **add -n** to **addn** does not work as intended
 
 ### Exiting the program : `exit`
 
