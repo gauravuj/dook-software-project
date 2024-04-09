@@ -80,7 +80,7 @@ public class UpdateCommand extends Command {
 
         model.setBooking(bookingToUpdate, updatedBooking);
         model.updateFilteredBookingList(PREDICATE_SHOW_ALL_BOOKINGS);
-        return new CommandResult(String.format(MESSAGE_UPDATE_BOOKING_SUCCESS, Messages.format(updatedBooking)));
+        return new CommandResult(String.format(MESSAGE_UPDATE_BOOKING_SUCCESS, Messages.format(bookingToUpdate)));
     }
 
     /**
