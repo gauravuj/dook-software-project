@@ -9,6 +9,8 @@ import java.util.Objects;
  * Represents a booking
  */
 public class Booking {
+
+
     /** Name of the booking */
     private Description description;
     /** Start time of the booking */
