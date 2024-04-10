@@ -20,26 +20,26 @@ public class TypicalBookings {
 
     public static final Booking CAREER_ADVISORY = new BookingBuilder()
             .withDescription("Career advisory consult")
-            .withStartTime("2024-1-31 11:00")
-            .withEndTime("2024-1-31 12:00")
+            .withStartTime("2024-01-12 11:00")
+            .withEndTime("2024-01-12 12:00")
             .build();
 
     public static final Booking CS2103T_CONSULT = new BookingBuilder()
             .withDescription("CS2103T consult")
-            .withStartTime("2024-3-31 14:00")
-            .withEndTime("2024-3-31 16:00")
+            .withStartTime("2024-03-09 14:00")
+            .withEndTime("2024-03-09 16:00")
             .build();
 
     public static final Booking CS2101_CONSULT = new BookingBuilder()
             .withDescription("CS2101 consult")
-            .withStartTime("2024-3-24 14:00")
-            .withEndTime("2024-3-24 16:00")
+            .withStartTime("2024-03-24 14:00")
+            .withEndTime("2024-03-24 16:00")
             .build();
 
     public static final Booking CS2109S_CONSULT = new BookingBuilder()
             .withDescription("CS2109 consult")
-            .withStartTime("2024-2-22 11:00")
-            .withEndTime("2024-2-22 13:00")
+            .withStartTime("2024-05-22 11:00")
+            .withEndTime("2024-05-22 13:00")
             .build();
 
     public static final Booking GENERIC_BOOKING = new BookingBuilder()

@@ -38,17 +38,18 @@ public class UpdateCommandTest {
 
     @Test
     public void execute_allFieldsSpecifiedUnfilteredList_success() {
+        Booking originalBooking = model.getFilteredBookingList().get(0);
         Booking updatedBooking = new BookingBuilder().build();
         UpdateBookingDescriptor descriptor = new UpdateBookingDescriptorBuilder(updatedBooking).build();
         UpdateCommand updateCommand = new UpdateCommand(INDEX_FIRST_BOOKING, descriptor);
 
         String expectedMessage = String.format(UpdateCommand.MESSAGE_UPDATE_BOOKING_SUCCESS,
-                Messages.format(updatedBooking));
+                                               Messages.format(originalBooking));
 
         Model expectedModel = new ModelManager(new AddressBook(model.getAddressBook()),
-                new ProfData(model.getProfData()),
-                new UserPrefs());
-        expectedModel.setBooking(model.getFilteredBookingList().get(0), updatedBooking);
+                                               new ProfData(model.getProfData()),
+                                               new UserPrefs());
+        expectedModel.setBooking(originalBooking, updatedBooking);
 
         assertCommandSuccess(updateCommand, model, expectedMessage, expectedModel);
     }
@@ -69,15 +70,16 @@ public class UpdateCommandTest {
         UpdateCommand updateCommand = new UpdateCommand(indexLastBooking, descriptor);
 
         String expectedMessage = String.format(UpdateCommand.MESSAGE_UPDATE_BOOKING_SUCCESS,
-                Messages.format(updatedBooking));
+                                               Messages.format(lastBooking));
 
         Model expectedModel = new ModelManager(new AddressBook(model.getAddressBook()),
-                new ProfData(model.getProfData()),
-                new UserPrefs());
+                                               new ProfData(model.getProfData()),
+                                               new UserPrefs());
         expectedModel.setBooking(lastBooking, updatedBooking);
 
         assertCommandSuccess(updateCommand, model, expectedMessage, expectedModel);
     }
+
 
     @Test
     public void execute_noFieldSpecifiedUnfilteredList_success() {
@@ -102,18 +104,20 @@ public class UpdateCommandTest {
         Booking updatedBooking =
                 new BookingBuilder(bookingInFilteredList).withDescription(VALID_BOOKING_DESCRIPTION).build();
         UpdateCommand updateCommand = new UpdateCommand(INDEX_FIRST_BOOKING,
-                new UpdateBookingDescriptorBuilder().withDescription(VALID_BOOKING_DESCRIPTION).build());
+                                                        new UpdateBookingDescriptorBuilder()
+                                                                .withDescription(VALID_BOOKING_DESCRIPTION).build());
 
         String expectedMessage = String.format(UpdateCommand.MESSAGE_UPDATE_BOOKING_SUCCESS,
-                Messages.format(updatedBooking));
+                                               Messages.format(bookingInFilteredList));
 
         Model expectedModel = new ModelManager(new AddressBook(model.getAddressBook()),
-                new ProfData(model.getProfData()),
-                new UserPrefs());
-        expectedModel.setBooking(model.getFilteredBookingList().get(0), updatedBooking);
+                                               new ProfData(model.getProfData()),
+                                               new UserPrefs());
+        expectedModel.setBooking(bookingInFilteredList, updatedBooking);
 
         assertCommandSuccess(updateCommand, model, expectedMessage, expectedModel);
     }
+
 
     @Test
     public void execute_duplicateBookingUnfilteredList_failure() {

@@ -36,6 +36,11 @@ public class BookCommandParser implements Parser<BookCommand> {
 
         argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_DESCRIPTION, PREFIX_START_TIME, PREFIX_END_TIME, PREFIX_NOTES);
 
+        // If note field is empty
+        if (argMultimap.getValue(PREFIX_NOTES).isEmpty()) {
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, BookCommand.MESSAGE_NOTE_MISSING));
+        }
+
         Description description = ParserUtil.parseBookingName(argMultimap.getValue(PREFIX_DESCRIPTION).get());
         StartTime start = ParserUtil.parseStartTime(argMultimap.getValue(PREFIX_START_TIME).get());
         EndTime end = ParserUtil.parseEndTime(argMultimap.getValue(PREFIX_END_TIME).get());
