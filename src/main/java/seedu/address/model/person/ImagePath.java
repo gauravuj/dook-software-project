@@ -36,4 +36,8 @@ public class ImagePath {
     public Path getFilePath() {
         return this.filePath;
     }
+
+    public String getStringPath() {
+        return "/images/default_image_2.png";
+    }
 }
