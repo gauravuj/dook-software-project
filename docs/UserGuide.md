@@ -635,7 +635,13 @@ Dook's [address book](#glossary) data are saved automatically after any command 
 
 #### Editing the data file
 
-Dook's data is saved automatically as a [JSON](#glossary) file:<br> `[JAR file location]/data/addressbook.json`. <br>Advanced users are welcome to update data directly by editing that data file.
+Dook's data is saved automatically as a [JSON](#glossary) file:<br> `[Dook JAR file location]/data/addressbook.json`. 
+
+<div markdown="block" class="alert alert-success">
+:bulb: **Tips**
+
+**Advanced** users are welcome to update data directly by editing the json data file.
+</div>
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
 If your changes to the data file makes its format invalid, Dook will discard all data and start with an empty data file at the next run. Hence, it is recommended to take a backup of the file before editing it. 
@@ -689,6 +695,7 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 | **Clear**         | `clear`                                                                                                                                                                               |
 | **Help**          | `help`                                                                                                                                                                                |
 
+[Back To ToC](#table-of-contents)
 
 ### Booking List Command summary
 
