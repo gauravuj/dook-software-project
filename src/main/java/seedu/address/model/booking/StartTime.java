@@ -14,9 +14,9 @@ import java.time.format.ResolverStyle;
 public class StartTime {
 
     public static final String MESSAGE_CONSTRAINTS = "Start times must be in the format of YYYY-MM-DD HH:MM "
-            + "(ISO_LOCAL_DATE_TIME).\nStart dates must also be valid. (i.e no 31 Feb)";
+            + "(ISO_LOCAL_DATE_TIME).\nThe date must also exist for that month/year. (i.e no 31 Feb)";
     private static final DateTimeFormatter formatter = DateTimeFormatter
-            .ofPattern("yyyy-MM-dd HH:mm")
+            .ofPattern("uuuu-MM-dd HH:mm")
             .withResolverStyle(ResolverStyle.STRICT);
 
     public final String startTimeString;

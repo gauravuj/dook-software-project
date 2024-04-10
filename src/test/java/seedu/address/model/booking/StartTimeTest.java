@@ -17,13 +17,23 @@ public class StartTimeTest {
     }
 
     @Test
-    public void isValidStartTime() {
-        // invalid start times
-        assertFalse(StartTime.isValidStartTime("")); // Empty string
-        assertFalse(StartTime.isValidStartTime("2024-02-30 24:01")); // Non-existent date and time
+    public void isValidStartTime_emptyTime_false() {
+        assertFalse(StartTime.isValidStartTime(""));
+        assertFalse(StartTime.isValidStartTime("         "));
+    }
 
-        // valid start times
-        assertTrue(StartTime.isValidStartTime("2024-03-19 12:00")); // Correct format
+    @Test
+    public void isValidStartTime_invalidDates_false() {
+        assertFalse(StartTime.isValidStartTime("2024-01-32 24:60")); // Non-existent date and time
+        assertFalse(StartTime.isValidStartTime("2024-02-31 24:60")); // 31 Feb doesnt exist
+        assertFalse(StartTime.isValidStartTime("2024-04-31 24:60")); // 31 Apr 2024 doesnt exist
+    }
+
+    @Test
+    public void isValidStartTime_validTime_true() {
+        // valid end times
+        assertTrue(StartTime.isValidStartTime("2024-03-19 12:00"));
+        assertTrue(StartTime.isValidStartTime("2024-03-01 23:59"));
     }
 
     @Test
