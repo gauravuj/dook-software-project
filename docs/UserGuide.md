@@ -242,6 +242,13 @@ add -n NAME [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG…​]
 | **ADDRESS**      | Optional                                                                                                       |
 | **TAG**          | Optional, each tag should start with -t (i.e. for two tags `friend`, `groupmate` use `-t friend -t groupmate`) |
 
+<div markdown="block" class="alert alert-danger">
+:exclamation: **Note** <br>
+
+Currently, Dook doesn't have the ability to recognise abbreviations (with a forward slash) such as d/o or s/o in the **_NAME_** parameter, so 
+it might return an error.
+</div>
+
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
 A person can have any number of tags (including 0)
@@ -575,20 +582,20 @@ Please use this command with caution!
 
 Dook comes preinstalled with a light and dark theme.
 
-Format: `theme -bg light/dark`
+Format: `theme -bg THEME` 
 
-* Changes the current theme to either dark/light
+* Changes the current theme to either dark, light or any other theme. 
 * Dark theme is the *default* on a new launch
 * Dook remembers your preferences, it loads the most recent selected theme on launch.
 
 Examples:
 * `theme -bg light`
 
-Below shows the application before executing `theme -bg light`:
+Below shows the application **before** executing `theme -bg light`:
 
 ![Dark Theme](images/darktheme.png)
 
-Below shows the application after executing `theme -bg light`:
+Below shows the application **after** executing `theme -bg light`:
 
 ![Light Theme](images/lighttheme.png)
 
@@ -599,7 +606,8 @@ Below shows the error message upon executing an invalid theme:
 
 <div markdown="block" class="alert alert-info">:information_source: **Information**
 
-New themes are currently being added.
+New themes are currently being added. In v1.5, we envisioned to create a tool for users to create their own theme from the
+`command box` itself.
 
 #### Adding aliases in Dook : `alias`
 
