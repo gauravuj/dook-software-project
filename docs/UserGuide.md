@@ -631,17 +631,18 @@ Format: `exit`
 
 #### Saving the data
 
-AddressBook data are saved automatically after any command that changes the data. There is no need to save manually.
+Dook's [address book](#glossary) data are saved automatically after any command that changes the data. There is no need to save it manually.
 
 #### Editing the data file
 
-AddressBook data are saved automatically as a JSON file:<br> `[JAR file location]/data/addressbook.json`. <br>Advanced users are welcome to update data directly by editing that data file.
+Dook's data is saved automatically as a [JSON](#glossary) file:<br> `[JAR file location]/data/addressbook.json`. <br>Advanced users are welcome to update data directly by editing that data file.
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
-If your changes to the data file makes its format invalid, AddressBook will discard all data and start with an empty data file at the next run. Hence, it is recommended to take a backup of the file before editing it.<br>
-Furthermore, certain edits can cause the AddressBook to behave in unexpected ways (e.g., if a value entered is outside of the acceptable range). Therefore, edit the data file only if you are confident that you can update it correctly.
-</div>
+If your changes to the data file makes its format invalid, Dook will discard all data and start with an empty data file at the next run. Hence, it is recommended to take a backup of the file before editing it. 
 
+Furthermore, certain edits can cause **Dook** to behave in unexpected ways (e.g., if a value entered is outside of the acceptable range). Therefore, edit the data file only if you are confident that you can update it correctly.
+</div>
+</div>
 --------------------------------------------------------------------------------------------------------------------
 
 ## FAQ
@@ -657,7 +658,7 @@ data folder created by Dook on the other computer.
 **A**: Not to worry! Dook automatically saves all data after every change, so no data will be lost!
 
 **Q**: Do I need Internet connection to use Dook?<br>
-**A**: Nope! Dook works fully offline and online!
+**A**: **Only once** when opening the User Guide using `Take me to UG` link in [Help Window](#help-window). Otherwise, Dook works fully offline!
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -677,16 +678,16 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 
 ### Address Book Command summary
 
-| Action            | Format, Examples                                                                                                                                                                |
-|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Add**           | `add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS [-t TAG]…​` <br> e.g., `add -n John Doe -p 22224444 -e jamesho@example.com -a 123, Clementi Rd, 1234665 -t friend t/colleague` |
-| **Add Professor** | `prof -n NAME` or `prof -a`                                                                                                                                                     |
-| **Delete**        | `delete INDEX`<br> e.g., `delete 3`                                                                                                                                             |
-| **Edit**          | `edit INDEX [-n NAME] [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG]…​`<br> e.g.,`edit 2 -n James Lee -e jameslee@example.com`                                              |
-| **Find**          | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`                                                                                                                      |
-| **List**          | `list`                                                                                                                                                                          |
-| **Clear**         | `clear`                                                                                                                                                                         |
-| **Help**          | `help`                                                                                                                                                                          |
+| Action            | Format, Examples                                                                                                                                                                      |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Add**           | `add -n NAME [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG]…​` <br> e.g., `add -n John Doe -p 22224444 -e jamesho@example.com -a 123, Clementi Rd, 1234665 -t friend t/colleague` |
+| **Add Professor** | `prof -n NAME` or `prof -a`                                                                                                                                                           |
+| **Delete**        | `delete INDEX`<br> e.g., `delete 3`                                                                                                                                                   |
+| **Edit**          | `edit INDEX [-n NAME] [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG]…​`<br> e.g.,`edit 2 -n James Lee -e jameslee@example.com`                                                    |
+| **Find**          | `find KEYWORD [MORE_KEYWORDS…​]`<br> e.g., `find James Jake`                                                                                                                          |
+| **List**          | `list`                                                                                                                                                                                |
+| **Clear**         | `clear`                                                                                                                                                                               |
+| **Help**          | `help`                                                                                                                                                                                |
 
 
 ### Booking List Command summary
@@ -706,6 +707,7 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 
 | Term                                                                                                                                                                           | Meaning                                                                                                                                                                                                                                                                                      |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[Address Book (for Dook)](https://en.wikipedia.org/wiki/Command-line_interface)**                                                                                            | A json file that saves all the data regarding contacts and consultations.                                                                                                                                                                                                                    |
 | **[CLI (Command Line Interface)](https://en.wikipedia.org/wiki/Command-line_interface)**                                                                                       | A text-based interface where users type in commands instead of interacting with the application's graphics.                                                                                                                                                                                  |
 | **[CSV](https://en.wikipedia.org/wiki/Comma-separated_values)**                                                                                                                | A text file format that uses commas to separate values. It is supported by a wide range of software, including Microsoft Excel.                                                                                                                                                              |
 | **[Command](https://en.wikipedia.org/wiki/Command_(computing))**                                                                                                               | A line of instructions that you input into the command box. Also see: Command Box                                                                                                                                                                                                            |
@@ -719,7 +721,6 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 | **[Tag](https://en.wikipedia.org/wiki/Tag_(metadata))**                                                                                                                        | A text phrase used to categorize employees by. A tag must be either a Student, Professor, or Teaching Assistant (TA)                                                                                                                                                                         |
 | **[Index](https://en.wikipedia.org/wiki/Index_(computer_science))**                                                                                                            | The number labeling each employee in the employee list.                                                                                                                                                                                                                                      |
 | **[Web browser](https://www.mozilla.org/en-US/firefox/new/)**                                                                                                                  | An application to serve the web like Internet Explorer, Google Chrome, or Firefox. In fact, you are probably using one to access this guide right now!                                                                                                                                       |
-
 
 
 [Back To ToC](#table-of-contents)
