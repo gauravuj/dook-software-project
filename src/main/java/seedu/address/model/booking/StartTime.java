@@ -5,6 +5,7 @@ import static seedu.address.commons.util.AppUtil.checkArgument;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.ResolverStyle;
 
 /**
  * Represents a Booking's start time in the address book.
@@ -13,8 +14,10 @@ import java.time.format.DateTimeParseException;
 public class StartTime {
 
     public static final String MESSAGE_CONSTRAINTS = "Start times must be in the format of YYYY-MM-DD HH:MM "
-            + "(ISO_LOCAL_DATE_TIME).";
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+            + "(ISO_LOCAL_DATE_TIME).\nThe date must also exist for that month/year. (i.e no 31 Feb)";
+    private static final DateTimeFormatter formatter = DateTimeFormatter
+            .ofPattern("uuuu-MM-dd HH:mm")
+            .withResolverStyle(ResolverStyle.STRICT);
 
     public final String startTimeString;
     public final LocalDateTime startTime;
@@ -42,6 +45,10 @@ public class StartTime {
         }
     }
 
+    public LocalDateTime getTime() {
+        return this.startTime;
+    }
+
     @Override
     public String toString() {
         return startTime.format(formatter);
@@ -63,4 +70,5 @@ public class StartTime {
     public int hashCode() {
         return startTime.hashCode();
     }
+
 }

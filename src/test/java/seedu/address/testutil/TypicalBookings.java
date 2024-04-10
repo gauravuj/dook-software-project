@@ -14,8 +14,8 @@ public class TypicalBookings {
 
     public static final Booking CS1231_CONSULT = new BookingBuilder()
             .withDescription("CS1231 Consult")
-            .withStartTime("2022-11-31 11:00")
-            .withEndTime("2022-11-31 12:00")
+            .withStartTime("2022-11-30 11:00")
+            .withEndTime("2022-11-30 12:00")
             .build();
 
     public static final Booking CAREER_ADVISORY = new BookingBuilder()

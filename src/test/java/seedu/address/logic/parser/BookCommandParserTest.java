@@ -30,6 +30,19 @@ public class BookCommandParserTest {
     }
 
     @Test
+    public void parse_startAfterEnd_failure() {
+        // No note is still valid
+        BookingBuilder bookingBuilder = new BookingBuilder()
+                .withStartTime("2024-03-10 11:00")
+                .withEndTime("2024-03-09 11:00");
+
+        String userInputWithNote = bookingBuilder.getBookingString();
+
+        assertParseFailure(parser, userInputWithNote,
+                String.format(MESSAGE_INVALID_COMMAND_FORMAT, BookCommand.MESSAGE_DATE_ORDER));
+    }
+
+    @Test
     public void parse_missingRequiredFields_failure() {
         // Missing description
         String userInputMissingDescription = START_TIME_DESC_TEST + END_TIME_DESC_TEST;
