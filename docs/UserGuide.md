@@ -5,12 +5,12 @@ title: User Guide
 
 --------------------------------------------------------------------------------------------------------------------
 
-## What is Dook?
-
 ![UiPreview](images/UserGuideFront.png)
 
-An **elegant minimalistic desktop application** made especially for **NUS Computing students** to easily manage their academic consultations and contacts all-in-one place. This lightweight
-platform enables users to quickly view and manage their consultations with people.
+## What is Dook?
+
+An _elegant, minimalistic and intuitive_ **desktop application** made especially for [**NUS Computing students**](https://www.comp.nus.edu.sg/) to
+easily manage their academic **consultations** and **contacts** all-in-one place.
 
 Dook blends the power of a nimble [**Command Line Interface (CLI)**](#glossary) together with the intuitive accessibility of a
 [**Graphical User Interface (GUI)**](#glossary).
@@ -19,7 +19,7 @@ Designed for the dynamic needs of the NUS
 School of Computing (SoC) community, Dook centralizes faculty information
 in an innovative manner, allowing one to easily find their professors by taking advantage of the basic CLI familiarity of SoC students.
 
-For the quick typist, Dook elevates your ability to swiftly organize your academic consultations with professors
+For the **quick typist**, Dook elevates your ability to swiftly organize your academic consultations with professors
 and teaching assistants, outpacing conventional GUI-based applications, making management of consultations a breeze.
 
 We hope that you will find this guide helpful in maximising your Dook experience! :)
@@ -65,18 +65,19 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
 
 ## Quick start
 
-1. Ensure you have [Java 11](#faq) or above installed in your Computer. If  If you have never downloaded it before,
+1. Ensure you have [Java 11](#faq) or above installed in your Computer. If you have never downloaded it before,
    download from [here.](https://www.oracle.com/sg/java/technologies/javase/jdk11-archive-downloads.html)
 
-1. Download the latest version of [Dook](https://github.com/AY2324S2-CS2103T-W11-3/tp/releases) in your computer.
+1. Download the latest version of [Dook](https://github.com/AY2324S2-CS2103T-W11-3/tp/releases) `jar` in your computer.
 
-1. Copy the file to an empty folder you want to use as the `home folder` for Dook.
+1. Copy the file into an empty folder you want to use as the `home folder` for Dook.
 
 1. Depending on your operating system, either open “Terminal” on macOS or “Command Prompt” in Windows, and type `java -jar Dook.jar` to run the application. <br>
    
 You should see a GUI similar to the one shown below pop up in a few seconds.
+**Note** that the application doesn't have any sample data.
 
-   ![Ui image](images/UserGuideApp.png)
+   ![Ui image](images/SampleUi.png)
 
 <div markdown="block" class="alert alert-info">
 :information_source: **Information**
@@ -84,27 +85,20 @@ You should see a GUI similar to the one shown below pop up in a few seconds.
 New to the command line? Don't worry, checkout this [guide](https://tutorials.codebar.io/command-line/introduction/tutorial.html)
 </div>
 
-### The basics
+### Let's add some sample data
 
-Here are some sample commands to get you going! 
+1. First, go to the [command box](#understanding-the-interface) on the main window, where it says 
+   _"Enter Command here..."_
+2. Now, type `help` to open another window that lists out all the **commands** native to Dook.
+3. Next, paste this command to add a **contact** named `Bob Smith` to the Dook address book. `add -n Bob Smith -p 98765432 -e bsmith@example.com -a Bedok 693021`
+4. Now, let's add some sample **consultations**. Paste this in your [command box](#understanding-the-interface) to add a consultation named `CS2103T Consultation`. <br>`book -n CS2103T Consultation -s 2024-04-21 14:00 -e 2024-04-21 16:00`
+5. Repeat steps 3 - 4 to add some more sample data, however this time **change** the details after each flag. (for example, `add -n Celine -p 98564383 ...`) 
+6. Now, let's **find** a consultation by typing `search CS2103T Consultation` into the `command box`
+7. Voila! You did it. You finally added some sample data to Dook and tried some native features as well.
+8. Now, let's exit the app using `exit` command. Don't worry, you data is **automatically saved** to Dook Address Book. 
 
-Input the commands below into the [command box](##-understanding-the-interface) and press Enter to execute it. 
-<br>
-Some example commands you can try:
 
-   * `help` : Opens the help window.
-
-   * `list` : Lists all contacts.
-
-   * `add -n Bob Smith -p 98765432 -e bsmith@example.com -a Bedok 693021` : Adds a contact named `Bob Smith` to the Dook address book.
-
-   * `book -n CS2103T Consultation -s 2024-04-21 14:00 -e 2024-04-21 16:00` : Adds a new booking for `CS2103T Consultation` from `2024-04-21 14:00` to `2024-04-21 16:00`.
-
-   * `search CS2103T Consultation` : Finds the consultation you just added above from the list.
-
-   * `exit` : Exits the app.
-
-For additional commands, please refer to the [Features section](#features) below for details of every available command.
+Thanks for joining us in this tutorial. For additional commands, please refer to the [Features section](#features) below for details of every available command.
 
 [Back To Top](#table-of-contents)
 
@@ -123,6 +117,7 @@ A [JSON](#glossary) file is a text-based format for storing and exchanging data.
 
 ![Main panel](images/MainPanel.png)
 
+Here's your guide of the different panels:
 1. `Contact List`: Displays all contacts in the Dook address book.
 2. `Booking List`: Shows all the bookings the user currently has.
 3. `Result Box`: Displays the output after each command is executed.
@@ -136,13 +131,15 @@ Each `Contact card` Includes the following information:
 2. `65164359` - Phone Number
 3. `COM2-02-57` - Address
 4. `damithch@comp.nus.edu.sg` - Email
-5. `Professor` - Tag (it can be 0 or more)
+5. `Professor` - Tag 
 
 <div markdown="block" class="alert alert-success">
 :bulb: **Tips**
 
-You can easily add a new contact using the [add](#adding-a-person-add) command or update the existing information with the [edit](#editing-a-person--edit) command.
+You can easily `add` a new contact using the [add](#adding-a-person-add) command or `update` the existing information with the [edit](#editing-a-person--edit) command.
 </div>
+
+[Back To Top](#table-of-contents)
 
 ### Booking Card
 ![Booking Card](images/BookingCard.png)
@@ -156,8 +153,10 @@ Each `Booking card` Includes the following information:
 <div markdown="block" class="alert alert-success">
 :bulb: **Tips**
 
-You can easily update the following details with the [update](#editing-a-person--edit) command or [cancel](#cancelling-a-booking--cancel) any existing bookings immediately.
+You can easily `update` the following details with the [update](#editing-a-person--edit) command or [`cancel`](#cancelling-a-booking--cancel) any existing bookings immediately.
 </div>
+
+[Back To Top](#table-of-contents)
 
 ### Result Box
 
@@ -169,11 +168,19 @@ Displays two kinds of information/indication based on the command executed.
 **Upon Failure:**
 ![Result Box](images/ResultBox_Error.png)
 
+[Back To Top](#table-of-contents)
+
 ### Help Window
 
 Displays a window with `Command Box Panel` and `Take me to UG` link.
 1. `Command Box Panel` - it consists of all the commands native to Dook.
-2. `Take me to UG` - takes you directly to this User Guide for more details on each feature.
+2. `Take me to UG` - a link that takes you directly to the User Guide for more information on each feature.
+
+<div markdown="block" class="alert alert-danger">
+:exclamation: **Note** <br>
+`Take me to UG` is the only time when Dook uses internet connection to take you to the User Guide. Otherwise, Dook is offline for most of its uses.
+</div>
+
 
 **Format:** `help`
 
@@ -219,11 +226,11 @@ It will open a window similar to this:
 
 #### Adding a contact: `add`
 
-With every contact book, we need to be able to create contacts. You have just made a new friend in your tutorial and
+**Situation:** With every contact book, we need to be able to create contacts. You have just made a new friend in your tutorial and
 decided to save his contact for future collaboration purposes.
 
 ```
-add -n NAME -p PHONE_NUMBER -e EMAIL -a ADDRESS -t TAG…​
+add -n NAME [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG…​]
 ```
 
 
@@ -244,7 +251,7 @@ For example:
 * `add -n John Doe -p 98765432 -e johnd@example.com -a John street, block 123, #01-01`
 * `add -n Betsy Crowe -t friend -e betsycrowe@example.com -a Newgate Prison -p 1234567 -t criminal`
 
-Below shows the successful output upon executing `add`:
+Below shows the successful output upon executing `add` command:
 
 ![Success Add Command](images/AddCommandSucess.png)
 
@@ -252,17 +259,17 @@ Below shows the contact list upon successful adding of contact:
 
 ![Success Add Command Contact](images/AddCommandContactsSuccess.png)
 
-In the event that the command entered is invalid, the below error message will be shown:
+In the event that the command entered is **invalid**, the below error message will be shown:
 
 ![Invalid Add Command Contact](images/AddCommandInvalid.png)
 
-In the event that there is an existing user in the contact book, the below error message will be shown:
+In the event that there is an **existing user** in the contact book, the below error message will be shown:
 
 ![Duplicate Add Command Contact](images/AddCommandDuplicate.png)
 
 #### Adding a Professor
 
-You have just taken CS2040S and you now have a favorite Professor in SoC! You would like to stay in contact with them and have their updated contact details at
+**Situation:** You have just taken CS2040S and you now have a favorite Professor in SoC! You would like to stay in contact with them and have their updated contact details at
 your fingertips.
 
 To add a specific Professor to the Dook,
@@ -271,9 +278,9 @@ To add a specific Professor to the Dook,
 prof -n NAME
 ```
 
-| Param            | Remarks                                                                                                        |
-|------------------|----------------------------------------------------------------------------------------------------------------|
-| **NAME**         | Must be non-null and unique                                                                                    |
+| Param            | Remarks                                                |
+|------------------|--------------------------------------------------------|
+| **NAME**         | Must be non-null and unique (and must be from NUS SoC) |
 
 Examples:
 * `prof -n aaron`
@@ -297,7 +304,7 @@ having the whole SoC staff faculty in your contact book is necessary!
 
 #### Listing all contacts : `list`
 
-You decided one day to touch base with all your course-mates and friends in NUS.
+**Situation:** You decided one day to touch base with all your course-mates and friends in NUS.
 
 This command lets you easily view all the people in your contacts!
 
@@ -313,7 +320,7 @@ Below shows the contact list upon executing `list`:
 
 #### Editing a contact : `edit`
 
-You just had a catchup with an old friend and realised he changed his phone number because after
+**Situation:** You just had a catchup with an old friend and realised he changed his phone number because after
 migrating overseas.
 
 The command allows you to update an existing contact's details.
@@ -323,9 +330,9 @@ edit INDEX [-n NAME] [-p PHONE] [-e EMAIL] [-a ADDRESS] [-t TAG]…​
 ```
 
 * Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed person list. The index **must be a positive integer** 1, 2, 3, …​
-* At least one of the optional fields must be provided.
+* **At least one** of the optional fields must be provided.
 * Existing values will be updated to the input values.
-* When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.
+* When editing tags, the existing tags of the person will be removed i.e. adding of tags is **not** cumulative.
 
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
