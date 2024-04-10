@@ -45,6 +45,10 @@ public class BookCommandParser implements Parser<BookCommand> {
         StartTime start = ParserUtil.parseStartTime(argMultimap.getValue(PREFIX_START_TIME).get());
         EndTime end = ParserUtil.parseEndTime(argMultimap.getValue(PREFIX_END_TIME).get());
 
+        if (start.getTime().compareTo(end.getTime()) == 1) {
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, BookCommand.MESSAGE_DATE_ORDER));
+        }
+
         // Parse note only if the prefix is present
         Notes note = argMultimap.getValue(PREFIX_NOTES).isPresent()
                 ? ParserUtil.parseBookingNote(argMultimap.getValue(PREFIX_NOTES).get())

@@ -45,6 +45,10 @@ public class StartTime {
         }
     }
 
+    public LocalDateTime getTime() {
+        return this.startTime;
+    }
+
     @Override
     public String toString() {
         return startTime.format(formatter);
@@ -66,4 +70,5 @@ public class StartTime {
     public int hashCode() {
         return startTime.hashCode();
     }
+
 }

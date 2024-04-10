@@ -10,7 +10,6 @@ import java.util.Objects;
  */
 public class Booking {
 
-
     /** Name of the booking */
     private Description description;
     /** Start time of the booking */
@@ -28,6 +27,7 @@ public class Booking {
      */
     public Booking(Description description, StartTime start, EndTime end, Notes note) {
         requireAllNonNull(description, start, end);
+
         this.description = description;
         this.start = start;
         this.end = end;
@@ -74,9 +74,9 @@ public class Booking {
     @Override
     public String toString() {
         return String.format("%s; Start time: %s; End time: %s; Notes: %s",
-                description,
-                start,
-                end,
-                note);
+                this.description,
+                this.start,
+                this.end,
+                this.note);
     }
 }

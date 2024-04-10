@@ -45,6 +45,10 @@ public class EndTime {
         }
     }
 
+    public LocalDateTime getTime() {
+        return this.endTime;
+    }
+
     @Override
     public String toString() {
         return endTime.format(formatter);
