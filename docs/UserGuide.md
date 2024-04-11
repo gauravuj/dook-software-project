@@ -608,6 +608,7 @@ Below shows the error message upon executing an invalid theme:
 
 New themes are currently being added. In v1.5, we envisioned to create a tool for users to create their own theme from the
 `command box` itself.
+</div>
 
 #### Adding aliases in Dook : `alias`
 
@@ -656,7 +657,7 @@ If your changes to the data file makes its format invalid, Dook will discard all
 
 Furthermore, certain edits can cause **Dook** to behave in unexpected ways (e.g., if a value entered is outside of the acceptable range). Therefore, edit the data file only if you are confident that you can update it correctly.
 </div>
-</div>
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## FAQ
