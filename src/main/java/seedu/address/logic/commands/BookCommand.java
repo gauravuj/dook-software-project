@@ -20,6 +20,7 @@ public class BookCommand extends Command {
 
     public static final String MESSAGE_SUCCESS = "Booking created!";
     public static final String MESSAGE_DUPLICATE_BOOKING = "Error: This booking already exists.";
+    public static final String MESSAGE_DATE_ORDER = "Error: Start time must be before end time.";
 
     public static final String MESSAGE_USAGE = BookCommand.COMMAND_WORD + ": Adds a booking to the system.\n"
             + "Parameters: "
@@ -32,6 +33,7 @@ public class BookCommand extends Command {
             + PREFIX_START_TIME + "2023-12-31 19:00 "
             + PREFIX_END_TIME + "2023-12-31 23:00 "
             + PREFIX_NOTES + "Bring cake";
+
     public static final String MESSAGE_NOTE_MISSING = "Error: Please fill in a non-empty note!";
     private final Booking toAdd;
 

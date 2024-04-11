@@ -17,19 +17,30 @@ public class EndTimeTest {
     }
 
     @Test
-    public void isValidEndTime() {
-        // invalid end times
-        assertFalse(EndTime.isValidEndTime("")); // Empty string
-        assertFalse(EndTime.isValidEndTime("2024-01-32 24:60")); // Non-existent date and time
+    public void isValidEndTime_emptyTime_false() {
+        assertFalse(EndTime.isValidEndTime(""));
+        assertFalse(EndTime.isValidEndTime("         "));
+    }
 
+    @Test
+    public void isValidEndTime_invalidDates_false() {
+        assertFalse(EndTime.isValidEndTime("2024-01-32 24:60")); // Non-existent date and time
+        assertFalse(EndTime.isValidEndTime("2024-02-31 24:60")); // 31 Feb doesnt exist
+        assertFalse(EndTime.isValidEndTime("2024-04-31 24:00")); // 31 Apr 2024 doesnt exist
+    }
+
+    @Test
+    public void isValidEndTime_validTime_true() {
         // valid end times
-        assertTrue(EndTime.isValidEndTime("2024-03-19 12:00")); // Correct format
+        assertTrue(EndTime.isValidEndTime("2024-03-19 12:00"));
+        assertTrue(EndTime.isValidEndTime("2024-03-01 23:59"));
     }
 
     @Test
     public void equals() {
         EndTime endTime = new EndTime("2024-03-19 12:00");
 
+        System.out.println("fsfd");
         // same values -> returns true
         assertTrue(endTime.equals(new EndTime("2024-03-19 12:00")));
 
