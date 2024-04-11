@@ -48,7 +48,13 @@ public class Phone {
         }
 
         Phone otherPhone = (Phone) other;
-        return value.equals(otherPhone.value);
+        if (this.value == null && otherPhone.value == null) {
+            return true; // Both values are null, consider them equal
+        } else if (this.value == null || otherPhone.value == null) {
+            return false; // One value is null while the other is not, consider them not equal
+        } else {
+            return this.value.equals(otherPhone.value); // Compare non-null values
+        }
     }
 
     @Override
