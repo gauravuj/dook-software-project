@@ -92,8 +92,10 @@ New to the command line? Don't worry, checkout this [guide](https://tutorials.co
 
 ### Let's add some sample data
 
-1. First, go to the [command box](#understanding-the-interface) on the main window, where it says 
+1. First, go to the [command box](#understanding-the-interface) on the main window, where it says
+
    _"Enter Command here..."_ <br> ![Command Box](images/commandBox.png)
+
 2. Now, type `help` to open another window that lists out all the **commands** native to Dook.
 3. Next, paste this command in the `command box` to add a new **contact** named `Bob Smith` to the Dook address book. `add -n Bob Smith -p 98765432 -e bsmith@example.com -a Bedok 693021`
 4. Now, let's add some sample **consultations**. Paste this in your [command box](#understanding-the-interface) to add a consultation named `CS2103T Consultation`. <br>`book -n CS2103T Consultation -s 2024-04-21 14:00 -e 2024-04-21 16:00`
@@ -255,7 +257,7 @@ add -n NAME [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG…​]
 | **TAG**          | Optional, each tag should start with -t (i.e. for two tags `friend`, `groupmate` use `-t friend -t groupmate`) |
 
 <div markdown="block" class="alert alert-danger">
-:exclamation: **Note** <br>
+:exclamation: **Warning** <br>
 
 Currently, Dook doesn't have the ability to recognise abbreviations (with a forward slash) such as d/o or s/o in the **_NAME_** parameter, so 
 it might return an error.
@@ -385,12 +387,6 @@ When editing tags, the existing tags of the person will be removed i.e adding of
 
 </div>
 
-<div markdown="span" class="alert alert-success">:bulb: **Tip:**
-
-You can remove all the person’s tags by typing `-t` without specifying any tags after it.
-
-</div>
-
 #### Locating contacts by name: `find`
 
 Imagine you have just met a wonderful group of NUS students at a networking event, and you've added their details to the
@@ -479,7 +475,7 @@ Below is the expected contact list after running `delete 3`, we observe `Sarah J
 
 <div markdown="block" class="alert alert-danger">
 
-**:exclamation: Destructive Command!**<br>
+**:exclamation: Be careful!**<br>
 
 This command is **irreversible**, the deleted contact information will be lost!
 
