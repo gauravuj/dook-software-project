@@ -7,3 +7,17 @@ Copyright by Susumu Yoshida - http://www.mcdodesign.com/
 Copyright by Jan Jan Kovařík - http://glyphicons.com/
 - calendar.png
 - edit.png
+
+Copyright by Icons8 - https://icons8.com/
+- address_icon.png
+- booking_icon.png
+- email_icon.png
+- endtime_icon.png
+- notes_icon.png
+- person_icon.png
+- phone_icon.png
+- terminal_icon.png
+- time_icon.png
+
+Copyright by Mohammad Hosein Shariatipour - https://avatar-placeholder.iran.liara.run/
+- default_image.png
