@@ -75,9 +75,12 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
 1. Depending on your operating system, either open “Terminal” on macOS or “Command Prompt” in Windows, and type `java -jar Dook.jar` to run the application. <br>
    
 You should see a GUI similar to the one shown below pop up in a few seconds.
-**Note** that the application doesn't have any sample data.
 
-   ![Ui image](images/SampleUi.png)
+<div markdown="block" class="alert alert-danger">
+:exclamation: **Note** <br>
+
+Please note that the application doesn't come with any sample data and that's why we will show you how to add your own in the [next section](#lets-add-some-sample-data).
+</div>
 
 <div markdown="block" class="alert alert-info">
 :information_source: **Information**
@@ -85,17 +88,26 @@ You should see a GUI similar to the one shown below pop up in a few seconds.
 New to the command line? Don't worry, checkout this [guide](https://tutorials.codebar.io/command-line/introduction/tutorial.html)
 </div>
 
+   ![Ui image](images/SampleUi.png)
+
 ### Let's add some sample data
 
 1. First, go to the [command box](#understanding-the-interface) on the main window, where it says 
-   _"Enter Command here..."_
+   _"Enter Command here..."_ <br> ![Command Box](images/commandBox.png)
 2. Now, type `help` to open another window that lists out all the **commands** native to Dook.
-3. Next, paste this command to add a **contact** named `Bob Smith` to the Dook address book. `add -n Bob Smith -p 98765432 -e bsmith@example.com -a Bedok 693021`
+3. Next, paste this command in the `command box` to add a new **contact** named `Bob Smith` to the Dook address book. `add -n Bob Smith -p 98765432 -e bsmith@example.com -a Bedok 693021`
 4. Now, let's add some sample **consultations**. Paste this in your [command box](#understanding-the-interface) to add a consultation named `CS2103T Consultation`. <br>`book -n CS2103T Consultation -s 2024-04-21 14:00 -e 2024-04-21 16:00`
 5. Repeat steps 3 - 4 to add some more sample data, however this time **change** the details after each flag. (for example, `add -n Celine -p 98564383 ...`) 
 6. Now, let's **find** a consultation by typing `search CS2103T Consultation` into the `command box`
 7. Voila! You did it. You finally added some sample data to Dook and tried some native features as well.
-8. Now, let's exit the app using `exit` command. Don't worry, you data is **automatically saved** to Dook Address Book. 
+8. Now, let's exit the app using `exit` command.
+
+<div markdown="block" class="alert alert-success">
+:bulb: **Worried about getting your data lost?**
+
+Don't worry, you data is **automatically saved** to Dook Address Book!
+</div>
+
 
 
 Thanks for joining us in this tutorial. For additional commands, please refer to the [Features section](#features) below for details of every available command.
