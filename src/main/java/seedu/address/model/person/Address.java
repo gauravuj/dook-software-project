@@ -52,13 +52,7 @@ public class Address {
         }
 
         Address otherAddress = (Address) other;
-        if (this.value == null && otherAddress.value == null) {
-            return true;
-        } else if (this.value == null || otherAddress.value == null) {
-            return false;
-        } else {
-            return this.value.equals(otherAddress.value);
-        }
+        return value.equals(otherAddress.value);
     }
 
     @Override
