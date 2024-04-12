@@ -17,7 +17,7 @@ import seedu.address.model.person.exceptions.DuplicatePersonException;
 public class ProfCommand extends Command {
     public static final String COMMAND_WORD = "prof";
 
-    public static final String MESSAGE_SUCCESS = "Professors Added!";
+    public static final String MESSAGE_SUCCESS = "Professors Added: %d\nDuplicates found: %d";
     public static final String MESSAGE_FAILURE = "No professors found!\nPlease double check professors name.";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds professors to the address book.\n"
@@ -49,17 +49,21 @@ public class ProfCommand extends Command {
             throw new CommandException(MESSAGE_FAILURE);
         }
 
+        int profsAdded = 0;
+        int dupesFound = 0;
+
         for (Person person : model.getFilteredProfList()) {
             try {
                 model.addPerson(person);
+                profsAdded++;
             } catch (DuplicatePersonException e) {
-                throw new CommandException("Error: Professor already in contacts");
+                dupesFound++;
             }
         }
 
         // reset user view
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
-        return new CommandResult(MESSAGE_SUCCESS);
+        return new CommandResult(String.format(MESSAGE_SUCCESS, profsAdded, dupesFound));
     }
 
     @Override
