@@ -622,16 +622,15 @@ New themes are currently being added. In v1.5, we envisioned to create a tool fo
 `command box` itself.
 </div>
 
-</div>
 #### Adding aliases in Dook : `alias`
 
 For commands that you use often, Dook allows the aliasing of them to any input of your choice.
 
 ```
--al NEW_COMMAND -r COMMAND_TO_REPLACE
+alias -al NEW_COMMAND -r COMMAND_TO_REPLACE
 ```
 
-* For example, if you like swapping between themes, you can enter `-al light -r theme -bg light`
+* For example, if you like swapping between themes, you can enter `alias -al light -r theme -bg light`
 * This results in `theme -bg light` being shortened to `light`
 
 <div markdown="block" class="alert alert-danger">
