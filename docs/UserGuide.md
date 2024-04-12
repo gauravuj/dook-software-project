@@ -76,6 +76,8 @@ Content in red boxes draws your attention to potential pitfalls to avoid and ale
    
 You should see a GUI similar to the one shown below pop up in a few seconds.
 
+![Ui image](images/SampleUi.png)
+
 <div markdown="block" class="alert alert-danger">
 :exclamation: **Note** <br>
 
@@ -87,8 +89,6 @@ Please note that the application doesn't come with any sample data and that's wh
 
 New to the command line? Don't worry, checkout this [guide](https://tutorials.codebar.io/command-line/introduction/tutorial.html)
 </div>
-
-   ![Ui image](images/SampleUi.png)
 
 ### Let's add some sample data
 
@@ -112,7 +112,7 @@ Don't worry, you data is **automatically saved** to Dook Address Book!
 
 
 
-Thanks for joining us in this tutorial. For additional commands, please refer to the [Features section](#features) below for details of every available command.
+Many thanks for joining us in this tutorial. For additional commands, please refer to the [Features section](#features) below for details of every available command.
 
 [Back To Top](#table-of-contents)
 
@@ -341,8 +341,8 @@ Below shows the contact list upon executing `list`:
 
 #### Editing a contact : `edit`
 
-**Situation:** You just had a catchup with an old friend and realised he changed his phone number because after
-migrating overseas.
+**Situation:** You just had a zoom call with an old friend and realised he changed his phone number because he had
+migrated overseas.
 
 The command allows you to update an existing contact's details.
 
@@ -368,16 +368,15 @@ Examples:
 * `edit 1 -p 91234567 -e johndoe@example.com` Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively.
 * `edit 2 -n Betsy Crower -t` Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags.
 
-Here is the current state of a contact information before updating:
+Below shows the current state of a contact information before updating:
 
 ![Success Add Command Contact](images/AddCommandContactsSuccess.png)
 
-Upon executing the command `edit 1 -n John Lim -p 23456789 -a 311, Rochor Ave 1, #01-01, johnl@example.com -t friend`,
-below would be the expected output:
+Below would be the expected output upon executing the command `edit 1 -n John Lim -p 23456789 -a 311, Rochor Ave 1, #01-01, johnl@example.com -t friend`,
 
 ![Success Edit Command](images/EditCommandSuccess.png)
 
-Here is the updated state of the contact information after updating:
+Below shows the updated state of the contact information after updating:
 
 ![Success Edit Command Contact](images/EditCommandContactsSuccess.png)
 
@@ -389,9 +388,9 @@ When editing tags, the existing tags of the person will be removed i.e adding of
 
 #### Locating contacts by name: `find`
 
-Imagine you have just met a wonderful group of NUS students at a networking event, and you've added their details to the
+**Situation:** You have just met a wonderful group of NUS students at a networking event, and you've added their details to the
 contact book. A few days later, you want to send a follow-up email to one of them, but their name escapes you. You remember
-it started with "John"
+it started with "John".
 
 This command allows you to quickly retrieve all names that match, ensuring you can maintain that crucial connection without
 a hitch.
@@ -438,7 +437,7 @@ This command will also fetch all existing Professors in the contact book if ther
 
 #### Deleting a contact : `delete`
 
-Your contact book is starting to look cluttered, and you realise you no longer certain contacts' details.
+**Situation:** Your contact book is starting to look cluttered, and you realise you no longer certain contacts' details.
 
 This command deletes the specified person from the contact book, ensuring your contacts remain relevant and up-to-date.
 
@@ -486,7 +485,8 @@ This command is **irreversible**, the deleted contact information will be lost!
 
 #### Adding a booking : `book`
 
-If you want to remind yourself of your consult tomorrow, you can add it to Dook.
+**Situation:** Dook allows you to keep track of **all** your consultations, so you never have to worry above forgetting them! 
+Say you booked a consultation in the next week, and you would like to keep track of it. The `book` command is for you!
 
 ```
 book -n DESCRIPTION -s START_TIME -e END_TIME -note NOTE
@@ -504,9 +504,24 @@ book -n DESCRIPTION -s START_TIME -e END_TIME -note NOTE
 Examples:
 * `book -n CS2101 Consult -s 2023-12-31 19:00 -e 2023-12-31 23:00 -note DO HOMEWORK`
 
+Below shows our original dashboard before adding a booking:
+
+![Before Booking](images/SampleUi.png)
+
+Say we booked a consultation slot a week later, and we would like to add it to **Dook** in case we forget.
+
+Below shows the expected output after executing the command `book -n CS2101 Consult -s 2023-12-31 19:00 -e 2023-12-31 23:00 -note DO HOMEWORK`.
+
+![Book Command Success](images/BookCommandSuccessList.png)
+
+Below shows the expected success message upon executing the above command. 
+
+![Book Command Success Message](images/BookCommandSuccessMessage.png)
+
 #### Updating bookings: `update`
 
-Did the meeting date change? Or perhaps you want to add extra reminders in the notes? Try:
+**Situation:** The Professor took a rain-check and decided to reschedule your consult. Now we need to update our booking details!
+
 ```
 update INDEX -n {description} -s {start_time} -e {end_time} -note {note}
 ```
@@ -521,10 +536,27 @@ update INDEX -n {description} -s {start_time} -e {end_time} -note {note}
 | **END_TIME**    | Optional, Must follow format of `2023-12-31 19:00` |
 | **NOTE**        | Optional                                           |
 
+Examples:
+* `update -1 -s 2024-01-02 19:00 -e 2024-01-02 23:00 -note DO HOMEWORK`
+
+Below shows our current booking that we scheduled for next week.
+
+![Book Command Success](images/BookCommandSuccessList.png)
+
+The Professor decides to postpone the consult to two days later, we shall execute the command `update 1 -s 2024-01-02 19:00 -e 2024-01-02 23:00 -note DO HOMEWORK`.
+
+Below shows the updated booking upon executing the command.
+
+![Update Command Success](images/UpdateCommandSuccessList.png)
+
+Below shows the success message upon executing the command.
+
+![Update Command Success Message](images/UpdateCommandSuccessMessage.png)
 
 #### Cancelling a booking : `cancel`
 
-Did an appointment get cancelled or postponed? You can easily cancel bookings from the address book using:
+**Situation:** You realised that you are not available on the current booking date, and you have apologised to the Professor to cancel the booking altogether.
+We shall use the `cancel` command to remove a booking from Dook. 
 
 ```
 cancel INDEX
@@ -534,7 +566,22 @@ cancel INDEX
 * The index refers to the index number shown in the displayed booking list.
 
 Examples:
-* `cancel 2` cancels the 2nd booking shown in the booking list.
+* `cancel 1` cancels the 1st booking shown in the booking list.
+
+Below shows our current bookings in Dook.
+
+![Update Command Success](images/UpdateCommandSuccessList.png)
+
+We decide to cancel the CS2101 Consult altogether. We notice that the `index` of the booking is **1**. 
+We shall use `cancel 1` to remove this booking from Dook.
+
+Below shows our current bookings after executing `cancel 1`.
+
+![Cancel Command Success](images/CancelCommandSuccessList.png)
+
+Below shows the success message upon executing the command.
+
+![Cancel Command Success Message](images/CancelCommandSuccessMessage.png)
 
 <div markdown="block" class="alert alert-success">
 :bulb: **Tips**
@@ -542,9 +589,27 @@ Examples:
 You might want to use [search](###-searching-for-a-booking) to display the booking in the GUI first to easily find its INDEX.
 </div>
 
+#### Clearing all bookings entries : `cancel -a`
+
+**Situation:** Want a fresh start from our busy schedule? You can quickly clear all your bookings with:
+
+ ```
+ cancel -a
+ ```
+
+<div markdown="block" class="alert alert-danger">
+
+**:exclamation: Be careful!**<br>
+
+This command is **irreversible**, and all your data will be lost.
+Please use this command with caution!
+
+</div>
+
 #### Searching for a booking : `search`
 
-Have too many bookings? Worry not, as you can searche for specific bookings using:
+**Situation:** You have multiple consultations lined up and decide to search for your CS2103 consult. We shall use the 
+`search` command to find our CS2103 consultation details!
 
 ```
 search KEYWORD [MORE_KEYWORDS]
@@ -562,27 +627,13 @@ Want to see all your bookings again? Try the [view command](###-searching-for-a-
 </div>
 
 #### Viewing all bookings : `view`
-Done searching for your bookings with your favourite professor? Lets display all your bookings using:
+
+**Situation:** You are done searching for your CS2103 consult and decide to refresh your memory of all your consults!
+We shall use the `view` command to list all our current bookings!
+
 ```
 view
 ```
-
-#### Clearing all bookings entries : `cancel -a`
-
-Want a fresh start? Quickly clears all your bookings with:
-
- ```
- cancel -a
- ```
-
-<div markdown="block" class="alert alert-danger">
-
-**:exclamation: Be careful!**<br>
-
-This command is **irreversible**, and all your data will be lost.
-Please use this command with caution!
-
-</div>
 
 ### Other features
 
