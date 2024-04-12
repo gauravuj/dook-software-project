@@ -622,6 +622,7 @@ New themes are currently being added. In v1.5, we envisioned to create a tool fo
 `command box` itself.
 </div>
 
+</div>
 #### Adding aliases in Dook : `alias`
 
 For commands that you use often, Dook allows the aliasing of them to any input of your choice.
