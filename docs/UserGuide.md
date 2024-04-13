@@ -496,7 +496,7 @@ book -n DESCRIPTION -s START_TIME -e END_TIME -note NOTE
 
 | Param           | Remarks                                  |
 |-----------------|------------------------------------------|
-| **DESCRIPTION** | Must be non-null                         |
+| **DESCRIPTION** | Must be non-null and unique              |
 | **START_TIME**  | Must follow format of `2023-12-31 19:00` |
 | **END_TIME**    | Must follow format of `2023-12-31 19:00` |
 | **NOTE**        | Must be non-null                         |
