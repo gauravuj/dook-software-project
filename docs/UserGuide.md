@@ -523,7 +523,7 @@ Below shows the expected success message upon executing the above command.
 **Situation:** The Professor took a rain-check and decided to reschedule your consult. Now we need to update our booking details!
 
 ```
-update INDEX -n {description} -s {start_time} -e {end_time} -note {note}
+update INDEX -n {DESCRIPTION} -s {START_TIME} -e {END_TIME} -note {NOTE}
 ```
 * The index refers to the index number shown in the displayed booking list.
 * Other params are optional and entered only if you want to update current data.
