@@ -53,7 +53,7 @@ public class ProfCommand extends Command {
             try {
                 model.addPerson(person);
             } catch (DuplicatePersonException e) {
-                throw new CommandException("Error: Professor already in contacts");
+                // throw new CommandException("Error: Professor already in contacts");
             }
         }
 
