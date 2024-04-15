@@ -304,30 +304,30 @@ sets scene's stylesheet to the respective CSS file associated with the theme.
 
 **Value proposition**: Help students manage booking consultations/meeting with professors/students.
 
+### User Stories
 
-### User stories
+Priorities: High (must have) - `***`, Medium (nice to have) - `**`, Low (unlikely to have) - `*`
 
-Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
+| Priority | As a…    | I want to…                       | So that I can…                                                         |
+|----------|----------|----------------------------------|------------------------------------------------------------------------|
+| ***      | new user | see usage instructions           | refer to instructions when I forget how to use the App                 |
+| ***      | user     | add a contact                    | (provide purpose)                                                      |
+| ***      | user     | delete a contact                 | remove entries that I no longer need                                   |
+| ***      | user     | update a contact                 | (provide purpose)                                                      |
+| ***      | user     | view professor's calendar        | see the available timings                                              |
+| ***      | user     | view professor's office hours    | know when to contact them                                              |
+| ***      | user     | view professor's office location | know where to find them                                                |
+| ***      | user     | find a prof by name              | locate details of persons without having to go through the entire list |
+| **       | user     | hide private contact details     | minimize chance of someone else seeing them by accident                |
+| *        | user     | update my calendar               | change my schedule                                                     |
+| *        | user     | create event/consultations       | it can be recorded                                                     |
+| *        | user     | delete event                     | (provide purpose)                                                      |
+| *        | user     | update event                     | (provide purpose)                                                      |
+| *        | user     | view the current week's consults | change my schedule                                                     |
+| *        | user     | view a TA's calendar             | book a consult                                                         |
+| *        | user     | generate email to contact        | easily send out communications                                         |
+| *        | user     | delete all contacts              | (provide purpose)                                                      |
 
-| Priority | As a ... | I want to ...                     | So that I can ...                                                      |
-|----------|----------|-----------------------------------|------------------------------------------------------------------------|
-| `* * *`  | new user | see usage instructions            | refer to instructions when I forget how to use the App                 |
-| `* * *`  | user     | add a contact                     |                                                                        |
-| `* * *`  | user     | delete a contact                  | remove entries that I no longer need                                   |
-| `* * *`  | user     | update a contact                  |                                                                        |
-| `* * *`  | user     | view professors calendar          | see the available timings                                              |
-| `* * *`  | user     | view professors's office hours    | know when to contact them                                              |
-| `* * *`  | user     | view professors's office location | know where to find them                                                | 
-| `* * *`  | user     | find a prof by name               | locate details of persons without having to go through the entire list |
-| `* *`    | user     | hide private contact details      | minimize chance of someone else seeing them by accident                |
-| `*`      | user     | update my calendar                | change my schedule                                                     |
-| `*`      | user     | create event/consultations        | it can be recorded                                                     |
-| `*`      | user     | delete event                      |                                                                        |
-| `*`      | user     | update event                      |                                                                        |
-| `*`      | user     | view the current week's consults  | change my schedule                                                     |
-| `*`      | user     | view a TA's calendar              | book a consult                                                         |
-| `*`      | user     | generate email to contact         | easily send out communications                                         |
-| `*`      | user     | delete all contacts               |                                                                        | 
 *{More to be added}*
 
 ### Use cases
