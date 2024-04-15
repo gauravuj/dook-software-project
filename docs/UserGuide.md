@@ -251,7 +251,7 @@ add -n NAME [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG…​]
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
 | **NAME**         | Must be non-null and unique                                                                                    |
-| **PHONE_NUMBER** | Optional, only numbers and minimum 3 digits                                                                    |
+| **PHONE_NUMBER** | Optional, only numbers and no minimum number of digits                                                         |
 | **EMAIL**        | Optional, follow standard email formats (i.e xxx@xxx)                                                          |
 | **ADDRESS**      | Optional                                                                                                       |
 | **TAG**          | Optional, each tag should start with -t (i.e. for two tags `friend`, `groupmate` use `-t friend -t groupmate`) |
