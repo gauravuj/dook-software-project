@@ -14,6 +14,7 @@ public class ThemeCommand extends Command {
     public static final String COMMAND_WORD = "theme";
 
     public static final String MESSAGE_SUCCESS = "Theme updated!";
+    public static final String MESSAGE_FAILURE = "Theme already %s!";
 
     public static final String MESSAGE_USAGE = ThemeCommand.COMMAND_WORD
             + " "
@@ -38,6 +39,11 @@ public class ThemeCommand extends Command {
     @Override
     public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
+
+        if (model.getTheme() == toChange) {
+            throw new CommandException(String.format(MESSAGE_FAILURE, toChange));
+        }
+
         model.setTheme(toChange);
         return new CommandResult(String.format(MESSAGE_SUCCESS, toChange), false, false, true);
     }
