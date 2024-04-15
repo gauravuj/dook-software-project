@@ -48,6 +48,13 @@ Content in blue boxes provides additional information and contextual knowledge y
 Content in green boxes provides tips and good practices to help you use the application more efficiently.
 </div>
 
+<div markdown="block" class="alert alert-warning">
+:exclamation: **Caution** <br>
+
+Content in yellow boxes draws your attention to certain minor issues that you may encounter when using Dook.
+
+</div>
+
 <div markdown="block" class="alert alert-danger">
 :exclamation: **Warnings** <br>
 
@@ -107,7 +114,7 @@ New to the command line? Don't worry, checkout this [guide](https://tutorials.co
 <div markdown="block" class="alert alert-success">
 :bulb: **Worried about getting your data lost?**
 
-Don't worry, you data is **automatically saved** to Dook Address Book!
+Don't worry, your data is **automatically saved** to Dook Address Book!
 </div>
 
 
@@ -315,11 +322,20 @@ prof -a
 ```
 
 
-<div markdown="block" class="alert alert-danger">
-:exclamation: **Warning** <br>
+<div markdown="block" class="alert alert-warning">
+:exclamation: **Caution** <br>
 
 While adding all professors is included as feature, we generally advise against this. You might find adding professors individually more useful unless you decide
 having the whole SoC staff faculty in your contact book is necessary!
+
+</div>
+
+<div markdown="span" class="alert alert-danger">
+:exclamation: **Warning:** <br>
+
+The `prof -a` command takes a bit of time to load all the data, as we are adding over 300+ contacts into Dook. 
+We recommend that upon running this command, you as a user should **wait a few seconds** and not force close the application or run other commands
+as it could lead to unexpected behaviors. Our team is aware of this and is looking into a more efficient solution to add all professors!
 
 </div>
 
