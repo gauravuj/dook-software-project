@@ -304,7 +304,6 @@ sets scene's stylesheet to the respective CSS file associated with the theme.
 
 **Value proposition**: Help students manage booking consultations/meeting with professors/students.
 
-
 ### User Stories
 
 Priorities: High (must have) - `***`, Medium (nice to have) - `**`, Low (unlikely to have) - `*`
