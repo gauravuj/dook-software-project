@@ -684,7 +684,7 @@ alias -al NEW_COMMAND -r COMMAND_TO_REPLACE
 | **NEW_COMMAND**        | The new string you would like to use as an alias |
 | **COMMAND_TO_REPLACE** | The original command that you want an alias for  |
 
-* For example, if you often swapping between themes, you can replace `theme -bg light` with `light` using the command below <br>
+* For example, if you are often swapping between themes, you can replace `theme -bg light` with `light` using the command below <br>
 ```alias -al light -r theme -bg light```
 * After that, you can swap to light theme anytime with just `light`
 
