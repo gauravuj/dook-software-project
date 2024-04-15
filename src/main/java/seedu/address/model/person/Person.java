@@ -122,11 +122,25 @@ public class Person {
         }
 
         Person otherPerson = (Person) other;
-        return name.equals(otherPerson.name)
-                && phone.equals(otherPerson.phone)
-                && email.equals(otherPerson.email)
-                && address.equals(otherPerson.address)
-                && tags.equals(otherPerson.tags);
+
+        // Handle null checks for each attribute
+        boolean nameEquals = (this.name == null && otherPerson.name == null)
+                || (this.name != null && this.name.equals(otherPerson.name));
+
+        boolean phoneEquals = (this.phone == null && otherPerson.phone == null)
+                || (this.phone != null && this.phone.equals(otherPerson.phone));
+
+        boolean emailEquals = (this.email == null && otherPerson.email == null)
+                || (this.email != null && this.email.equals(otherPerson.email));
+
+        boolean addressEquals = (this.address == null && otherPerson.address == null)
+                || (this.address != null && this.address.equals(otherPerson.address));
+
+        boolean tagsEquals = (this.tags == null && otherPerson.tags == null)
+                || (this.tags != null && this.tags.equals(otherPerson.tags));
+
+        // Return true if all attributes are equal
+        return nameEquals && phoneEquals && emailEquals && addressEquals && tagsEquals;
     }
 
     @Override

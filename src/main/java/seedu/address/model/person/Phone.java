@@ -48,7 +48,13 @@ public class Phone {
         }
 
         Phone otherPhone = (Phone) other;
-        return value.equals(otherPhone.value);
+        if (this.value == null && otherPhone.value == null) {
+            return true;
+        } else if (this.value == null || otherPhone.value == null) {
+            return false;
+        } else {
+            return this.value.equals(otherPhone.value);
+        }
     }
 
     @Override

@@ -309,7 +309,7 @@ sets scene's stylesheet to the respective CSS file associated with the theme.
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
-| Priority | As a …​  | I want to …​                      | So that I can…​                                                        |
+| Priority | As a ... | I want to ...                     | So that I can ...                                                      |
 |----------|----------|-----------------------------------|------------------------------------------------------------------------|
 | `* * *`  | new user | see usage instructions            | refer to instructions when I forget how to use the App                 |
 | `* * *`  | user     | add a contact                     |                                                                        |

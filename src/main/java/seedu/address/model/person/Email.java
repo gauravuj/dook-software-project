@@ -66,7 +66,13 @@ public class Email {
         }
 
         Email otherEmail = (Email) other;
-        return value.equals(otherEmail.value);
+        if (this.value == null && otherEmail.value == null) {
+            return true;
+        } else if (this.value == null || otherEmail.value == null) {
+            return false;
+        } else {
+            return this.value.equals(otherEmail.value);
+        }
     }
 
     @Override

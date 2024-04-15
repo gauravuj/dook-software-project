@@ -3,12 +3,12 @@ package seedu.address.ui;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.Region;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
-
 
 /**
  * The UI component that is responsible for receiving user command inputs.
@@ -49,6 +49,14 @@ public class CommandBox extends UiPart<Region> {
                 commandTextField.positionCaret(commandTextField.getText().length());
             }
             setStyleToDefault();
+        });
+
+        commandTextField.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.UP) {
+                // Move the caret to the beginning of the text
+                commandTextField.positionCaret(2);
+                event.consume(); // Consume the event to prevent default behavior
+            }
         });
 
         setupScrollingOnCommandTextField();
