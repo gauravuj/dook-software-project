@@ -1,9 +1,15 @@
 package seedu.address.ui;
 
+import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.Region;
 import seedu.address.logic.commands.CommandResult;
@@ -30,18 +36,6 @@ public class CommandBox extends UiPart<Region> {
         super(FXML);
         this.commandExecutor = commandExecutor;
 
-        commandTextField.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue) { // When the text field is focused
-                if (commandTextField.getText().equals("> ")) {
-                    commandTextField.setText("");
-                }
-            } else { // When the text field loses focus
-                if (commandTextField.getText().isEmpty()) {
-                    commandTextField.setText("> ");
-                }
-            }
-        });
-
         // calls #setStyleToDefault() whenever there is a change to the text of the command box.
         commandTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.startsWith("> ")) {
@@ -51,12 +45,30 @@ public class CommandBox extends UiPart<Region> {
             setStyleToDefault();
         });
 
+        commandTextField.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
+            if (new KeyCodeCombination(KeyCode.C, KeyCombination.CONTROL_ANY).match(event)
+                    || new KeyCodeCombination(KeyCode.C, KeyCombination.META_ANY).match(event)) {
+                copyTextWithoutPrompt();
+                event.consume();
+            } else {
+                handleKeyEvents(event);
+            }
+        });
+
         commandTextField.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.UP) {
                 // Move the caret to the beginning of the text
                 commandTextField.positionCaret(2);
-                event.consume(); // Consume the event to prevent default behavior
+                event.consume();
             }
+        });
+
+        commandTextField.setOnMouseClicked(event -> {
+            Platform.runLater(() -> {
+                if (commandTextField.getCaretPosition() < 2) {
+                    commandTextField.positionCaret(2);
+                }
+            });
         });
 
         setupScrollingOnCommandTextField();
@@ -87,8 +99,6 @@ public class CommandBox extends UiPart<Region> {
         }
     }
 
-
-
     /**
      * Sets the command box style to use the default style.
      */
@@ -102,7 +112,6 @@ public class CommandBox extends UiPart<Region> {
     private void setStyleToIndicateCommandFailure() {
         ObservableList<String> styleClass = commandTextField.getStyleClass();
 
-        // Just add the error style class, do not clear the text
         if (!styleClass.contains(ERROR_STYLE_CLASS)) {
             styleClass.add(ERROR_STYLE_CLASS);
             System.out.println("Error style class added.");
@@ -111,6 +120,29 @@ public class CommandBox extends UiPart<Region> {
         // Keep the caret at the end of the text
         commandTextField.positionCaret(commandTextField.getText().length());
     }
+
+    /**
+     * Handles key press events within the command text field.
+     * This method is designed to prevent modification of the command prompt
+     * and to manage the caret position correctly. It consumes key events that
+     * could move the caret to a position before the prompt or that could modify
+     * the prompt itself.
+     *
+     * @param event The {@code KeyEvent} that occurred within the command text field.
+     */
+    private void handleKeyEvents(KeyEvent event) {
+        int caretPosition = commandTextField.getCaretPosition();
+        KeyCode code = event.getCode();
+
+        if (caretPosition <= 2 && (code.isArrowKey()
+                || code.isWhitespaceKey() || code.isLetterKey() || code.isDigitKey())) {
+            event.consume();
+        } else if ((code == KeyCode.BACK_SPACE && caretPosition == 2)
+                || (code == KeyCode.DELETE && caretPosition == 1)) {
+            event.consume();
+        }
+    }
+
 
     /**
      * Sets up the ability to "scroll" horizontally in the text field using the mouse wheel.
@@ -135,6 +167,28 @@ public class CommandBox extends UiPart<Region> {
             event.consume();
         });
     }
+
+    /**
+     * Copies the selected text from the command text field to the system clipboard,
+     * excluding the prompt ("> "). If the selection start index is less than 2, which
+     * indicates that the prompt is part of the selection, it adjusts the start index
+     * to exclude the prompt from the copied text.
+     */
+    private void copyTextWithoutPrompt() {
+        String selectedText = commandTextField.getSelectedText();
+        int selectionStart = commandTextField.getSelection().getStart();
+        int selectionEnd = commandTextField.getSelection().getEnd();
+
+        // Exclude the prompt from the selected text if it's included
+        if (selectionStart < 2) {
+            selectedText = commandTextField.getText().substring(2, selectionEnd);
+        }
+
+        ClipboardContent content = new ClipboardContent();
+        content.putString(selectedText);
+        Clipboard.getSystemClipboard().setContent(content);
+    }
+
 
     /**
      * Represents a function that can execute commands.
