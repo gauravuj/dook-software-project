@@ -233,8 +233,6 @@ It will open a window similar to this:
 * If you are using a PDF version of this document, be careful when copying and pasting commands that span multiple lines as space characters surrounding line-breaks may be omitted when copied over to the application.
 </div>
 
-[Back To ToC](#table-of-contents)
-
 --------------------------------------------------------------------------------------------------------------------
 ### Contact Management
 
@@ -597,6 +595,9 @@ You might want to use [search](###-searching-for-a-booking) to display the booki
  cancel -a
  ```
 
+After executing the command above, your [GUI](#glossary) will look similar to the below.
+![Cancel All](images/CancelAllCommandSuccess.png)
+
 <div markdown="block" class="alert alert-danger">
 
 **:exclamation: Be careful!**<br>
@@ -605,6 +606,7 @@ This command is **irreversible**, and all your data will be lost.
 Please use this command with caution!
 
 </div>
+
 
 #### Searching for a booking : `search`
 
@@ -620,6 +622,21 @@ search KEYWORD [MORE_KEYWORDS]
 * Bookings matching at least one keyword will be returned (i.e. `OR` search).
   e.g. `Consult` will return `CS2103 Consult`, `CS5300 Consult`
 
+So, let's try to find `CS2103T Consultation` using the `search` command. Here's the initial window
+that will be displayed in case you have a list of consultations.
+
+![List of Consult](images/SearchCommandSampleBookings.png)
+
+Now, after executing the `search` command, if the consultation you're trying to find
+**exists**, it will be displayed like the sample image shown below.
+
+![Search Command Success](images/SearchCommandSuccess.png)
+
+And, in case the booking **doesn't** exist, Dook will throw you an error (such as the one below) indicating that 
+it couldn't find any such bookings in the [JSON](#glossary) file.
+
+![Search Command Error](images/SearchCommandError.png)
+
 <div markdown="block" class="alert alert-success">
 :bulb: **Tips**
 
@@ -634,6 +651,7 @@ We shall use the `view` command to list all our current bookings!
 ```
 view
 ```
+![View Command Success](images/ViewCommandSuccess.png)
 
 ### Other features
 
@@ -679,6 +697,18 @@ alias -al NEW_COMMAND -r COMMAND_TO_REPLACE
 
 * For example, if you like swapping between themes, you can enter `alias -al light -r theme -bg light`
 * This results in `theme -bg light` being shortened to `light`
+
+![Alias Command Success](images/AliasCommandSuccess.png)
+
+After adding the alias above, you can simply type `light` in the `command box` to change the theme.
+Isn't that cool?
+
+<div markdown="block" class="alert alert-success">
+:bulb: **Tips**
+
+Try adding some more aliases and see how Dook responds efficiently! Remember to 
+replace the whole command such as `theme -bg light` otherwise it won't work as expected.
+</div>
 
 <div markdown="block" class="alert alert-danger">
 :exclamation: **Warning** <br>
