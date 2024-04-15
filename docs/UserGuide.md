@@ -150,7 +150,7 @@ Each `Contact card` Includes the following information:
 <div markdown="block" class="alert alert-success">
 :bulb: **Tips**
 
-You can easily `add` a new contact using the [add](#adding-a-person-add) command or `update` the existing information with the [edit](#editing-a-person--edit) command.
+You can easily `add` a new contact using the [add](#adding-a-contact-add) command or `edit` the existing information with the [edit](#editing-a-contact--edit) command.
 </div>
 
 [Back To Top](#table-of-contents)
@@ -167,7 +167,7 @@ Each `Booking card` Includes the following information:
 <div markdown="block" class="alert alert-success">
 :bulb: **Tips**
 
-You can easily `update` the following details with the [update](#editing-a-person--edit) command or [`cancel`](#cancelling-a-booking--cancel) any existing bookings immediately.
+You can easily `update` the following details with the [update](#updating-bookings-update) command or [`cancel`](#cancelling-a-booking--cancel) any existing bookings immediately.
 </div>
 
 [Back To Top](#table-of-contents)
@@ -480,6 +480,7 @@ This command is **irreversible**, the deleted contact information will be lost!
 
 </div>
 
+[Back To Top](#table-of-contents)
 
 ### Booking Management
 
@@ -635,6 +636,8 @@ We shall use the `view` command to list all our current bookings!
 view
 ```
 
+[Back To Top](#table-of-contents)
+
 ### Other features
 
 ####  Changing themes in Dook : `theme`
@@ -716,6 +719,8 @@ If your changes to the data file makes its format invalid, Dook will discard all
 
 Furthermore, certain edits can cause **Dook** to behave in unexpected ways (e.g., if a value entered is outside of the acceptable range). Therefore, edit the data file only if you are confident that you can update it correctly.
 </div>
+
+[Back To Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
 
