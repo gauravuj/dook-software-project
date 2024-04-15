@@ -48,6 +48,13 @@ Content in blue boxes provides additional information and contextual knowledge y
 Content in green boxes provides tips and good practices to help you use the application more efficiently.
 </div>
 
+<div markdown="block" class="alert alert-warning">
+:exclamation: **Caution** <br>
+
+Content in yellow boxes draws your attention to certain minor issues that you may encounter when using Dook.
+
+</div>
+
 <div markdown="block" class="alert alert-danger">
 :exclamation: **Warnings** <br>
 
@@ -107,7 +114,7 @@ New to the command line? Don't worry, checkout this [guide](https://tutorials.co
 <div markdown="block" class="alert alert-success">
 :bulb: **Worried about getting your data lost?**
 
-Don't worry, you data is **automatically saved** to Dook Address Book!
+Don't worry, your data is **automatically saved** to Dook Address Book!
 </div>
 
 
@@ -150,7 +157,7 @@ Each `Contact card` Includes the following information:
 <div markdown="block" class="alert alert-success">
 :bulb: **Tips**
 
-You can easily `add` a new contact using the [add](#adding-a-person-add) command or `update` the existing information with the [edit](#editing-a-person--edit) command.
+You can easily `add` a new contact using the [add](#adding-a-contact-add) command or `edit` the existing information with the [edit](#editing-a-contact--edit) command.
 </div>
 
 [Back To Top](#table-of-contents)
@@ -167,7 +174,7 @@ Each `Booking card` Includes the following information:
 <div markdown="block" class="alert alert-success">
 :bulb: **Tips**
 
-You can easily `update` the following details with the [update](#editing-a-person--edit) command or [`cancel`](#cancelling-a-booking--cancel) any existing bookings immediately.
+You can easily `update` the following details with the [update](#updating-bookings-update) command or [`cancel`](#cancelling-a-booking--cancel) any existing bookings immediately.
 </div>
 
 [Back To Top](#table-of-contents)
@@ -206,7 +213,7 @@ It will open a window similar to this:
 
 ![help message](images/HelpWindow.png)
 
-[Back To ToC](#table-of-contents)
+[Back To Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
 ## Features
@@ -249,7 +256,7 @@ add -n NAME [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG…​]
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
 | **NAME**         | Must be non-null and unique                                                                                    |
-| **PHONE_NUMBER** | Optional, only numbers and minimum 3 digits                                                                    |
+| **PHONE_NUMBER** | Optional, only numbers and no minimum number of digits                                                         |
 | **EMAIL**        | Optional, follow standard email formats (i.e xxx@xxx)                                                          |
 | **ADDRESS**      | Optional                                                                                                       |
 | **TAG**          | Optional, each tag should start with -t (i.e. for two tags `friend`, `groupmate` use `-t friend -t groupmate`) |
@@ -286,7 +293,7 @@ In the event that there is an **existing user** in the contact book, the below e
 
 ![Duplicate Add Command Contact](images/AddCommandDuplicate.png)
 
-#### Adding a Professor
+#### Adding a Professor `prof`
 
 **Situation:** You have just taken CS2040S and you now have a favorite Professor in SoC! You would like to stay in contact with them and have their updated contact details at
 your fingertips.
@@ -313,11 +320,20 @@ prof -a
 ```
 
 
-<div markdown="block" class="alert alert-danger">
-:exclamation: **Warning** <br>
+<div markdown="block" class="alert alert-warning">
+:exclamation: **Caution** <br>
 
 While adding all professors is included as feature, we generally advise against this. You might find adding professors individually more useful unless you decide
 having the whole SoC staff faculty in your contact book is necessary!
+
+</div>
+
+<div markdown="span" class="alert alert-danger">
+:exclamation: **Warning:** <br>
+
+The `prof -a` command takes a bit of time to load all the data, as we are adding over 300+ contacts into Dook. 
+We recommend that upon running this command, you as a user should **wait a few seconds** and not force close the application or run other commands
+as it could lead to unexpected behaviors. Our team is aware of this and is looking into a more efficient solution to add all professors!
 
 </div>
 
@@ -478,6 +494,7 @@ This command is **irreversible**, the deleted contact information will be lost!
 
 </div>
 
+[Back To Top](#table-of-contents)
 
 ### Booking Management
 
@@ -653,6 +670,8 @@ view
 ```
 ![View Command Success](images/ViewCommandSuccess.png)
 
+[Back To Top](#table-of-contents)
+
 ### Other features
 
 ####  Changing themes in Dook : `theme`
@@ -695,8 +714,14 @@ For commands that you use often, Dook allows the aliasing of them to any input o
 alias -al NEW_COMMAND -r COMMAND_TO_REPLACE
 ```
 
-* For example, if you like swapping between themes, you can enter `alias -al light -r theme -bg light`
-* This results in `theme -bg light` being shortened to `light`
+| Param                  | Remarks                                          |
+|------------------------|--------------------------------------------------|
+| **NEW_COMMAND**        | The new string you would like to use as an alias |
+| **COMMAND_TO_REPLACE** | The original command that you want an alias for  |
+
+* For example, if you are often swapping between themes, you can replace `theme -bg light` with `light` using the command below <br>
+```alias -al light -r theme -bg light```
+* After that, you can swap to light theme anytime with just `light`
 
 ![Alias Command Success](images/AliasCommandSuccess.png)
 
@@ -747,6 +772,8 @@ If your changes to the data file makes its format invalid, Dook will discard all
 Furthermore, certain edits can cause **Dook** to behave in unexpected ways (e.g., if a value entered is outside of the acceptable range). Therefore, edit the data file only if you are confident that you can update it correctly.
 </div>
 
+[Back To Top](#table-of-contents)
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## FAQ
@@ -793,7 +820,7 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 | **Clear**         | `clear`                                                                                                                                                                               |
 | **Help**          | `help`                                                                                                                                                                                |
 
-[Back To ToC](#table-of-contents)
+[Back To Top](#table-of-contents)
 
 ### Booking List Command summary
 
@@ -806,7 +833,7 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 | **Cancel** | `cancel INDEX` or `cancel -a`<br> e.g., `cancel 2`                                                                                   |
 
 
-[Back To ToC](#table-of-contents)
+[Back To Top](#table-of-contents)
 
 ## Glossary
 
@@ -828,4 +855,4 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 | **[Web browser](https://www.mozilla.org/en-US/firefox/new/)**                                                                                                                  | An application to serve the web like Internet Explorer, Google Chrome, or Firefox. In fact, you are probably using one to access this guide right now!                                                                                                                                       |
 
 
-[Back To ToC](#table-of-contents)
+[Back To Top](#table-of-contents)
