@@ -206,7 +206,7 @@ It will open a window similar to this:
 
 ![help message](images/HelpWindow.png)
 
-[Back To ToC](#table-of-contents)
+[Back To Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
 ## Features
@@ -679,10 +679,11 @@ For commands that you use often, Dook allows the aliasing of them to any input o
 ```
 alias -al NEW_COMMAND -r COMMAND_TO_REPLACE
 ```
-| Param                  | Remarks                                          |
-|------------------------|--------------------------------------------------|
-| **NEW_COMMAND**        | The new string you would like to use as an alias |
-| **COMMAND_TO_REPLACE** | The original command that you want an alias for  |
+| Param                  | Remarks                                           |
+|------------------------|---------------------------------------------------|
+| **NEW_COMMAND**        | The new string you would like to use as an alias  |
+| **COMMAND_TO_REPLACE** | The original command that you want an alias for   |
+
 
 * For example, if you are often swapping between themes, you can replace `theme -bg light` with `light` using the command below <br>
 ```alias -al light -r theme -bg light```
@@ -773,7 +774,7 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 | **Clear**         | `clear`                                                                                                                                                                               |
 | **Help**          | `help`                                                                                                                                                                                |
 
-[Back To ToC](#table-of-contents)
+[Back To Top](#table-of-contents)
 
 ### Booking List Command summary
 
@@ -786,7 +787,7 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 | **Cancel** | `cancel INDEX` or `cancel -a`<br> e.g., `cancel 2`                                                                                   |
 
 
-[Back To ToC](#table-of-contents)
+[Back To Top](#table-of-contents)
 
 ## Glossary
 
@@ -808,4 +809,4 @@ The list of valid commands accept **only lowercase letters**. For example, `Book
 | **[Web browser](https://www.mozilla.org/en-US/firefox/new/)**                                                                                                                  | An application to serve the web like Internet Explorer, Google Chrome, or Firefox. In fact, you are probably using one to access this guide right now!                                                                                                                                       |
 
 
-[Back To ToC](#table-of-contents)
+[Back To Top](#table-of-contents)
