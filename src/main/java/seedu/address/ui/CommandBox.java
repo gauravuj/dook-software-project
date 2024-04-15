@@ -177,7 +177,6 @@ public class CommandBox extends UiPart<Region> {
         int selectionStart = commandTextField.getSelection().getStart();
         int selectionEnd = commandTextField.getSelection().getEnd();
 
-        // Exclude the prompt from the selected text if it's included
         if (selectionStart < 2) {
             selectedText = commandTextField.getText().substring(2, selectionEnd);
         }
