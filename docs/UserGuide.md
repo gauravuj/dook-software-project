@@ -249,7 +249,7 @@ add -n NAME [-p PHONE_NUMBER] [-e EMAIL] [-a ADDRESS] [-t TAG…​]
 | Param            | Remarks                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------|
 | **NAME**         | Must be non-null and unique                                                                                    |
-| **PHONE_NUMBER** | Optional, only numbers and minimum 3 digits                                                                    |
+| **PHONE_NUMBER** | Optional, only numbers and no minimum number of digits                                                         |
 | **EMAIL**        | Optional, follow standard email formats (i.e xxx@xxx)                                                          |
 | **ADDRESS**      | Optional                                                                                                       |
 | **TAG**          | Optional, each tag should start with -t (i.e. for two tags `friend`, `groupmate` use `-t friend -t groupmate`) |
@@ -697,11 +697,11 @@ For commands that you use often, Dook allows the aliasing of them to any input o
 ```
 alias -al NEW_COMMAND -r COMMAND_TO_REPLACE
 ```
-| Param                  | Remarks                                           |
-|------------------------|---------------------------------------------------|
-| **NEW_COMMAND**        | The new string you would like to use as an alias  |
-| **COMMAND_TO_REPLACE** | The original command that you want an alias for   |
 
+| Param                  | Remarks                                          |
+|------------------------|--------------------------------------------------|
+| **NEW_COMMAND**        | The new string you would like to use as an alias |
+| **COMMAND_TO_REPLACE** | The original command that you want an alias for  |
 
 * For example, if you are often swapping between themes, you can replace `theme -bg light` with `light` using the command below <br>
 ```alias -al light -r theme -bg light```
