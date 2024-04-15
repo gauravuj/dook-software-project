@@ -288,7 +288,7 @@ In the event that there is an **existing user** in the contact book, the below e
 
 ![Duplicate Add Command Contact](images/AddCommandDuplicate.png)
 
-#### Adding a Professor
+#### Adding a Professor `prof`
 
 **Situation:** You have just taken CS2040S and you now have a favorite Professor in SoC! You would like to stay in contact with them and have their updated contact details at
 your fingertips.
@@ -676,9 +676,14 @@ For commands that you use often, Dook allows the aliasing of them to any input o
 ```
 alias -al NEW_COMMAND -r COMMAND_TO_REPLACE
 ```
+| Param                  | Remarks                                          |
+|------------------------|--------------------------------------------------|
+| **NEW_COMMAND**        | The new string you would like to use as an alias |
+| **COMMAND_TO_REPLACE** | The original command that you want an alias for  |
 
-* For example, if you like swapping between themes, you can enter `alias -al light -r theme -bg light`
-* This results in `theme -bg light` being shortened to `light`
+* For example, if you often swapping between themes, you can replace `theme -bg light` with `light` using the command below <br>
+```alias -al light -r theme -bg light```
+* After that, you can swap to light theme anytime with just `light`
 
 <div markdown="block" class="alert alert-danger">
 :exclamation: **Warning** <br>
