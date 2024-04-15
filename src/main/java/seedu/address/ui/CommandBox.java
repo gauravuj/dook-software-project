@@ -46,10 +46,8 @@ public class CommandBox extends UiPart<Region> {
         });
 
         commandTextField.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
-            if (new KeyCodeCombination(KeyCode.C, KeyCombination.CONTROL_ANY).match(event)
-                    || new KeyCodeCombination(KeyCode.C, KeyCombination.META_ANY).match(event)) {
-                copyTextWithoutPrompt();
-                event.consume();
+            if (new KeyCodeCombination(KeyCode.V, KeyCombination.CONTROL_ANY).match(event)
+                    || new KeyCodeCombination(KeyCode.V, KeyCombination.META_ANY).match(event)) {
             } else {
                 handleKeyEvents(event);
             }
